@@ -23,6 +23,8 @@ $else$
 \usepackage{lmodern}
 $endif$
 
+
+
 $if(linestretch)$
 \usepackage{setspace}
 \setstretch{$linestretch$}
@@ -190,6 +192,14 @@ $highlighting-macros$
 $endif$
 $if(tables)$
 \usepackage{longtable,booktabs}
+
+%I don't know how to make table text small.
+%\let\oldlongtable\longtable
+%\let\oldendlongtable\endlongtable
+%\renewcommand{\longtable}[1]{\scalebox{0.7}{\oldlongtable{#1}}}
+\renewcommand{\caption}[1]{\caption{#1}}
+
+
 $if(beamer)$
 \usepackage{caption}
 % These lines are needed to make table captions work with longtable:
@@ -210,7 +220,7 @@ $if(graphics)$
 % Scale images if necessary, so that they will not overflow the page
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setkeys{Gin}{width=.8\maxwidth,height=.8\maxheight,keepaspectratio}
 $endif$
 $if(beamer)$
 % Prevent slide breaks in the middle of a paragraph:
@@ -365,6 +375,7 @@ $include-before$
 $endfor$
 
 \addtolength{\wpYoffset}{4.5in}
+\addtolength{\wpXoffset}{1in}
 \ThisCenterWallPaper{0.5}{printing/Masthead.png}
 
 $if(toc)$

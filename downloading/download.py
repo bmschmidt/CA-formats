@@ -36,9 +36,9 @@ def get_download_list():
         try:
             site=pq(url=url)
         except urllib.error.HTTPError as err:
-            # If there are only two (say) pages of archives, it raises 404
+            # If there are only two (as there are right now) pages of archives, it raises 404
             # and we're done.
-            if err.code==404:
+            if err.code==404 and i > 0:
                 break
             else:
                 raise
@@ -47,7 +47,8 @@ def get_download_list():
             urls.append(post.attrib["href"])
     return urls
 
-def download_url(url,oput=None,overwrite=False):
+def download_url(url,oput=None,overwrite=False, dump = False):
+    # Dump: an argument used for testing.
     oput = default_path(url)
 
     if os.path.exists(oput) and not overwrite:
@@ -72,8 +73,9 @@ def download_url(url,oput=None,overwrite=False):
     shorttitle = title
     if len(shorttitle) > 50:
         shorttitle = re.sub(": .*","",title)
-        
+    
     inner_html = site(".pf-content")
+    footnote_html = site(".footnotes")
     output = open(oput,"w")
     output.write("""
     <head>
@@ -86,6 +88,12 @@ def download_url(url,oput=None,overwrite=False):
     """.format(author,title,date,shortauthor,shorttitle))
 
     output.write(inner_html.html())
+    try:
+        footnotes = footnote_html.outer_html()
+        output.write("<div id='footnote_div'>{}</div>".format(footnotes))
+    except TypeError:
+        # Maybe there aren't footnotes.
+        pass
     output.close()
 
 def main():
