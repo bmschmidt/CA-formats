@@ -1,13 +1,16 @@
 target = "http://culturalanalytics.org/2017/11/scotlands-poetics-of-space-an-experiment-in-geospatial-semantics/"
 
 font=Times New Roman
+font=Lora
 font=Minion Pro
+
 CJKmainfont=Noto Sans CJK SC
 all_htmls=$(shell find htmls -type f)
 # Note--this will create a weird filename if someone uses "html" in their filename.
 # "Ethics of HTML" will become "Ethics of PDF"sss
 all_pdfs=$(subst html,pdf,$(all_htmls))
 all_mds=$(subst html,md,$(all_htmls))
+
 
 
 all: $(all_mds) $(all_pdfs)
@@ -19,11 +22,10 @@ markdown: $(all_mds)
 
 haskell_compilations: printing/footnote_dropper printing/html_cleaner
 
+# This fills up the folder 'htmls' with one file per CA article.
+
 downloads:
 	python3 downloading/download.py
-
-articles/%.html:
-	python3 downloading/download.py http://culturalanalytics.org/2017/09/towards-a-poetics-of-strangeness-experiments-in-classifying-language-of-technological-novelty
 
 printing/%: printing/%.hs
 	ghc $@ -o $@
@@ -44,19 +46,6 @@ mds/%.md: htmls/%.html
 		--standalone \
 		--filter printing/html_cleaner \
 
-
-xpdfs/%.pdf: htmls/%.html printing/CA.latex
-	-pandoc -o $@ \
-		--from html+smart+multiline_tables \
-		--filter printing/html_cleaner \
-		--template printing/CA.latex \
-		--pdf-engine xelatex \
-		$< \
-		--variable="mainfont:$(font)" \
-		--variable="CJKmainfont:$(CJKmainfont)" \
-		--variable="fontsize:11pt" \
-#		--verbose 
-
 pdfs/%.pdf: mds/%.md printing/CA.latex
 	-pandoc -o $@ \
 		--template printing/CA.latex \
@@ -64,7 +53,7 @@ pdfs/%.pdf: mds/%.md printing/CA.latex
 		$< \
 		--variable="mainfont:$(font)" \
 		--variable="CJKmainfont:$(CJKmainfont)" \
-		--variable="fontsize:11pt" \
+		--variable="fontsize:12pt" \
 #		--verbose 
 
 
