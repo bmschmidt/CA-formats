@@ -31,7 +31,9 @@ $if(linestretch)$
 $endif$
 
 \usepackage{mathptmx}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=.75in,a5paper]{geometry}
+
+
 \usepackage{wallpaper}
 
 \usepackage{fancyhdr}
@@ -197,6 +199,25 @@ $if(tables)$
 %\let\oldlongtable\longtable
 %\let\oldendlongtable\endlongtable
 %\renewcommand{\longtable}[1]{\scalebox{0.7}{\oldlongtable{#1}}}
+
+\makeatletter
+\let\oldlt\longtable
+\let\endoldlt\endlongtable
+\def\longtable{\@ifnextchar[\longtable@i \longtable@ii}
+\def\longtable@i[#1]{
+\begin{tiny}
+\oldlt[#1]
+}
+\def\longtable@ii{
+\begin{tiny}
+\oldlt
+}
+\def\endlongtable{\endoldlt
+\end{tiny}
+}
+\makeatother
+
+
 \renewcommand{\caption}[1]{\caption{#1}}
 
 
@@ -375,7 +396,7 @@ $include-before$
 $endfor$
 
 \addtolength{\wpYoffset}{4.5in}
-\addtolength{\wpXoffset}{1in}
+\addtolength{\wpXoffset}{-1.2in}
 \ThisCenterWallPaper{0.5}{printing/Masthead.png}
 
 $if(toc)$
