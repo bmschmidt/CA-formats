@@ -638,10 +638,6 @@ cross-validation prediction process described above.
 
  
 
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::
-
 [^1]: R.S. Gilbert "Joyful Noise: Reflections on Applause," *Southwest
     Review*, 86(1) (2001): 13-33; C. Goodwin, "Audience diversity,
     participation and interpretation," *Text: Interdisciplinary Journal

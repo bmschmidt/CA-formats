@@ -1155,10 +1155,6 @@ the page, words like "feeling," "knowing," "seeing," "remembering,"
 the not. This is the space of fiction's apartness. "And where is this
 elsewhere?" Roland Barthes once asked. "In the paradise of words."
 
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::
-
 [^1]: I would like to gratefully acknowledge the support of the Social
     Sciences and Humanities Research Council of Canada (SSHRC) in
     funding this research.

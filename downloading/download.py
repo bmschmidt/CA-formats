@@ -74,8 +74,8 @@ def download_url(url,oput=None,overwrite=False, dump = False):
     if len(shorttitle) > 50:
         shorttitle = re.sub(": .*","",title)
     
-    inner_html = site(".pf-content")
-    footnote_html = site(".footnotes")
+    inner_html = site("div.post")
+#    footnote_html = site(".footnotes")
     output = open(oput,"w")
     output.write("""
     <head>
@@ -88,12 +88,12 @@ def download_url(url,oput=None,overwrite=False, dump = False):
     """.format(author,title,date,shortauthor,shorttitle))
 
     output.write(inner_html.html())
-    try:
-        footnotes = footnote_html.outer_html()
-        output.write("<div id='footnote_div'>{}</div>".format(footnotes))
-    except TypeError:
+#    try:
+#        footnotes = footnote_html.outer_html()
+#        output.write("<div id='footnote_div'>{}</div>".format(footnotes))
+#    except TypeError:
         # Maybe there aren't footnotes.
-        pass
+#        pass
     output.close()
 
 def main():

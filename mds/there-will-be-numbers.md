@@ -445,9 +445,3 @@ cultures and media that have gotten us to where we are today. What
 unites it is a belief that computation can show us things about culture
 that previous media and their metonymical impasses could not. The proof,
 as they say, is in the pudding.
-
-*Andrew Piper, McGill University*
-
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::

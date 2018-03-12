@@ -1083,10 +1083,6 @@ moving forward will be to create data and models adequate to this task.
 
  
 
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::
-
 [^1]: Textual approaches to geographic questions have been pioneered in
     the humanities by scholars like Ian Gregory, Andrew Hardie, and
     Matthew Wilkens. See Ian N. Gregory and Andrew Hardie, "Visual

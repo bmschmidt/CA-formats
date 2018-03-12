@@ -20,7 +20,7 @@ update: downloads
 
 markdown: $(all_mds)
 
-haskell_compilations: printing/footnote_dropper printing/html_cleaner
+haskell_compilations: printing/html_cleaner
 
 # This fills up the folder 'htmls' with one file per CA article.
 

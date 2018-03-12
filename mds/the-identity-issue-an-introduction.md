@@ -2,8 +2,8 @@
 author: Susan Brown and Laura Mandell
 date: '02.13.18'
 shortauthor: Susan Brown and Laura Mandell
-shorttitle: 'The Identity Issue: An Introduction'
-title: 'The Identity Issue: An Introduction'
+shorttitle: The Identity Issue
+title: The Identity Issue
 ---
 
 ###### *Clusters: [Gender](http://culturalanalytics.org/2018/02/gender/)*
@@ -19,12 +19,18 @@ of how social identities can be addressed through computational methods.
 In particular, it probes the extent to which large datasets can be used
 to elucidate the kinds of questions that humanities scholars want to ask
 about historical and representational processes that structure social
-relations and positions. The papers emerge from the work of the Text
-Mining the Novel research partnership,[^1] which chose identity as one
-of its themes of inquiry. This issue is thus situated at the
-intersection of literary studies and sociology, looking outward toward
-the novel's construction of ethnicities, genders, class categories, and
-racial terminology.
+relations and positions. The papers to be published here emerge from the
+work of the Text Mining the Novel research partnership,[^1] which chose
+identity as one of its themes of inquiry. This issue is thus situated at
+the intersection of literary studies and sociology, looking outward
+toward the novel's construction of ethnicities, genders, class
+categories, and racial terminology. It is also situated in an emerging
+scholarly publishing ecology that allows the journal to release articles
+progressively, as they pass through the peer review process and reach
+completion, rather than waiting for an entire set to be complete. This
+introduction therefore situates identity issues in relation to cultural
+analytics more broadly, and provides summaries of the
+provisional contents of the special issue.
 
 Identity categories have played a role throughout the politics of
 modernity in movements associated with class, race, nationalism,
@@ -214,13 +220,13 @@ In a much cited and reprinted interview first published in an Australian
 journal, Gayatri Spivak admonished her "positivist feminist colleagues,"
 warning them "that essentialism is a trap" too easy to fall into when
 theorizing identity. Work that is concerned with retrieving "the voice"
-of non-elite colonized subjects, she argued, needs to be read from
+of non-elite colonized subjects, she argued, needs to be read "from
 within but against the grain . . . . \[T\]he project to retrieve the
 subaltern consciousness \[should be read as\] the attempt to undo a
-massive historiographic metalepsis and "situate" the effect of the
+massive historiographic metalepsis and 'situate' the effect of the
 subject as subaltern. I would read it, then, as a strategic use of
 positivist essentialism in a scrupulously visible political
-interest.[^22]
+interest."[^22]
 
 The goal is to acknowledge the subjective effects of belonging to an
 identity constituted historically through oppression without believing
@@ -262,7 +268,7 @@ the fixed and permanent quality of the binary opposition, a genuine
 historicization and deconstruction of the terms of sexual difference"
 [^27]. However, one way to analyze the various attributes accorded to a
 gender that is reconstructed throughout history is to search through
-large amounts of data using that very binary category-that is,
+large amounts of data using that very binary category--that is,
 investigating "the origins and consequences" of the social category of
 the gender binary and its surrounding practices.[^28] Deborah Verhoeven
 has commented that Scott's notion of gender as an analytic category
@@ -311,7 +317,7 @@ methodologies. As Katherine Bode puts it,
 > infallible. Awareness of the way scientists interrogate - rather than
 > simply accept or promote - statistical measures is often lacking in
 > current humanities' debate about quantitative approaches and their
-> ideological resonances.(Bode, *Reading by Numbers*, 12-13.)
+> ideological resonances.  (Bode, *Reading by Numbers*, 12-13.)
 
 Statisticians well know that their results reflect categorization
 effects, a difficulty compounded when the categories in question are
@@ -386,9 +392,10 @@ and the privileging of heteronormativity.
 Paula Moya and Michael Hamer-García's 2000 anthology *Reclaiming
 Identity* (see footnote 5) provides a treasure-trove of methodological
 resources and examples for investigating identities with the
-"post-positivist realist" approach pioneered by Satya Mohanty.[^38]
-Linda Alcoff argues that identity studies is only positivistic insofar
-as its insights are claimed to be more than provisional:
+"post-positivist realist" approach pioneered by Satya Mohanty.[^38] In
+that anthology, Linda Alcoff argues that identity studies is only
+positivistic insofar as its insights are claimed to be more than
+provisional:
 
 > Ontologies can be thought of as models of reality useful in science
 > (or in social theory) that approximate the world as it is, thus
@@ -403,7 +410,7 @@ and ontologies.
 
  
 
-2017 {#section-7 style="text-align: center;"}
+2018 {#section-7 style="text-align: center;"}
 ====
 
 Despite the risks, there is something to be said about the particular
@@ -415,7 +422,7 @@ latter is intent upon destabilizing identity categories, he argues, some
 of the historical work on gay identity in fact leads the way: it is
 "just a step," he argues, "from historicizing to destabilizing."[^39]
 One particular feature of doing history at scale is that it allows
-taking more, and more ephemera, into account. As Bode puts it,
+taking more and more ephemera, into account. As Bode puts it,
 
 > quantitative methods allow us to explore aspects of the literary
 > field, especially trends and patterns, broad developments and
@@ -454,19 +461,19 @@ stratification (eugenics, the Bell Curve, etc.). Thus, any "big data" or
 computational method applied to racial minority authors and texts is in
 great peril of simply reproducing reified and problematic views of
 racial identity. So, Long, and Zhu argue that canonical methods in
-textual analytics - specifically, sequence alignment - can be
-productively deformed and reconstructed through an attention to the
-critique of race not only to produce new "large scale" views of cultural
-and literary history, but also to advance the work of critique by
-challenging the assumptions of the algorithm itself. They combine theory
-and close reading with sequence alignment analysis to critique the
-racial homogeneity and universalism nominally supported by the method of
-sequence alignment , through a case study focused on the modern American
+textual analytics--specifically, sequence alignment--can be productively
+deformed and reconstructed through an attention to the critique of race
+not only to produce new "large scale" views of cultural and literary
+history, but also to advance the work of critique by challenging the
+assumptions of the algorithm itself. They combine theory and close
+reading with sequence alignment analysis to critique the racial
+homogeneity and universalism, nominally supported by the method of
+sequence alignment, through a case study focused on the modern American
 novel and the question of racial difference. A new story about racial
 difference and the US novel emerges from testing the limits of the
 algorithm, which are often the limits of normative literary history
 itself. That is, a creative use of computation, animated by critique,
-draws attention to what has been written out of literary history, while
+draws attention to what has been written out of literary history while
 at the same time advancing the work of racial critique.
 
 In "Representing Race and Ethnicity in American Fiction: 1789-1920,"
@@ -490,24 +497,26 @@ ethnicity in demonstrating the extent to which identities are
 continually shifting and trading their discursive markers.
 
 Elizabeth Evans and Matthew Wilkens's contribution, "Nation, Ethnicity,
-and the Geography of British Fiction, 1880-1940" draws on four distinct,
-substantial collections of British literature published in the late
-nineteenth and early twentieth centuries to assess the applicability of
-existing critical claims about modernist internationalism to large runs
-of the period's fiction and trace the complex interplay of insider and
-outsider status in writing by authors born outside the UK. They find
-that, within a framework of broad continuity, the decades leading up to
-the Second World War saw increasing literary attention to locations
-beyond Britain's borders, but a drop in the overall rate at which named
-locations appeared, shifts they attribute to forces cultural, political,
-and aesthetic. Evans and Wilkens show that foreign writers favored an
-especially geographically intensive style that drew more heavily on
-abstractions than on the details of setting, which, they argue, was
-linked to such authors' greater engagement with the era's colonial and
-anticolonial politics. Beyond its specific inquiries, the article
-describes a set of broadly applicable methods for analyzing textual
-geography at scale and provides a rich dataset for other scholars
-studying what the authors call the "long modernist era."\
+and the Geography of British Fiction, 1880-1940," draws on four
+distinct, substantial collections of British literature published in the
+late nineteenth and early twentieth centuries to assess the
+applicability of existing critical claims about modernist
+internationalism to large runs of the period's fiction and trace the
+complex interplay of insider and outsider status in writing by authors
+born outside the UK. They find that, within a framework of broad
+continuity, the decades leading up to the Second World War saw
+increasing literary attention to locations beyond Britain's borders, but
+there was a drop in the overall rate at which named locations appeared,
+shifts they attribute to forces cultural, political, and aesthetic.
+Evans and Wilkens show that foreign writers favored an especially
+geographically intensive style that drew more heavily on abstractions
+than on the details of setting, which, they argue, was linked to such
+authors' greater engagement with the era's colonial and anticolonial
+politics. Beyond its specific inquiries, the article describes a set of
+broadly applicable methods for analyzing textual geography at scale and
+provides a rich dataset for other scholars studying what the authors
+call the "long modernist era."
+
 Two articles in this special issue emphasize that quantitative methods
 can be used as, or with, linguistic and literary analysis, mirroring the
 mixed methods approach advocated by social scientists. In their
@@ -521,7 +530,7 @@ Chinese fiction. Using measures of information and diversity in diction
 combined with other simple textual features, they find a tendency toward
 repetition in self-referential or psychologically oriented narratives
 and argue for its role as conscious stylistic innovation within East
-Asian literary modernity. This finding, which holds across distinct, but
+Asian literary modernity. This finding, which holds across distinct but
 interrelated national literary contexts, shows how quantitative methods
 can contribute to translingual comparison. It also offers an opportunity
 to reflect on the longer history of linguistic measures of redundancy,
@@ -538,10 +547,10 @@ a consideration of broad social patterns, providing a finely-grained
 consideration of gender-normative reading in nineteenth-century Muncie,
 Indiana. They examine intra- and extra-textual pressures that impinged
 upon reader choice in the period in order to discuss "crossover" and
-"convergent" reading practices. "Crossover reading" is the reading by
-the non-targeted gender of overtly gender-targeted fiction that was
-otherwise most frequently read, as intended, by persons of the targeted
-gender. "Convergent reading" refers to the selection of
+"convergent" reading practices. "Crossover reading" is the reading
+performed by the non-targeted gender of overtly gender-targeted fiction
+that was otherwise most frequently read, as intended, by persons of the
+targeted gender. "Convergent reading" refers to the selection of
 fiction[---]{.emdash}not overtly specified to gender, e.g., as "books
 for women" or "books for men"[---]{.emdash}by persons of either gender
 at similar rates relative to the respective gender group. The
@@ -552,7 +561,7 @@ gender of reader or another. This insight only emerges as a result of
 placing aggregate borrowing patterns in dialogue with text-mining
 techniques designed to find novelistic features typed by gender,
 analyzing simultaneously literary qualities and statistical patterns.
-Additionally, Erlin, Tatlock, Knox, and Pentecost offer a situated
+Additionally, Erlin, Tatlock, Knox, and Pentecost, offer a situated
 understanding of gender; their article performs gender trouble through
 its investigation of crossover reading and the crossover textuality of
 Horatio Alger.
@@ -657,82 +666,80 @@ investigation of cultural identities using digital humanities methods,
 including of recent texts that cannot circulate freely.[^46] As Klein
 argues, "it may very well be that a distant view that is trained on
 power, and that is self-reflexive about the forces that enable
-it--cultural and conceptual as well as computational­-can contribute
+it--cultural and conceptual as well as computational­--can contribute
 significantly to the project of dismantling structural power."[^47] The
 contributions clustered here will enable the ongoing debate over how
 cultural analytics can engage ethically and convincingly with thorny
 questions of identity to proceed productively on the basis of both
 theory and practice.
 
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::
-
 [^1]: The Text Mining the Novel project is led by Andrew Piper at McGill
     University and funded by a Partnership Grant from the Social
-    Sciences and Humanities Research Council of Canada. See
-     [http://www.noveltm.ca](http://www.noveltm.ca/).
+    Sciences and Humanities Research Council of Canada.
+    See [http://www.noveltm.ca](http://www.noveltm.ca/).
 
 [^2]: Linda J. Nicholson, *Identity before Identity Politics*
     (Cambridge: Cambridge University Press, 2008).
 
 [^3]: Craig Calhoun, *Social Theory and the Politics of Identity* (New
-    York, Wiley, 1994).
+    York: Wiley, 1994).
 
 [^4]: The coining of the phrase "identity politics" is attributed to the
-    famous statement of the Combahee River Collective from 1977.
-    Reprinted as  "The Combahee River Collective Statement" in *Home
-    Girls: A Black Feminist Anthology*, ed. Barbara Smith (New York:
-    Kitchen Table/Women of Color Press, 1983), 264-274. See Michelle
-    Murphy, *Seizing the Means of Reproduction: Entanglements of
-    Feminism, Health, and Technoscience* (Durham, NC: Duke University
-    Press, 2012), 39; and T. David Mason, "Ethnicity and Politics," in
-    *Encyclopedia of Government and Politics,* ed.  Mary E. Hawkesworth
-    and Maurice Kogan (Taylor & Francis US, 2004, 568-586.
+    famous statement of the Combahee River Collective from 1977. Rpt. as
+    "The Combahee River Collective Statement" in *Home Girls: A Black
+    Feminist Anthology*, ed. Barbara Smith (New York: Kitchen
+    Table/Women of Color Press, 1983), 264-274. See Michelle Murphy,
+    *Seizing the Means of Reproduction: Entanglements of Feminism,
+    Health, and Technoscience* (Durham, NC: Duke University Press,
+    2012), 39; and T. David Mason, "Ethnicity and Politics," in
+    *Encyclopedia of Government and Politics,* 2^nd^ ed., 2 vols., ed.
+    Mary E. Hawkesworth and Maurice Kogan (New York: Rutledge, 2004):
+    568-586.
 
 [^5]: A comprehensive bibliography is available in Jodi Dean,
     *Solidarity of Strangers: Feminism After Identity Politics*
-    (Berkeley, CA: U of CA P, 1996); cited in Paula Moya,
-    "Introduction," *Reclaiming Identity: Realist Theory and the
+    (Berkeley: University of California Press, 1996); cited in Paula
+    Moya, "Introduction," *Reclaiming Identity: Realist Theory and the
     Predicament of Postmodernism*, ed. Paula Moya, Michael Hames-García
-    (Berkeley: U of California P, 2000), 1-26.
+    (Berkeley: University of California Press, 2000), 1-26.
 
 [^6]: Diana Fuss, *Essentially Speaking: Feminism, Nature, and
     Difference* (New York: Routledge, 1989), 2.
 
 [^7]: See, for instance, Gloria T. Hull, Patricia Bell Scott, and
     Barbara Smith, *All the women are white, all the men are black, but
-    some of us are brave* (New York: Feminist P, 1982).
+    some of us are brave* (New York: Feminist Press, 1982).
 
 [^8]: Gaye Tuchman and Nina Fortin, *Edging Women Out: Victorian
-    Novelists, Publishers and Social Change* (New Haven: Yale, 1989).
-    Shlomo Argamon, Jean-Baptiste Goulain, Russell Horton, and Mark
-    Olsen, "Vive la Différence! Text Mining Gender Difference in French
-    Literature," *Digital Humanities Quarterly* 3.2 (2009). Katherine
-    Bode, *Reading by Numbers: Recalibrating the Literary Field* (New
-    York: Anthem Press, 2012). See also: Matt Jockers, *Macroanalysis*
-    (Urbana: U of Illinois P, 2013); Jan Rybicki, \"*Vive la
-    différence*: Tracing the (Authorial) Gender Signal by Multivariate
-    Analysis of Word Frequencies,\" *Digital Scholarship in the
-    Humanities* (2015): 1-16; Mark Olsen, \"*Écriture feminine*:
-    Searching for an Indefinable Practice?\" *Literary and Linguistic
-    Computing* 20 suppl. (2005): 147-64; Mark Olsen, \"Qualitative
-    Linguistics and *Histoire des Mentalités*: Gender Representation in
-    the *Trésor de la Langue Française*,\" *QALICO* (14 January 1992);
-    Andrew Piper and Richard Jean So, "Women Write About Family, Men
-    Write About War," *The New Republic* April 8,
-    2016: <https://newrepublic.com/article/132531/women-write-family-men-write-war>.
+    Novelists, Publishers and Social Change* (New Haven: Yale University
+    Press, 1989). Shlomo Argamon, Jean-Baptiste Goulain, Russell Horton,
+    and Mark Olsen, "Vive la Différence! Text Mining Gender Difference
+    in French Literature," *Digital Humanities Quarterly* 3.2 (2009).
+    Katherine Bode, *Reading by Numbers: Recalibrating the Literary
+    Field* (New York: Anthem Press, 2012). See also: Matt Jockers,
+    *Macroanalysis* (Urbana: University of Illinois Press, 2013); Jan
+    Rybicki, \"*Vive la différence*: Tracing the (Authorial) Gender
+    Signal by Multivariate Analysis of Word Frequencies,\" *Digital
+    Scholarship in the Humanities* (2015): 1-16; Mark Olsen, \"*Écriture
+    feminine*: Searching for an Indefinable Practice?\" *Literary and
+    Linguistic Computing* 20 suppl. (2005): 147-64; Mark Olsen,
+    \"Qualitative Linguistics and *Histoire des Mentalités*: Gender
+    Representation in the *Trésor de la Langue Française*,\" *QALICO*
+    (14 January 1992); Andrew Piper and Richard Jean So, \"[Women Write
+    About Family, Men Write About
+    War](https://newrepublic.com/article/132531/women-write-family-men-write-war),\"
+    *The New Republic,* April 8, 2016.
 
 [^9]: Bethany Nowviskie, "What Do Girls Dig?" *Debates in Digital
-    Humanities*, ed. Matthew K. Gold (Minneapolis, U of Minnesota Press,
-    2012); Lisa Marie Rhody, "Why I Dig: Feminist Approaches to Text
-    Analysis," in *Debates in Digital Humanities*, ed. Matthew K. Gold
-    and Lauren Klein (Minneapolis: U of Minnesota Press, 2016); Laura
-    Mandell, "Gender and Cultural Analytics: Finding or Making
-    Stereotypes?" *Debates in Digital Humanities* (Minneapolis: U of
-    Minnesota Press, forthcoming 2018). The continuing debate is
-    apparent in a number of the recent considerations of "distant
-    reading" in *PMLA* 132.3 (2017).
+    Humanities*, ed. Matthew K. Gold (Minneapolis, University of
+    Minnesota Press, 2012); Lisa Marie Rhody, "Why I Dig: Feminist
+    Approaches to Text Analysis," in *Debates in Digital Humanities*,
+    ed. Matthew K. Gold and Lauren Klein (Minneapolis: University of
+    Minnesota Press, 2016); Laura Mandell, "Gender and Cultural
+    Analytics: Finding or Making Stereotypes?" *Debates in Digital
+    Humanities* (Minneapolis: University of Minnesota Press, forthcoming
+    2018). The continuing debate is apparent in a number of the recent
+    considerations of "distant reading" in *PMLA* 132.3 (2017).
 
 [^10]: Ann Snitow, "A Gender Diary," in *Conflicts in Feminism*, ed.
     Marianne Hirsch, Evelyn Fox Keller (New York: Routledge, 1990),
@@ -747,24 +754,25 @@ theory and practice.
 
 [^13]: Linda Martín Alcoff, "Who's Afraid of Identity Politics?" in
     Moya, Hames-García, eds., 312-344, the section title "A Genealogy of
-    the Problem," pp. 325-34.
+    the Problem," 325-334.
 
 [^14]: Stephen Heath, "Difference," *Screen* 19.3 (1978): 51-112;
     Alcoff, 329; Fuss, 6-12.
 
 [^15]: Fuss, *Essentially Speaking,*12-19.
 
-[^16]: Fuss, *Essentially Speaking, *3
+[^16]: Fuss, *Essentially Speaking, *3.
 
 [^17]: Anthony Elliott, *Concepts of the Self* (Malden, MA: Polity P,
     2008), 132.
 
 [^18]: Henry Abelove, "From Thoreau to Queer Politics," *Yale Journal of
-    Criticism* 6.2 (1993): 17-27. Rpt. in *Deep Gossip* (Minneapolis,
-    MN: U of Minnesota P, 2003), 29-41. For use of the term "queer," see
-    Lisa Duggan, "Making it Perfectly Queer," *Socialist Review* 22.1
-    (1992): 11-31. See also David M. Halperin, "The Normalization of
-    Queer Theory," *Journal of Homosexuality* 45.2-4 (2003): 339-343.
+    Criticism* 6.2 (1993): 17-27. Rpt. in *Deep Gossip* (Minneapolis:
+    University of Minnesota Press, 2003), 29-41. For use of the term
+    "queer," see Lisa Duggan, "Making it Perfectly Queer," *Socialist
+    Review* 22.1 (1992): 11-31. See also David M. Halperin, "The
+    Normalization of Queer Theory," *Journal of Homosexuality* 45.2-4
+    (2003): 339-343.
 
 [^19]: Michael Warner, "Introduction: Fear of a Queer Planet," *Social
     Text* 29 (1991): 3-17, 11.
@@ -782,12 +790,12 @@ theory and practice.
     (New York: Methuen, 1987), 205. Rpt. of an earlier interview with
     Elizabeth Grosz, "Criticism, Feminism and the Institution," *Thesis
     Eleven* 10/11 (1984-85): 175-88.  (Rpt. also Gayatri Spivak,
-    *Postcolonial Critic,* ed. Sarah Harasym (New York: Routledge,
-    1990), 1-16).
+    *Postcolonial Critic,* ed. Sarah Harasym \[New York: Routledge,
+    1990\], 1-16).
 
 [^23]: "In a Word," interview with Ellen Rooney, 1988. In *The Essential
     Difference*, ed. Naomi Schor and Elizabeth Weed (Bloomington:
-    Indiana UP, 1994), p. 151-184. Rpt. in *Contemporary Literary
+    Indiana UP, 1994), 151-184. Rpt. in *Contemporary Literary
     Criticism*, ed. Jeffrey W. Hunter, vol. 233 (Detroit: Gale, 2007).
 
 [^24]: "The desire for 'truth' or 'objective' knowledge" about
@@ -823,15 +831,15 @@ theory and practice.
     401-36; 408.
 
 [^31]: Donna Haraway, "Gender for a Marxist Dictionary: the Sexual
-    Politics of a Word." In *Simians, Cyborgs, and Women: the
+    Politics of a Word," in *Simians, Cyborgs, and Women: the
     Reinvention of Nature*. London: Free Association Books, 1991. Rpt.
-    in *Women, Gender, Religion: a Reader*, ed. Elizabeth A. Castelli.
-    NY: Palgrave, 2001. 49-75, 67.
+    in *Women, Gender, Religion: a Reader*, ed. Elizabeth A. Castelli
+     (New York: Palgrave, 2001), 49-75, 67.
 
 [^32]: Miriam Posner, \"[What's Next: The Radical, Unrealized Potential
     of Digital
-    Humanities](http://miriamposner.com/blog/whats-next-the-radical-unrealized-potential-of-digital-humanities/).\"
-    *Miriam Posner's Blog* 27 (2015). See also James English,
+    Humanities,](http://miriamposner.com/blog/whats-next-the-radical-unrealized-potential-of-digital-humanities/)\"
+    *Miriam Posner* \[blog\], 27 (2015). See also James English,
     \"Everywhere and Nowhere: The Sociology of Literature After 'the
     Sociology of Literature,\"' *New Literary History* 41.2 (2010): v-
     xxiii.
@@ -840,11 +848,10 @@ theory and practice.
     America](http://ngm.nationalgeographic.com/2013/10/changing-faces/schoeller-photography),\"* National
     Geographic,* October 2013.
 
-[^34]: Kimberlé Crenshaw, *Stanford Law Review*, Vol. 43, No. 6 (Jul.,
-    1991): 1241-1299.
+[^34]: Kimberlé Crenshaw, *Stanford Law Review*, 43.6 (1991): 1241-1299.
 
 [^35]: Erez Levon, "Integrating Intersectionality in Language, Gender,
-    and Sexuality Research," *Language and Linguistics Compass* 9/7
+    and Sexuality Research," *Language and Linguistics Compass* 9.7
     (2015): 295-308, 295.
 
 [^36]: For an overview, see Yvonne Lincoln, Susan Lynham, Egon Guba,
@@ -855,7 +862,8 @@ theory and practice.
 
 [^37]: Gayatri Spivak, "Can the Subaltern Speak?" originally published
     in *Marxism and the Interpretation of Culture*, ed. Cary Nelson,
-    Lawrence Grossberg (Urbana, IL: U of Illinois P, 1988), 67-111.
+    Lawrence Grossberg (Urbana: University of Illinois Press, 1988),
+    67-111.
 
 [^38]: Satya P. Mohanty, *Literary Theory and the Claims of History:
     Postmodernism, Objectivity, Multicultural Politics* (Ithaca: Cornell
@@ -866,18 +874,18 @@ theory and practice.
 [^39]: Abelove, *Deep Gossip, *54.
 
 [^40]: Roopika Risam, "Beyond the Margins: Intersectionality and the
-    Digital Humanities," *DHQ* 9.2 (2015), "Navigating the Global
-    Digital Humanities: Insights from Black Feminism," *Debates in
-    Digital Humanities*, ed. Matthew K. Gold, Lauren Klein (Minneapolis,
-    MN: U of Minnesota P, 2016); Kim Gallon, \"Making a Case for the
-    Black Digital Humanities, *Debates in Digital Humanities*, ed.
-    Matthew K. Gold, Lauren Klein (Minneapolis, MN: U of Minnesota P,
-    2016); Amy Earhart, "Can Information be Unfettered? Race and the New
-    Digital Humanities Canon," *Debates in Digital Humanities*, ed.
-    Matthew K. Gold, Lauren Klein (Minneapolis, MN: U of Minnesota P,
-    2012), 309-18; Lauren Klein, "The Image of Absence: Archival
-    Science, Data Visualization, and James Hemings," *American
-    Literature* 85.4 (2013): 661-88.
+    Digital Humanities," *DHQ* 9.2 (2015), and "Navigating the Global
+    Digital Humanities: Insights from Black Feminism," in *Debates in
+    Digital Humanities*, ed. Matthew K. Gold, Lauren Klein (Minneapolis:
+    University of Minnesota Press, 2016); Kim Gallon, "Making a Case for
+    the Black Digital Humanities," in *Debates in Digital Humanities*,
+    ed. Matthew K. Gold, Lauren Klein (Minneapolis: University of
+    Minnesota Press, 2016); Amy Earhart, "Can Information be Unfettered?
+    Race and the New Digital Humanities Canon," in *Debates in Digital
+    Humanities*, ed. Matthew K. Gold, Lauren Klein (Minneapolis:
+    University of Minnesota Press, 2012), 309-318; Lauren Klein, "The
+    Image of Absence: Archival Science, Data Visualization, and James
+    Hemings," *American Literature* 85.4 (2013): 661-688.
 
 [^41]: Alexis Lothian and Amanda Phillips, "Can Digital Humanities Mean
     Transformative Critique?" *E-Media Studies* 3.1 (2013):
@@ -887,16 +895,16 @@ theory and practice.
     large-scale social effects and individual cognitive processes that
     rely on schemas and tokenization, see Michèle Lamont, Stefan
     Beljean, and Matthew Clair, "What is Missing? Cultural Processes and
-    the Making of Inequality." *Socio-Economic Review*, 12.3 (2014):
+    the Making of Inequality," *Socio-Economic Review*, 12.3 (2014):
     573-608.
 
 [^43]: Alan Liu, \"[Drafts for Against the Cultural Singularity (book in
-    progress).](http://liu.english.ucsb.edu/drafts-for-against-the-cultural-singularity)\"
-    2 May
-    2016. [http://liu.english.ucsb.edu/drafts-for-against-the-cultural-singularity](https://liu.english.ucsb.edu/drafts-for-against-the-cultural-singularity).
+    progress),](http://liu.english.ucsb.edu/drafts-for-against-the-cultural-singularity)\"
+    Alan Liu \[blog\] 2 May 2016.
 
-[^44]: Lauren Klein, "Distant Reading after Moretti," Lauren F. Klein
-    \[blog\] (January 2018).
+[^44]: Lauren Klein, \"[Distant Reading after
+    Moretti](http://lklein.com/2018/01/distant-reading-after-moretti/),\"
+    *Lauren F. Klein* \[blog\] (January 2018).
 
 [^45]: Catherine D'Ignazio and Lauren F. Klein, "Feminist data
     visualization," in Workshop on Visualization for the Digital

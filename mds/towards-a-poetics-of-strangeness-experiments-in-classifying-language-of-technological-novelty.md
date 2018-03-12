@@ -870,10 +870,6 @@ strangeness can help us understand the continuities and feedbacks among
 the science fictions we accept to be possible, and the science fictions
 we accept, every day, to be true.
 
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::
-
 [^1]: Work by the Authors was partially supported by The National
     Aeronautics and Space Administration through the funding of
     a *Workshop on Understanding Literature and Art Cultures for

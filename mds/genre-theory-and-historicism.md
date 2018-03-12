@@ -195,10 +195,6 @@ tension between them. That is what we hope to have fostered here: a mode
 of inquiry about genre that revives substantive debate, and avoids
 falling back on a nominalistic shrug.
 
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::
-
 [^1]: Northrop Frye, *Anatomy of Criticism* (Princeton: Princeton
     University Press, 1957); Jacques Derrida and Avital Ronell, "The Law
     of Genre," *Critical Inquiry* 7, no. 1 (1980): 55-81.

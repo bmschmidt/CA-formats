@@ -931,10 +931,6 @@ conventions of a single genre.
 
  
 
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::
-
 [^1]: For Frye's formalist version of genre, see especially essay four
     of his *Anatomy of Criticism* (Princeton: Princeton UP, 1957). For
     Genette's more content-oriented approach, see *The Architext: An

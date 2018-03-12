@@ -631,10 +631,6 @@ increase the opportunities for serendipitous discovery.  From this
 perspective, *Visual Correspondence* demonstrates some of the
 possibilities inherent in all letter collections.
 
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::
-
 [^1]: For an example see: Martin Grandjean, \"[A social network analysis
     of Twitter: Mapping the digital humanities
     community](http://doi.org/10.1080/23311983.2016.1171458),\" *Cogent

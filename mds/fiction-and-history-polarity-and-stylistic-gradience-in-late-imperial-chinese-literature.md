@@ -1,5 +1,7 @@
 ---
+author: Paul Vierthaler
 date: '05.23.16'
+shortauthor: Paul Vierthaler
 shorttitle: Fiction and History
 title: |
     Fiction and History: Polarity and Stylistic Gradience in Late Imperial
@@ -950,10 +952,6 @@ excellent explanation of the relationship among these texts.
 :::
 
  
-
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::
 
 [^1]: 
 

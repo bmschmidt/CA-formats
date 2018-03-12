@@ -990,10 +990,6 @@ strange characters, perhaps even some wearing red hats. Now, however,
 they will be better equipped to answer the question, "I wonder what he
 is doing here?"
 
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::
-
 [^1]: For example, see John Zemke, "Editor's Column. Archives,
     Databases, and Special Collections," *Oral Tradition* 28, no. 2
     (2014): 1-3; Desislava Paneva, Konstantin Rangochev, and Detelin

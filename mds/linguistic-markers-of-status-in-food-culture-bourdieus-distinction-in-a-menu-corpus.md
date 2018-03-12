@@ -944,10 +944,6 @@ out the effects of description length in words (loglength).
 
 Table A3.  Lexicons
 
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::
-
 [^1]: This work was supported in part by a research grant from Google,
     and by the Center for Advanced Study in the Behavioral Sciences at
     Stanford University. We are grateful for very helpful suggestions

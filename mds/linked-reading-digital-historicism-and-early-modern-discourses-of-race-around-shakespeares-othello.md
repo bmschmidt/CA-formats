@@ -1,7 +1,7 @@
 ---
-author: 'James Lee, Blaine Greteman, Jason Lee, and David Eichmann'
+author: 'James Jaehoon Lee, Blaine Greteman, Jason Lee, and David Eichmann'
 date: '01.25.18'
-shortauthor: 'James Lee et al.'
+shortauthor: 'James Jaehoon Lee et al.'
 shorttitle: Linked Reading
 title: |
     Linked Reading: Digital Historicism and Early Modern Discourses of Race
@@ -10,7 +10,7 @@ title: |
 
 ###### *Peer-Reviewed By: Rachel Buurma, Paul Yachnin*
 
-###### *Clusters: Race*
+###### *Clusters: [Race](http://culturalanalytics.org/2018/01/race/)*
 
 ###### *Article DOI: [10.22148/16.018](http://doi.org/10.22148/16.018)*
 
@@ -1088,10 +1088,6 @@ point, we may have the power to articulate alternative non-essentialist
 vocabularies, using Shakespeare's global text to rethink the idea of
 ethnic difference in today's globalized - and increasingly racialized -
 society.
-
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::
 
 [^1]: The authors are grateful to the Andrew W. Mellon Foundation's
     Digital Bridges for Humanistic Inquiry Grant and the University of

@@ -995,10 +995,6 @@ Is the github repo containing code, data, and metadata for the project,
 located here:\
 <https://github.com/tedunderwood/fiction>
 
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::
-
 [^1]: The author gratefully acknowledges the support of the NovelTM
     project, funded by Canada's Social Sciences and Humanities Research
     Council. Support for this project was also provided by Knowledge Lab

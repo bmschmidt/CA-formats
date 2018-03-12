@@ -16,6 +16,8 @@ title: 'The Transformation of Gender in English-Language Fiction'
 
 ###### *Journal ISSN: 2371-4549*
 
+###### *Cite: Ted Underwood, David Bamman, and Sabrina Lee, "The Transformation of Gender in English-Language Fiction," Cultural Analytics Feb. 13, 2018. DOI: [10.22148/16.019](http://doi.org/10.22148/16.019).*
+
  
 
 This essay explores the changing significance of gender in fiction,
@@ -868,10 +870,6 @@ exhausting their potential; these methods have a lot of room to run, and
 they could eventually have broad theoretical implications.
 
  
-
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::
 
 [^1]: The evidence used in this paper has depended heavily on the labor
     of other hands. The HathiTrust corpus we use was processed by Boris

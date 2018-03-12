@@ -1186,10 +1186,6 @@ of concern.
 
  
 
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::
-
 [^1]: Russell A. Berman, "Politics: Divide and Rule," *MLQ: Modern
     Language Quarterly* 62.4 (2001): 328.
 

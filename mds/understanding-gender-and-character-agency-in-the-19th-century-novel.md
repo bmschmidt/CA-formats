@@ -979,10 +979,6 @@ receive, understand, said, looks.
 
  
 
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::
-
 [^1]: Vladimir Propp, *Morphology of the Folktale: Second
     Edition* (Austin: University of Texas Press, 1968), 87.
 

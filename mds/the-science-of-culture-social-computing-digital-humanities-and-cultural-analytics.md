@@ -586,10 +586,6 @@ we think, see, and ultimately act on our knowledge.
 
  
 
-::: {.printfriendly .pf-alignright}
-[](# "Printer Friendly, PDF & Email"){.noslimstat}
-:::
-
 [^1]: In assembling this article, I am grateful to my colleagues from
     computer science and digital humanities fields for many discussions
     over the years. My gratitude also extends to the students, and
