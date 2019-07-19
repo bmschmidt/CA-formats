@@ -1,0 +1,1404 @@
+
+    <head>
+    <meta name="author" content="Laura B. McGrath, Devin Higgins, and Arend Hintze">
+    <title>Measuring Modernist Novelty</title>
+    <meta name="date" content="11.09.18">
+    <meta name="shortauthor" content="Laura B. McGrath, Devin Higgins, and Arend Hintze">
+    <meta name="shorttitle" content="Measuring Modernist Novelty">
+    </head>
+    
+	<div class="entry print-only">
+						 
+		 
+		<div class="post-1809 post type-post status-publish format-standard has-post-thumbnail hentry category-articles" id="post-1809">
+			<!-- Show post on single page if option enabled -->
+
+		
+					<h6><em>Peer-Reviewed By: Mark Algee-Hewitt; Elizabeth Dillon </em></h6>
+<h6><em>Clusters: <a href="http://culturalanalytics.org/2016/05/genre/" target="_blank" rel="noopener">Genre</a>, <a href="http://culturalanalytics.org/2018/11/change/" target="_blank" rel="noopener">Change</a></em></h6>
+<h6><em>Article DOI: <a href="http://doi.org/10.22148/16.027" target="_blank" rel="noopener">10.22148/16.027</a></em></h6>
+<h6><em>Dataverse DOI: <a href="https://doi.org/10.7910/DVN/VWCAON" target="_blank" rel="noopener">10.7910/DVN/VWCAON</a></em></h6>
+<h6><em>PDF DOI: <a href="https://doi.org/10.31235/osf.io/sgdph" target="_blank" rel="noopener">10.31235/osf.io/sgdph</a></em></h6>
+<h6><em>Journal ISSN: 2371-4549</em></h6>
+<h6><em>Cite: Laura McGrath, Devin Higgins, and Arend Hintze, "Measuring Modernist Novelty," <em>Journal of Cultural Analytics. </em>November 9, 2018.</em> <a href="https://doi.org/10.31235/osf.io/sgdph" target="_blank" rel="noopener">10.31235/osf.io/sgdph</a></h6>
+<p> </p>
+<p>One may as well begin with two overly-cited quotations about novelty.<sup><a href="#footnote_0_1809" id="identifier_0_1809" class="footnote-link footnote-identifier-link" title="The authors would like to thank Thomas Padilla for his early work on this project. The preliminary study of the Bloom Filter’s application to literary texts was conducted by Hintze, Higgins, and Thomas Padilla, and presented at DH2015 as “Patterns of Novelty in Literary Data.”">1</a></sup> <span style="line-height: 1.4em;">The first: "On or about December, 1910, human character changed." </span>And, more predictably: "Make It New!"</p>
+<p>That these two statements about change and innovation have been so frequently cited reveals a contradiction in modernist studies: novelty is commonplace, both for modernist writers and for literary critics. Novelty has become so firmly fixed as a central framing narrative for literary modernism that the two terms<span class="emdash">—</span>"novelty", "modernism"<span class="emdash">—</span>are often treated as synonymous. The period (roughly, 1890-1945) has been defined by its capacities for rupture and the rejection of tradition: a "paradigmatic shift, a major revolt;" " a ruthless break with any or all preceding historical conditions [...] characterized by a never-ending process of internal ruptures and fragmentations within itself;" "a powerful vortex of historical conditions that coalesce to produce sharp ruptures from the past [...] shattering change."<sup><a href="#footnote_1_1809" id="identifier_1_1809" class="footnote-link footnote-identifier-link" title="Astradur Eysteinsson, The Concept of Modernism (1990):  David Harvey, “Modernity and Modernism,” Modernism, ed. Tim Middleton (2003): 269; Susan Stanford Friedman, “Periodizing Modernism,” Modernism/modernity 13.3 (September, 2006): 433.">2</a></sup> These revolts, breaks, and ruptures coalesced into the definitive sense of newness that would come to define the age for modernists and modernist literary critics alike, producing an exhaustive, exhausting commitment to newness in all its forms:</p>
+<blockquote><p>The new spirit, the new form, the new reality, the new object, new facts, new organisms, new life, new values, a new world, new cosmos, new society, new culture or civilization, new era or epoch, new time and new age, to which the new consciousness and enhanced susceptibility would respond with a new sensitivity, a new corporeality, a new psychology aroused by new sensations; and these would give rise, naturally, to a new aesthetics, a new beauty <span class="emdash">—</span>a new realism and a new archaism, enforced by a new rhythm<span class="emdash">—</span>arising from new means and new methods: a new art, architecture, plastic expression, poetry, literature, new words and new language, music, drama, new optic realms, a new vision, a <em>new</em>. . . . The alacrity required to dispel the old order was audacious and impulsive, but it could always be called New.<sup><a href="#footnote_2_1809" id="identifier_2_1809" class="footnote-link footnote-identifier-link" title="Jed Rasula, “Make it New.” Modernism/modernity 17.4 (November, 2010): 713-733.">3</a></sup></p></blockquote>
+<p>Then as now, the "new" means everything and nothing, as Jed Rasula's catalog aptly demonstrates. Novelty is so capacious a concept that it is a challenge to operationalize and measure<span class="emdash">—</span>the very processes that would provide a  deeper understanding of both the concept and its significance in modernism, literary history,  and beyond. In this essay, we propose a method to measure one type of literary novelty<span class="emdash">—</span>not distinct to, but emblematic of, high modernism: intratextuality. Situating modernism's literary innovations in the context of contemporaneous linguistic and scientific theory, Michael Levenson coined the term "intratextuality" to describe modernism's "aesthetic of composites" in his essay "Novelty, Modernity, Adjacency. <sup><a href="#footnote_3_1809" id="identifier_3_1809" class="footnote-link footnote-identifier-link" title="”Michael Levenson, “Novelty, Modernity, Adjacency.” New Literary History 42.4 (2011): 663-680.">4</a></sup> In keeping with Levenson's scientifically-inflected definition of modernist novelty, we derive our methods from computational biology and metagenomics, applying a Bloom Filter to the study of literary texts.</p>
+<p>"Novelty" is a concept that has fascinated scientists, philosophers, and mathematicians as much as literary critics, as Michael North has shown; it is a field-specific term, taking on different meanings and tonal registers in different disciplines.<sup><a href="#footnote_4_1809" id="identifier_4_1809" class="footnote-link footnote-identifier-link" title="See North, Michael. Novelty: A History of the New (2015).">5</a></sup> While literary critics such as Rasula may treat novelty as "new words and a new language," metagenomicists, for instance, understand novelty as a genetic mutation. A number of methods have been developed in bioinformatics in order to detect, measure, and analyze these instances of genetic novelty<span class="emdash">—</span>methods that, when applied to literary texts, grant us a means of tracking novelty at its most microscopic level: the individual character. To that end, the aims of this essay are threefold: first, to demonstrate the potential of metagenomic methods for the analysis of intratextual novelty; second, to validate the measurement through close reading; third, to propose provisional hypotheses about the basic shapes of intratextual novelty that emerge from our preliminary results. Our hope is that this early analysis<span class="emdash">—</span>a sort of methodological provocation<span class="emdash">—</span>might open new possibilities for question, conversation, and collaboration.</p>
+<p><em> </em></p>
+<h1 style="text-align: center;">Methods: Intratextual Novelty and The Bloom Filter</h1>
+<p>Modernist novelty has been described as encompassing, but irreducible to "formal experiment, dislocation of conventional syntax, radical breaches of decorum, disturbance of chronology and spatial order, polysemy, obscurity, mythopoeic allusion, primitivism, irrationalism, structuring by symbol and motif rather than by narrative or argumentative logic"<span class="emdash">—</span>to say nothing of the novelties of mass culture: advertisements, paperbacks, and pulps.  A number of formal literary innovations were often revisions of past forms, such as Eliot's reliance on myth, rather than wholly new artistic experiments. A number of contradictions, then, rest at the heart of modernist novelty: both a rupture of epistemic newness and dime store tchotchkes, at once avant-garde and culture industry, equally innovation and renovation.</p>
+<p>Beyond the definitional, novelty raises the problems of context and scale <span class="emdash">—</span>that is, "new" and "not new" are constantly moving targets. "Novelty" is a comparative, contextual evaluation, judged only in relationship to the typical, the commonplace, the conventional, or the familiar. With each appearance of the new, both convention and the potential for innovation shift,<sup><a href="#footnote_5_1809" id="identifier_5_1809" class="footnote-link footnote-identifier-link" title="Novelty is not only always relative to what has come before it, but it also lays the groundwork for whatever novelty may surpass it, rearranging what scientists have called “the adjacent possible.” Recent research attempting to test the intuition that one novelty begets another, has shown that the concept of novelty (describing a formation that is new only from a particular perspective, e.g. in the reader’s experience moving page by page through a novel) is strongly linked to the concept of innovation (describing a formation that is new to all perspectives, e.g. to all readers in relation to their larger reading lives). Both forms of newness, local and global, appear to align with the same mathematical models whereby if “a novelty of any kind occurs, it does not occur alone. It comes with an entourage of surrounding possibilities, a cloud of other potentially new ideas or experiences that are thematically adjacent to it and hence can be triggered by it.” See F. Tria,  V. Loreto, V. D. P. Servedio, and S. H. Strogatz. “The Dynamics of Correlated Novelties.” Nature (July 2014).">6</a></sup> a problem that T.S. Eliot considered at length in his seminal essay, "Tradition and the Individual Talent": "The existing monuments form an ideal order among themselves, which is modified by the introduction of the new (the really new) work of art among them... for order to persist after the supervention of novelty, the <em>whole</em> existing order must be, if ever so slightly, altered; and so the relations, proportions, values of each work of art toward the whole are readjusted."<sup><a href="#footnote_6_1809" id="identifier_6_1809" class="footnote-link footnote-identifier-link" title="T.S. Eliot and Frank Kermode, Selected Prose of T.S. Eliot. (New York: Farrar, Straus, and Giroux, 1988), 38.">7</a></sup> For Eliot, novelty's comparative nature is also a problem of scale, in which the context of the "whole existing order" is both ever-shifting <em>and</em> ever-expanding. Eliot's "new (the really new)" would be methodologically impossible to measure.</p>
+<p>In his essay, "Novelty, Modernity, Adjacency," Michael Levenson advances a heuristic for understanding novelty-in-context: intratextuality. Instead of the revolutionary novel, Levenson proposes intratextuality as model of the <em>relationally</em> novel, developed in response to both Bertram Russell's logical atomism and Saussurean linguistics. Levenson writes, "Intratextuality designates all those relations threaded within the boundaries of the artifact itself, all the mirroring and summoning of one piece of text by another... the tonal play that aligns distant elements without building narrative connections...The persistent impulse to say it again as said before, to repeat and resume, to gather up the foregoing words of the text, to have them melt into one another... assemble[d] into an echo chamber of mutual relations." <sup><a href="#footnote_7_1809" id="identifier_7_1809" class="footnote-link footnote-identifier-link" title="Michael Levenson, “Novelty, Modernity, Adjacency.” New Literary History 42.4 (2011): 668-70.">8</a></sup> The result is an "aesthetic of composites, multivoiced, polyphonic compounds," representative of the usual high modernist suspects <span class="emdash">—</span>"The Waste Land," <em>Ulysses, </em>montage, Cubism. Modernism's inheritance, Levenson argues, is the "inveterate relation of novelty and context," made particularly apparent by moments of intratextuality. Intratextual novelty is not an absolute novelty, in which individual work readjusts an Eliotic "whole existing order," but rather, novelty contained within a text<span class="emdash">—</span>the means by which an individual text might evince novelty within itself. Delimiting novelty's context to the boundaries of a text provides a much more stable basis for sorting the "new" from the "not new," and an eminently more measurable scale. It is here that we begin, adopting Levenson's concept of intratextuality as a means of operationalizing novelty as a high modernist form.</p>
+<p>To identify moments of novelty within the context of the familiar, we turn to bioinformatics, a field that poses similar questions about novelty vs. familiarity - not about literature, but about genetics, studying the progression of genetic sequences for previously unseen materials.<sup><a href="#footnote_8_1809" id="identifier_8_1809" class="footnote-link footnote-identifier-link" title="Indeed, as Alberto Piazza reflects in his Afterward to Franco Moretti’s Graphs, Maps, and Trees, literary theorists and biologists share a great many metaphors: Scientists and philosophers alike rely on the alphabetic sequence and, even, the metaphor of poetic inspiration to describe complex, evolutionary problems; DNA is translated and transcribed, not to mention written, copied, and, increasingly, edited. See Franco Moretti, Graphs, Maps, and Trees. (New York: Verso, 2007).">9</a></sup> Novelty, in this context, means that a particular DNA sequence either deviates subtly from an earlier found sample or has never been seen before. In order to identify novelty within samples, metagenomicists employ a probabilistic, memory-efficient data structure called the Bloom Filter, which trades an acceptable amount of error for enough data capacity to work at scale.<sup><a href="#footnote_9_1809" id="identifier_9_1809" class="footnote-link footnote-identifier-link" title="For more on the ways that Bloom Filter has been used to measure genetic novelty, see Jason Pell, Arend Hintze, Rosangela Canino-Koning, Adina Howe, James M. Tiedje, and C. Titus Brown, “Scaling Metagenome Sequence Assembly with Probabilistic de Bruijn Graphs.” Proceedings of the National Academy of Sciences 109, no. 33 (2012): 13272-13277.">10</a></sup> Simply put, the Bloom Filter determines whether or not an element is a part of a set, allowing scientists to quickly identify moments of genetic variance for further study.<sup><a href="#footnote_10_1809" id="identifier_10_1809" class="footnote-link footnote-identifier-link" title="The Bloom Filter and the models that we employ in this essay are similar to the sorts of sequence analysis that has recently found its way into computational studies of culture. See Alexander T.J. Barron, Jenny Huang, Rebecca L. Spang, and Simon DeDeo, “Individuals, Institutions, and Innovation in the Debates of the French Revolution.” Proceedings of the National Academy of Sciences of the United States of America (2018); Shaobin Xu, David A. Smith, Abigail Mullen, and Ryan Cordell, “Detecting and Evaluating Local Text Reuse in Social Networks.” Proceedings of the Joint Workshop on Social Dynamics and Personal Attributes, Association for Computational Linguistics (2014): 50-57; and Richard Jean So, Hoyt Long, and Yuancheng Zhu, “The Dark Code: Race, Computation and the History of White-Black Literary Relations, 1880-2000.” CA, forthcoming.">11</a></sup> When applied to literature, the Bloom Filter makes it possible to computationally identify moments of heightened or diminished newness within a text ("has this string of text been seen before?"), as well as the degree of internal variation or novelty that occurs across the text as a whole ("how many times?"). Instead of an externally defined comparison ("the whole existing order"), the Bloom Filter analyzes character-sequence novelty within a text itself, providing us a measurement of intratextual novelty.</p>
+<p>The Filter scans the entirety of a text, tracking the repetition of language at incredibly small, precise intervals called <em>k</em>-mers; in our case, a fixed 12-character window called a 12-mer. The Bloom Filter evaluates the text one k-mer at a time, starting at the beginning then advancing one character, such that 12-mer 1 of the English alphabet would be ABCDEFGHIJKL, 12-mer 2 would be BCDEFGHIJKLM, and the third 12-mer would be CDEFGHIJKLMN, and so on.<sup><a href="#footnote_11_1809" id="identifier_11_1809" class="footnote-link footnote-identifier-link" title="Punctuation and spaces are included in each k-mer, which are encoded according to their ASCII value using a modulo-32 operation to reduce the number of bits required to encode each character from 8 to 5.">12</a></sup> The Filter develops a growing database of k-mers, and each new k-mer is assessed for its presence (novelty score of 0, i.e., already in the database, therefore: not new) or absence (novelty score of 1, i.e., not in the database, therefore: new) in the database. The Bloom Filter is a data structure that achieves a workable efficiency at the cost of the occasional "hash collision," when the filter stores two pieces of information in the same spot, indistinguishably. So, the Bloom Filter will return false positives (identifying an unknown sequence as known), but never false negatives (identifying a known sequence as unknown). That is to say, while the Bloom Filter might erroneously mislabel a segment of text as "not novel," it never erroneously labels a text as "novel." Our novelty scores, therefore, are quite trustworthy, if erring on the conservative side. A text will remain 100% novel until the point at which a k-mer is repeated at any point in the text.<sup><a href="#footnote_12_1809" id="identifier_12_1809" class="footnote-link footnote-identifier-link" title="All code is available for use in our GitHub Repository: https://github.com/devinhiggins/Novelty-Filter">13</a></sup></p>
+<p>Consider this scan of Gertrude Stein's "A rose is a rose is a rose." (Table 1.) For ease of illustration, spaces are represented as underscores. While segments of Stein's sentence repeat - "rose"- only a perfect match of a k-mer is scored a 0.</p>
+
+<table id="tablepress-71-no-2" class="tablepress tablepress-id-71">
+<tbody class="row-hover">
+<tr class="row-1 odd">
+	<td class="column-1">A_rose_is_a_</td><td class="column-2">Novel</td><td class="column-3">1</td>
+</tr>
+<tr class="row-2 even">
+	<td class="column-1">_rose_is_a_r</td><td class="column-2">Novel</td><td class="column-3">1</td>
+</tr>
+<tr class="row-3 odd">
+	<td class="column-1">rose_is_a_ro</td><td class="column-2">Novel</td><td class="column-3">1</td>
+</tr>
+<tr class="row-4 even">
+	<td class="column-1">ose_is_a_ros</td><td class="column-2">Novel</td><td class="column-3">1</td>
+</tr>
+<tr class="row-5 odd">
+	<td class="column-1">se_is_a_rose</td><td class="column-2">Novel</td><td class="column-3">1</td>
+</tr>
+<tr class="row-6 even">
+	<td class="column-1">e_is_a_rose_</td><td class="column-2">Novel</td><td class="column-3">1</td>
+</tr>
+<tr class="row-7 odd">
+	<td class="column-1">_is_a_rose_</td><td class="column-2">Novel</td><td class="column-3">1</td>
+</tr>
+<tr class="row-8 even">
+	<td class="column-1">is_a_rose_i</td><td class="column-2">Novel</td><td class="column-3">1</td>
+</tr>
+<tr class="row-9 odd">
+	<td class="column-1">s_a_rose_is</td><td class="column-2">Novel</td><td class="column-3">1</td>
+</tr>
+<tr class="row-10 even">
+	<td class="column-1">_a_rose_is_</td><td class="column-2">Novel</td><td class="column-3">1</td>
+</tr>
+<tr class="row-11 odd">
+	<td class="column-1">a_rose_is</td><td class="column-2">Not novel</td><td class="column-3">0</td>
+</tr>
+<tr class="row-12 even">
+	<td class="column-1">_rose_is_a_r</td><td class="column-2">Not novel</td><td class="column-3">0</td>
+</tr>
+<tr class="row-13 odd">
+	<td class="column-1">rose_is_a_ro</td><td class="column-2">Not novel</td><td class="column-3">0</td>
+</tr>
+<tr class="row-14 even">
+	<td class="column-1">ose_is_a_ros</td><td class="column-2">Not novel</td><td class="column-3">0</td>
+</tr>
+<tr class="row-15 odd">
+	<td class="column-1">se_is_a_rose</td><td class="column-2">Not novel</td><td class="column-3">0</td>
+</tr>
+<tr class="row-16 even">
+	<td class="column-1">e_is_a_rose.</td><td class="column-2">Novel</td><td class="column-3">1</td>
+</tr>
+</tbody>
+</table>
+<!-- #tablepress-71-no-2 from cache -->
+<p>Table 1. Novelty Scores</p>
+<p>This example is illustrative of the importance of character sequence and order to the Bloom Filter. Though Stein repeats only three words, the word-sequence and punctuation are vital to the Filter's understanding of the text's relative novelty. If more variation were to enter this sequence, the filter would register novelty at the point in which the variable character was introduced.</p>
+<p>As this example demonstrates, approximately 59% of Stein's sentence is novel, at the level of character sequence. But imagine this scan occurring at the scale of the chapter, or the text. While variations of "a rose is" may not appear often, certainly character names ("Alice_B_To"), dialogue tags ("_she_said."), or Stein's characteristic repetition would cause her writing to register as less novel as the text progresses. To a Stein scholar, this finding may seem counter-intuitive; Stein's repetition is precisely what makes her work so innovative. However, because the Bloom Filter's assessment of character-sequence novelty ultimately registers patterns of relative newness and not-newness over the course of a text, atypical repetition like Stein's can be reclaimed as innovation in its own right, bringing a level of nuance and sophistication to our understanding of novelty beyond a simple proportion of unique words. By registering novelty at the level of the k-mer and the character, the Bloom Filter attends more closely to the stylistic components of text that are often elided, dismissed pragmatically as noise, reading (as in DNA) the most elemental components of language as raw data, from which we might make claims at the level of sentence, the paragraph, the chapter, the text. As a heuristic, we believe that the Bloom Filter's analysis of the smallest, most basic units of measurement in language helps us to peer in at something decidedly less basic, and, potentially impossible to ever fully capture in an algorithmic method: the sense of newness.</p>
+<p> </p>
+<h1 style="text-align: center;"><strong>Results: Visualizing Intratextual Novelty </strong></h1>
+<p>What does the Bloom Filter reveal at the scale of the book? What formal patterns emerge in innovation and repetition? And how do those patterns help us understand intratextual novelty? In order to process even larger pieces of data, the sequences of 0s and 1s is binned into intervals of 10,000 k-mers, computing the fraction of 1s in each interval as its novelty score. These scores can then be graphed, providing us with a general shape of how intratextual novelty unfolds in narrative time, from cover to cover. Each text begins with 100% novelty - none of it has been seen before - and novelty gradually decays as character sequences are repeated.<sup><a href="#footnote_13_1809" id="identifier_13_1809" class="footnote-link footnote-identifier-link" title="While it might be theoretically possible for novelty to steadily increase over a text, it is highly implausible; every graph produced by the Bloom Filter has a negative slope.">14</a></sup> The Bloom Filter reveals the ways in which character-sequence novelty unfolds throughout a text, how quickly and often k-mers are reused. The Bloom Filter thus registers moments of relative novelty, in which moments of newness are measured against the aggregated text that came before - or, novelty in context.</p>
+<div id="attachment_1819" style="width: 650px" class="wp-caption aligncenter"><a href="http://culturalanalytics.org/?attachment_id=1819"><img aria-describedby="caption-attachment-1819" class="wp-image-1819" src="http://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig1.png" alt="" width="640" height="322" srcset="https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig1.png 1035w, https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig1-300x151.png 300w, https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig1-768x386.png 768w, https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig1-1024x514.png 1024w" sizes="(max-width: 640px) 100vw, 640px" /></a><p id="caption-attachment-1819" class="wp-caption-text">Figure 1. This graph shows the course of novelty in George Eliot's <em>Middlemarch</em>. Along the x-axis are intervals of binned k-mers; the y-axis shows the degree of novelty. We see a fairly steady rate of decay, without much internal variation.</p></div>
+<p>In <em>Middlemarch</em>, for instance, novelty appears to decay at a steady, gradual rate from the novel's early intervals (see fig. 1). The peaks registering "novel" and valleys registering "not-novel" do not vary substantially from the best fit line (<em>r²</em>=0.8903), and occur at what appear to be fairly well-paced intervals. This suggests that the language of <em>Middlemarch</em> is fairly consistent, and exhibits very little internal variation. <em>Middlemarch</em> demonstrates usefully the limitations of the Bloom Filter. It would be a mistake to read this graph as a visual description of the shape of the novel's plot, sentiments, or narrative structure. Though novelty seems to increase in the novel's last, small interval, we cannot rightly say - either by interpreting this graph or by reading <em>Middlemarch </em>- that the novel has a surprise ending. We can say, however, that the language in <em>Middlemarch </em>appears to vary very little, and novelty appears to decay at a steady rate.</p>
+<p>By contrast, and in keeping with our filter's name, we turn to James Joyce's <em>Ulysses</em>. How would the filter register <em>Ulysses</em>'s novelty, if at all? Bloomian resonances aside, <em>Ulysses</em> is a useful counterpoint to <em>Middlemarch</em>: it's a common touchstone in discussions of novelty and the signal text in literary modernism. Levenson uses <em>Ulysses' </em>"telegraphic repetition" to make his case for modernist intratextuality. How would the novelty filter respond to a text that we presume, from the outset and without question, to be incredibly novel in distinctly modernist terms? Joyce's language is intentionally playful and experimental, providing ample opportunity to test the Bloom Filter's precision and flexibility for measuring intratextual novelty:<em> Ulysses</em> relies on a new language system for (almost) each episode, from the advert-speak of "Aeolus" to the catechism of "Ithaca." How does the Bloom Filter respond to these changes?</p>
+<div id="attachment_1820" style="width: 650px" class="wp-caption aligncenter"><a href="http://culturalanalytics.org/?attachment_id=1820"><img aria-describedby="caption-attachment-1820" class="wp-image-1820" src="http://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig2.png" alt="" width="640" height="329" srcset="https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig2.png 1020w, https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig2-300x154.png 300w, https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig2-768x395.png 768w" sizes="(max-width: 640px) 100vw, 640px" /></a><p id="caption-attachment-1820" class="wp-caption-text">Figure 2. This figure shows the course of novelty in James Joyce's <em>Ulysses</em>. We see a high level of variation in the novel's language, as the novelty scores do not conform to the best fit line.</p></div>
+<p>Unlike <em>Middlemarch</em>, the dispersal of character-sequence novelty throughout <em>Ulysses</em> appears uneven (see fig. 2). While the novelty of <em>Middlemarch </em>decays at a steady rate, <em>Ulysses </em>appears to exhibit a good deal of variation, suggesting both frequent innovation and repetition. While the graph of <em>Ulysses</em> is striking in its inconsistency, we need to return to the text in order to study these high and low points in detail. We wrote a Python script that marks up texts with intervals and running novelty scores to ease the process of cross-referencing and determining what textual features may have produced a given score (available for public access in our GitHub Repository).<sup><a href="#footnote_14_1809" id="identifier_14_1809" class="footnote-link footnote-identifier-link" title="See script and marked up texts at https://github.com/devinhiggins/Novelty-Filter/blob/master/texts/modernism/Joyce_Ulysses_intervals.txt">15</a></sup> An examination of <em>Ulysses</em> helps us to clarify the nature of the novelty laid out by the Bloom Filter: the percentage of the text that registers as "novel" is far less significant to our purposes than the ways that the text varies - how it repeats, revises, and recirculates textual material.</p>
+<p>After the early chapters (declining as Stephen Dedalus and Buck Mulligan speak, then jumping up again as the narrative shifts to Eccles Street), the major spike in novelty occurs around interval 90, approximately 55% of the way through the text. Even given Joyce's experimentation, this increase in novelty is dramatic<span class="emdash">—</span>particularly at the novel's midpoint. Interval 90 corresponds to episode 14, "Oxen of the Sun." An episode known for its difficulty, "Oxen of the Sun" rehearses the history of the English language as Bloom waits at the Holles Street maternity hospital during Mrs. Purefoy's labor and delivery. Yet, at some point in episode 14, the English language catches up to Joyce, and novelty begins to decline once more.</p>
+<p>Around interval 45, <em>Ulysses</em>' character-sequence novelty dips to a surprisingly low level. This decline corresponds to the beginning of episode 10, "Wandering Rocks," which presents a series of short vignettes about Dublin residents loosely connected to the Bloom and Dedalus families. The language is highly repetitive, both in word choice and sentence structure, with the character's full name in the subject position - "Father John Conmee" or "Blazes Boylan," without abbreviation - followed by a simple past tense verb (Father John Conmee walked, Father John Conmee thought, Father John Conmee smiled). The repetition in names and sentence structure would seem to account for this apparent drop in novelty. While "Wandering Rocks" demonstrates very little innovation in the form of (say) portmanteau or onomatopoeia, its character-sequence repetition in simple sentences represents a marked difference within <em>Ulysses</em>, particularly on the heels of the absurd rhetorical battle of episode 9, "Scylla and Charybdis." These low-points are significant, and should not be read as "not novel," but, as in our example of Gertrude Stein, moments of unusual character-sequence repetition that serve as a form of experimentation itself.</p>
+<p>Just as peaks in novelty scores indicate moments of high innovation, we suggest reading these valleys of moments of experimental repetition, a form of textual play and reinvention. The Bloom Filter most effectively highlights the interplay of sameness and difference that is a hallmark of intratextuality. In the context of fluctuating difference, sameness or repetition rightly appears as a formal choice. Because the Bloom Filter produces a measurement of <em>relative </em>novelty, moments of intense repetition (such as "Wandering Rocks") only make the bursts of new language (such as "Oxen of the Sun") all the more startling, and the spikes in our readouts steeper. The Bloom Filter thus helps us to positively value unusual repetition as a form of novelty in itself.</p>
+<p>It is tempting to read the novel's plot into the graph - to equate each peak with a new episode in Leopold Bloom's walk around Dublin. This simply is not the case; there is no direct correlation between novelty score and plot. While there are moments where the novelty scores correspond to important episodes in the novel, this is due to the language that Joyce employs in a particular episode; this clear correspondence would likely not appear in texts that are more singularly voiced. (Later examples will further illuminate this principle). Even still, the case of <em>Ulysses</em> helps us to clarify the type of novelty that the Bloom Filter can register at the scale of the single text. It would seem that it is especially well-suited to evaluating intratextual novelty in highly fragmentary, multivocal texts, like <em>Ulysses - </em>evaluating the ways that a text deploys novelty internally through reinvention, regeneration, or recycling textual material.</p>
+<p> </p>
+<h1 style="text-align: center;"><strong>Results: Comparing Intratextual Novelty</strong></h1>
+<p>Our first-pass, visual comparison between <em>Middlemarch</em> and <em>Ulysses</em> appears to indicate that <em>Middlemarch</em>ian novelty decays relatively consistently throughout and <em>Ulysses</em> displays wild intratextual variation. But how consistent or wild are each of these texts when compared to others? To understand the relative intratextual novelty of both texts, we compared  intratextual novelty scores on a mid-sized corpus. We rely on two primary metrics (depicted in the linear regressions above) to compare the intratextual novelty of multiple texts: <em>r²</em> and slope. Taken together, these two measures are surprisingly descriptive.</p>
+<p><em>Degree of Formal Variation: </em>We use <em>r²</em>  to describe the degree of formal variation. The <em>r²</em> value, typically a measurement of error, measures the relationship between the best-fit line and the running novelty scores. A high<em> r²</em> value (close to 1) indicates very little internal variation since the the best-fit line adequately describes the general shape of the novelty's decay (as in <em>Middlemarch</em>). A low <em>r²</em> value indicates that there is a high degree of internal variation, for the best fit line does not accurately describe the running novelty scores (as in <em>Ulysses</em>). The <em>r² </em>can handily describe the degree of variation in the language, accounting for both moments of striking newness and moments of unusual repetition.</p>
+<p><em>Rate of Novelty Decay:</em> By contrast, the slope tells us about the rate or pace of novelty decay, or how quickly a text becomes ingrained in its own linguistic milieu. A steep slope suggests that novelty depletes itself quickly and steadily; the novel's language is likely conventional (unto itself) and consistent throughout<span class="emdash">—</span>again, <em>Middlemarch</em>. A shallow slope, by contrast, indicates that a text decays slowly; said another way, a shallow slope indicates that variation occurs throughout the <em>entirety</em> of the text. The slope thus tells us something about the structure of intratextual novelty in the most general terms, without accounting for the shape of its unfolding, as the <em>r² </em>value does.</p>
+<p>By graphing the <em>r²</em> (degree of variation) and slope (rate of decay) together, we can see <em>how much</em> and <em>how often</em> variation occurs over the course of a text, allowing us to better clarify the contours of intratextual novelty. These two parameters provide a basis for comparing texts to one another (i.e., the intratextual novelty of Text A against the intratextual novelty of Text B) and have the potential to enable macro-level questions. By graphing the degree of variation against the rate of decay, we hypothesized, we could establish a set of parameters for typical intratextual novelty<span class="emdash">—</span>that is, the way that <em>most</em> texts exhibit novelty internally<span class="emdash">—</span> while accounting for variation in textual patterns.</p>
+<p>We ran the Bloom Filter against a corpus of texts, graphing each according to its degree of variation (x-axis) and rate of decay (y-axis). For this exploratory analysis, our corpus remained relatively small, only 410 Anglophone texts, spanning 1700-2016. We used English-language texts provided by the txtLAB 450 corpus.<sup><a href="#footnote_15_1809" id="identifier_15_1809" class="footnote-link footnote-identifier-link" title="Our thanks to Andrew Piper and the McGill University .txtlab for both sharing their post-1923 corpus, and making the Novel 450 corpus available for further research.">16</a></sup> Additionally, we developed a working list of 20th century titles by compiling publicly available doctoral field exam lists from leading universities, arriving at a relatively stable list of widely-held canonical titles, evenly dispersed over time. (See Appendix for a full list.)</p>
+<div id="attachment_1821" style="width: 650px" class="wp-caption aligncenter"><a href="http://culturalanalytics.org/?attachment_id=1821"><img aria-describedby="caption-attachment-1821" class="wp-image-1821" src="http://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig3.png" alt="" width="640" height="428" srcset="https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig3.png 958w, https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig3-300x201.png 300w, https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig3-768x514.png 768w" sizes="(max-width: 640px) 100vw, 640px" /></a><p id="caption-attachment-1821" class="wp-caption-text">Figure 3. This graph shows the novelty of 410 Anglophone novels. r² is measured along the x-axis, and slope is measured along the y-axis. Confidence intervals have been inserted, with p&lt;0.05. <em>Ulysses</em> is marked with a green arrow, and <em>Middlemarch</em> is marked with a red arrow.</p></div>
+<p>On the x-axis is the degree of variation (<em>r²)</em>, and on the y-axis, the rate of decay (slope). Texts that are closer to 1.0 on the x-axis exhibit a smaller degree of internal variation. The closer a text is to 0.00 on the y-axis, the slower the rate of decay. Theoretically, the text with the highest levels of intratextual novelty would be one with a completely flat slope and an <em>r²</em> value of 1.0 - high degrees of variation, consistent throughout the text. A more realistic version of high intratextual novelty, however, seems to couple very flat, slightly negative, slopes with correspondingly high degrees of internal variation. In figure 3, dotted lines represent confidence intervals of p &lt; 0.05; texts that fall outside of those dotted lines exhibit statistically significant levels of intratextual novelty. The centermost segment of the graph, where most texts fall, indicates a fairly standard degree of intratextual novelty: a moderate degree of internal variation and a moderate rate of decay. <em>Middlemarch</em> (marked with the red arrow) is positioned within this central cluster, and is typical of novels in our corpus.</p>
+<p>Many of the texts that exhibit an unusual degree of intratextual novelty have long been held up as exemplars of modernist novelty, giving us confidence in the validity of our measure. Yet many of these results surprise us. <em>Ulysses</em>, marked by a green arrow, is not quite as overwhelmingly novel as we presumed; while exhibiting a slower rate of decay, its degree of internal variation is actually not <em>statistically</em> significant to the degree we're measuring here. This is not to say that <em>Ulysses</em> is not a significantly novel text according to the Bloom Filter, but that different types of intratextual novelty emerged through our analysis.</p>
+<p> </p>
+<h2 style="text-align: center;">1. Intratextual Fragmentation: High, Sustained Variation</h2>
+<p>Novels that have both a significantly slow rate of decay and a significantly high degree of internal variation are our most novel texts, and are located in the top left corner of our graph; tellingly, only one novel falls in this region:<em> The Sound and the Fury. </em>No other text in our corpus exhibits anything close to this degree of intratextual novelty, in terms of both variation and continuity. (In a larger corpus, we believe that it is entirely plausible that other texts would exhibit novelty of this degree.)</p>
+<div id="attachment_1822" style="width: 650px" class="wp-caption aligncenter"><a href="http://culturalanalytics.org/?attachment_id=1822"><img aria-describedby="caption-attachment-1822" class="wp-image-1822" src="http://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig4.png" alt="" width="640" height="360" srcset="https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig4.png 979w, https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig4-300x169.png 300w, https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig4-768x431.png 768w" sizes="(max-width: 640px) 100vw, 640px" /></a><p id="caption-attachment-1822" class="wp-caption-text">Figure 4. This graph shows the course of novelty over William Faulkner's <em>The Sound and the Fury</em>. Within our corpus, The Sound and the Fury is by all measures novel, with a significantly shallow slope and a significantly low r². The bars on this graph show how often novelty falls outside standard margins of error.</p></div>
+<p>No other text in our corpus contains an interval score that exceeds that of the first interval; novelty consistently decays from the beginning of most texts. Here, however, the novel begins with a novelty score of .8998 in interval 1, then drops to a low-point of .748 at interval 9, before jumping up to .932 at interval 13. An examination of the binned text confirmed our suspicions: <em>The Sound and the Fury</em> famously opens with narrative written from the perspective of Benjy Compson, which consists of a great deal of word-level repetition, a limited vocabulary, and simple syntax. The novelty score begins shifting upward at interval 10, corresponding with the shift to Quentin Compson's point of view; novelty increases to a 1.0, entirely new in comparison to Benjy's narration, reflecting not only the point of view shift but the difference in language and syntactic complexity. While this result is consistent with a reading of the novel, and is a (more extreme) version of what we expected to see reflected in a graph of <em>The Sound and the Fury, </em>it is less the individual high- and low-points that are significant than the <em>degree</em> of difference between the two. To say that Benjy's point of view is somehow not-novel because the scores are so low is simply false; indeed, Benjy's narration is perhaps the most unusual aspect of <em>The Sound and the Fury</em>. Similarly, to say that Quentin's point of view is somehow more novel simply because of its high score is also disingenuous. The difference between these two sections, and the rather jarring shift, is what distinguishes <em>The Sound and the Fury</em> from other novels in our corpus.</p>
+<p><em>The Sound and the Fury</em> is also continuously novel, spiking again at interval 47; that is to say, the novel repeatedly reinvents itself, introducing new types of textual variation relatively late in the text. While the middle sections of the novel, narrated by Quentin and Jason Compson, do not vary substantially (all scores falling within the standard error range), the end of the novel peaks toward the beginning of "April Eighth, 1928." This may be due to the narrative emphasis on Dilsey and the prevalence of Faulkner's variation on black English; it may also be due to the shift from first person to third. Because the language shifts with each narrative perspective, and because the novel changes perspective continuously, <em>The Sound and the Fury</em> exhibits an especially flat slope. More than any other text we examined, <em>The Sound and the Fury</em> exhibits high and consistent textual variation, whereas other novels with multiple narrators (as in our next case, <em>The Color Purple</em>) taper off once the diverging voices have been introduced.</p>
+<p>That <em>The Sound and the Fury</em> should emerge as our most novel text confirmed our confidence in our measure's ability to capture the types of intratextual novelty most closely associated with modernism - novelty akin to fragmentation, montage, or a composite form. <em>The Sound and the Fury</em> is a fascinating example; no other text in our corpus match its internal variation or its consistent renovation. But it is also important to note that <em>The Sound and the Fury</em> is not the only Faulkner text in our corpus. We also included <em>As I Lay Dying, </em>for comparison's sake, and found that it falls within the typical range. Our intratextual novelty scores seem to be not necessarily a matter of oeuvre or aesthetic, but (appropriately) vary by text. For now, <em>The Sound and the Fury</em> is in a class of its own, a text that varies wildly in its Bloomian novelty, but when all is said and done, the final page turned, has also left a record of sustained textual invention.</p>
+<p> </p>
+<h2 style="text-align: center;"> 2. Dialogic Novelty: High Variation, Average Decay</h2>
+<p>Novels in Category 2 exhibit many of the same features as <em>The Sound and the Fury</em> by virtue of their equally high degree of internal variation: the language varies such that the best fit line does not accurately describe the majority of the text. While more texts exhibit this type of novelty than Category 1 novelty, it is still rather rare in our corpus. The texts that fall into this category, including <em>The Color Purple</em> and <em>A Portrait of the Artist as a Young Man</em>, would indicate that our results fall less neatly into categories than a continuum. We turn to <em>The Color Purple</em> for illustration. While the significance of <em>A Portrait of the Artist</em> is unsurprising, given our research team's  investment in literary modernism and our measure's apparent sensitivity to intratextual fragmentation, <em>The Color Purple</em> is associated neither with the modernist period, nor is it held up as an example of a modernist continuation beyond midcentury into the latter 20th. A closer investigation of Walker's novel is particularly illustrative of the Bloom Filter's limitations.</p>
+<p><em>The Color Purple</em> has a typical rate of decay. But the degree of internal variation is significantly high. <em>The Color Purple</em> is an epistolary novel, and like <em>The Sound and the Fury</em>, has more than one first-person narrator<span class="emdash">—</span>­Celie composes the majority of letters, first to God and then to her sister Nettie, who in return writes a number of letters to Celie. There is a fairly steep rate of decay in the first quarter of the novel, consistent with Celie's vocabulary and short letters. The novelty increases, however, once Celie discovers and begins reading Nettie's letters, hidden over a number of years (the biggest spike in novelty corresponds with Celie's <em>initial</em> discovery). Nettie's letters employ a more sophisticated vocabulary and sentence structure, in keeping with her education. Furthermore, Nettie's vocabulary is contextually different than Celie's. Nettie is a missionary in northern Africa, and her vocabulary reflects her immediate cultural context; Nettie's letters introduce nouns that would never occur in Celie's letters. Even still, while the  running novelty score peaks slightly each time the narration shifts between the sisters, it recalibrates to their respective vocabularies and contexts, decaying at a standard rate.</p>
+<div id="attachment_1823" style="width: 650px" class="wp-caption aligncenter"><a href="http://culturalanalytics.org/?attachment_id=1823"><img aria-describedby="caption-attachment-1823" class="wp-image-1823" src="http://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig5.png" alt="" width="640" height="361" srcset="https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig5.png 979w, https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig5-300x169.png 300w, https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig5-768x433.png 768w" sizes="(max-width: 640px) 100vw, 640px" /></a><p id="caption-attachment-1823" class="wp-caption-text">Figure 5. This graph shows the novelty of Alice Walker's <em>The Color Purple</em>, which exhibits a significantly low r² but a typical slope.</p></div>
+<p>The instances of unusual repetition in <em>The Color Purple</em> are especially instructive<span class="emdash">—</span>the name "dialogic novelty" is meant to gesture toward these low-points as much as the novel's structural dialogue between Celie and Nettie. Unlike Nettie's letters, Celie's, as the main narrative, consist of a great deal of dialogue. Celie writes without punctuation and with a great deal of repetition to indicate who is speaking and to whom. This passage, for example, comes from the interval with the lowest novelty score:</p>
+<blockquote><p>Too late to cry, Miss Eleanor Jane, say Sofia. [...]</p>
+<p>You just don't like him cause he look like daddy, say Miss Eleanor Jane.</p>
+<p>You don't like him cause he look like daddy, say Sofia. I don't feel nothing about him at all. I don't love him, I don't hate him. I just wish he couldn't run loose all the time messing up folks stuff.</p>
+<p>All the time! All the time! say Miss Eleanor Jane. Sofia, he just a baby. Not even a year old. He only been here five or six times.</p>
+<p>I feel like he been here forever, say Sofia.</p></blockquote>
+<p>This back and forth between Sofia and Eleanor Jane is fairly typical of the dialogue that Celie writes. With a sort of call-and-response structure, Sofia repeats much of what Eleanor Jane tells her, with slight differences, often implied tonally ("You just don't like him cause he look like daddy," and "You don't like him cause he look like Daddy"). Without punctuation, Celie also insists on repetitive dialogue tags<span class="emdash">—</span>"say Sofia" and "say Miss Eleanor Jane" repeat a number of times in this passage, consistent with all of the dialogue in the novel. Here, the measurement is somewhat deceptive. Dialogue is not the same thing as experimental repetition, in a Steinian sense, but the Bloom Filter, agnostic to the fictional content it scans, encodes these segments of texts similarly. This is not to say that <em>The Color Purple</em> is a false positive, but it does reveal the limitations of the measurement. The work of close reading remains necessary in order to understand the dynamics being measured, scored, and graphed.</p>
+<p> </p>
+<h2 style="text-align: center;">3. Maximalist Novelty: Average Variation, Slow Decay</h2>
+<p>Category 3 texts demonstrate a statistically significant level of novelty across one variable: slope. Category 3 texts sustain a novelty continuously over their length, but do not exhibit as much internal variation as the unusual exemplar in Category 1; interval novelty scores rarely exceed or fall below a standard margin of error, resulting in an non-significant <em>r²</em> score. The slopes, however, are statistically flatter than most texts in our corpus. Novels in this category include <em>Ulysses</em>, <em>Infinite Jest, </em>and<em> Gravity's Rainbow</em>. We'll take <em>Infinite Jest</em> as our example.</p>
+<p><em>Infinite Jest</em> (see Fig. 6) exhibits very little internal variation; its <em>r²</em> value falls within the typical range. Initially, the novel's typical <em>r² </em>score surprised us. We were expecting <em>Infinite Jest </em>to exhibit a higher degree of internal variation. In contrast to <em>The Sound and the Fury</em> and <em>Ulysses </em>(which exhibits a low, though still statistically insignificant <em>r²</em>)  <em>Infinite Jest</em> is more univocal on a narrative scale; while <em>The Sound and the Fury</em> and <em>The Color Purple</em> are focalized in the first-person and through a number of characters, <em>Infinite Jest</em> retains a consistently detached third-person narration. <em>Infinite Jest</em> owes its flat slope and significant score to one distinctive portion of the novel: the end.  Those familiar with the novel can likely hazard a guess why: the novel concludes with a dense and meticulously detailed appendix, beginning around interval 284. The "Notes and Errata" novelty scores are, true to their name, much more erratic.</p>
+<div id="attachment_1824" style="width: 650px" class="wp-caption aligncenter"><a href="http://culturalanalytics.org/?attachment_id=1824"><img aria-describedby="caption-attachment-1824" class="wp-image-1824" src="http://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig6.png" alt="" width="640" height="360" srcset="https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig6.png 979w, https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig6-300x169.png 300w, https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig6-768x431.png 768w" sizes="(max-width: 640px) 100vw, 640px" /></a><p id="caption-attachment-1824" class="wp-caption-text">Figure 6. This graph shows novelty over the course of David Foster Wallace's<em> Infinite Jest</em>. While the r²  is typical, the slope is significantly shallower than most texts in our corpus.</p></div>
+<p>The endnotes have dramatically influenced the shape of the novel, pulling the slope upward with their strange variations in form. Other texts that fall into this category also reflect this pattern, with the later portions of the text shifting in novelty and rendering the slope more shallow. Thomas Pynchon's <em>Gravity's Rainbow </em>also sits comfortably in this category. <em>Gravity's Rainbow </em>(see Fig. 7) begins with a rather steep decline. Around interval 125, however, the novelty levels off; a best-fit line drawn from interval 125 to the end of the novel would look relatively flat, easily characterizing the majority of the novel. While perhaps Pynchon and Wallace do not exhibit a great deal of innovation on the micro-level - or, at least, not much more than is typical - what novelty they do exhibit comes later in the text. <em>Infinite Jest</em>'s appendix is a limit case; we hypothesize that additional texts in this category would likely resemble something closer to <em>Gravity's Rainbow</em> than <em>Infinite Jest</em>.</p>
+<div id="attachment_1825" style="width: 650px" class="wp-caption aligncenter"><a href="http://culturalanalytics.org/?attachment_id=1825"><img aria-describedby="caption-attachment-1825" class="wp-image-1825" src="http://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig7.png" alt="" width="640" height="361" srcset="https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig7.png 979w, https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig7-300x169.png 300w, https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig7-768x433.png 768w" sizes="(max-width: 640px) 100vw, 640px" /></a><p id="caption-attachment-1825" class="wp-caption-text">Figure 7. This graph shows novelty over the course of Thomas Pynchon's <em>Gravity's Rainbow</em>. While the r²  is typical, the slope is significantly shallower than the most texts in our corpus.</p></div>
+<p>Our examples in this category raise the question: is this <em>postmodern</em> novelty? Does it speak to characteristics of the postmodern novel, typified by Wallace and Pynchon? While the presence of Ulysses seems to confound a neat period-specific reading, it perhaps suggests a continuity of literary experimentation in the twentieth century. As exemplars of their respective periods, the similarity of these texts may gesture towards a more singular modernity than a postmodern rupture. Rather than a question of periodization, we might also approach these texts with questions of form. These three texts are all quite long; perhaps this type of novelty has more to do with length than with any other stylistic category.<sup><a href="#footnote_16_1809" id="identifier_16_1809" class="footnote-link footnote-identifier-link" title="One would be forgiven for wondering at this point whether the Bloom Filter is simply biased toward longer texts: A line drawn from the novelty reading at point A (the beginning of the text) to point B (the ending) has a shallower slope the farther apart they are. Yet our data reveals that the longer texts we examine here really are generating as much new textual novelty over their length than their shorter yet otherwise identical counterparts. A bias in favor of “more novel” longer texts would be operative only if the novelty decay plateaued at some point, in which case extending the plateau a few hundred more pages would certainly seem to “artificially” elevate the calculated slope. Our analysis shows, however, that attempts to fit non-linear patterns of decay to the data do not return increased accuracy, and we do not see evidence of this plateauing effect. In fact, the high r2 values our maximalist texts tend to receive, indicate that their shallowly sloping novelty does not subside in ways a non-linear measure would capture.">17</a></sup> Perhaps we might say, instead, that the novels in this category, <em>Ulysses</em> included, represent a sort of maximalist tendency that reached its apex in postmodernism.<sup><a href="#footnote_17_1809" id="identifier_17_1809" class="footnote-link footnote-identifier-link" title="Stefano Ercolino has remarked on the relationship between length and maximalism, arguing that, “Length is not simply a neutral material aspect as regards the maximalist novel, but something more... It is a possibility that turns out to be related both to the strongly innovative and experimental nature of maximalist novels and to their ambition to realize synthetic-totalizing representations of the world.” See Ercolino, “The Maximalist Novel.” Comparative Literature 64.3 (2012): 241-256.">18</a></sup> So, just as the Bloom Filter is particularly well-suited to uncovering patterns in fragmentary texts, it may also be responsive to the long novels that characterize postmodernism. If not "postmodern" and if not simply "long," then perhaps we can see in this type a definition of Maximalist Novelty.</p>
+<p> </p>
+<h2 style="text-align: center;">4. Not Novelty: Very Little Variation, Fast Decay</h2>
+<p>Curiouser and curiouser. <em>Alice's Adventures in Wonderland</em> (see Fig. 8) provides us with another fascinating example. Like <em>The Sound and the Fury</em>,<em> Alice's Adventures in Wonderland</em> is the only text of its type, though others (including Carroll's <em>Through the Looking Glass</em>) do tend toward this type of novelty. While <em>The Sound and the Fury </em>has a uniquely low <em>r² </em>and shallow slope, <em>Alice's Adventures</em> is nearly its inverse: it has the steepest slope of any text in our corpus, though the <em>r² </em>is quite high; at times, there is very little variation between the best fit line and the novelty interval scores. This suggests that there is very little linguistic variation at the structural or vocabulary level.</p>
+<p><em>Alice in Wonderland</em> is not significant because of its high degree of internal variation or its slow decay; it is unique in terms of how little variation it exhibits. This may be related to any number of factors: its genre, its target audience (it is the only children's book in our corpus), its precocious narrational style. While these hypotheses are provocative, and may bear out with more testing, none of them seem to quite explain why <em>Alice</em> scores so distinctly according to the Bloom Filter.  <em>Alice's Adventures in Wonderland</em> offers an important corrective: all texts exhibit some novelty, according to our measure. To argue that the texts that fall within the typical novelty range are not novel is incorrect; as measure of intratextual novelty, the Bloom Filter gives each text an unfolding series of scores for how novel it is according to its own parameters. <em>Alice's Adventures in Wonderland</em> registers as significant for how little novelty it exhibits in comparison to our range of "normal" texts.</p>
+<div id="attachment_1826" style="width: 650px" class="wp-caption aligncenter"><a href="http://culturalanalytics.org/?attachment_id=1826"><img aria-describedby="caption-attachment-1826" class="wp-image-1826" src="http://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig8.png" alt="" width="640" height="361" srcset="https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig8.png 979w, https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig8-300x169.png 300w, https://culturalanalytics.org/wp-content/uploads/2018/10/McGrath_fig8-768x433.png 768w" sizes="(max-width: 640px) 100vw, 640px" /></a><p id="caption-attachment-1826" class="wp-caption-text">Figure 8. This figure shows the novelty of Lewis Carrol's <em>Alice's Adventures in Wonderland</em>. This text is significant for its relative lack of novelty: the slope is quite steep, and the r²is quite high.</p></div>
+<p>While only those texts that fall outside of the dotted lines are significantly novel, it is worth considering this typology as poles toward which novels tend on a continuum: novels with a lower <em>r² tend</em> to vary more syntactically; novels with a steeper slope <em>tend</em> to be more conventional. Though tendencies in novelty may not be statistically significant, they are nevertheless descriptive as we seek to understand the shapes that intratextual novelty takes, and provide a useful basis for comparing novelty across texts. By no means is this analysis exhaustive; rather, it offers an explanatory heuristic by which we might consider some basic shapes, patterns, and behaviors of intratextual novelty. Without question, there are more questions to be asked regarding languages, genres, and any number of other analytical categories.</p>
+<p> </p>
+<h1 style="text-align: center;"><strong>Conclusion</strong></h1>
+<p>This proof-of-concept has demonstrated the potential of the Bloom Filter to measure intratextual novelty and suggested ways that the results of this measurement might be brought to bear on larger questions of literary history, helping us to better understand the paradoxical concept of novelty and the literature that lays claims to it. Yet our results raise far more questions than they answer, first among them: does novelty really exist at the level of the alphabetic character? William James insisted that not even <em>meaning</em> could be drawn from the character level: "It is not as if men had first invented letters and made syllables out of them, then made words of the syllables and sentences of the words; - they actually followed the reverse order."<sup><a href="#footnote_18_1809" id="identifier_18_1809" class="footnote-link footnote-identifier-link" title="William James, “The Compounding of Consciousness” in Writings: 1902-1910 (New York: Library of America, 1987): 715.">19</a></sup> Yet words are also not made out of thin air - they do take form in specific and concrete languages obeying physical rules of morphology and phonology that do leave their traces in the accidents of spelling.  Still, can we argue that novelty can be measured at the level of the k-mer, an admittedly constructed unit of measurement? Certainly, the k-mer is not the "it" that Ezra Pound had in mind when he insisted upon making it new, not Eliot's "really new" that should disrupt and rearrange the nature of tradition. And, certainly, novelty cannot be disentangled from its cultural context. This measurement is an imperfect one, without question. Imperfect though the measurement might be, we believe that the Bloom Filter does provide a suitable proxy for the measurement of intratextual novelty, at both the micro and macro scales.</p>
+<p>Beyond demonstrating the effectiveness of Bloom Filter, our preliminary analysis raises a number questions, inviting further application of the measurement that can intervene in the literary history and periodicity of the 20<sup>th</sup> century. Consider two of our significantly novel texts: <em>Infinite Jest </em>and<em> Gravity's Rainbow</em>; intratextual novelty may, in fact, be more characteristic of postwar novels, prompting any number of questions regarding postmodernism's extension, negation, or response to earlier modernist experimentation. While, on the one hand, these results may affirm a lineage of 20<sup>th</sup> century maximalist experimentation<span class="emdash">—</span>from Joyce to Pynchon to Wallace<span class="emdash">—</span>they also seem to disrupt the periodizing narrative of modernism's conclusion on or about 1945.</p>
+<p>Alternatively, it seems equally plausible that, when taken as a whole, modernism may be far less novel than we thought<span class="emdash">—</span>that these statistically significant texts are, in fact, outliers. Recently, scholars of literary modernism have moved away from novelty as an explanatory feature of periodicity, instead considering modernism's relationship to the mundane, the quotidian, the obsolete, the ordinary, and the everyday.<sup><a href="#footnote_19_1809" id="identifier_19_1809" class="footnote-link footnote-identifier-link" title="Mark Goble writes, “It might even be the case that modernism persists for us today largely as an aesthetic of obsolescence… precisely because we no longer feel required to insist on modernism's novelty as the most important measure of its value,” (147). See “Obsolescence” in Eric Hayot and Rebecca Walkowitz, A New Vocabulary for Global Modernism. (New York: Columbia UP, 2016): 146. See also Liesl Olson, Modernism and the Ordinary. (New York: Oxford UP, 2009). Juan A Suárez, Pop Modernism: Noise and the Reinvention of the Everyday. (Champagne: U Illinois P, 2007). Bryony Randall, Modernism, Daily Time and Everyday Life. (New York: Cambridge UP, 2007).">20</a></sup> No connection between modernism and intratextual novelty would, in itself, be a fascinating result. While modernism is often defined by such figures as Joyce and Faulkner, a larger corpus of modernist fiction could reveal the exemplarity or exceptionality of their writing in the context of their contemporaries, widening or narrowing the Great Divide accordingly.</p>
+<p>Finally, what of <em>The Color Purple</em>? Among our statistically significant results, it is the only novel written by a woman, and the only novel written by a person of color<span class="emdash">—</span>authors who tend to be written out of the history of High Modernism (capital-H, capital-M) and, for the most part, postmodernism. On the one hand, <em>The Color Purple</em>'s presence may suggest limitations of the measurement<span class="emdash">—</span>dialogue mistaken for formal innovation. But perhaps the significance of <em>The Color Purple</em> prompts a reconsideration of the whitened and masculinized genealogy of 20<sup>th</sup> century experimentation. Perhaps Walker's formal innovations, as revealed by the Bloom Filter, challenge notions of literary experimentation and novelty.</p>
+<p>While these questions are provocative, they cannot be answered without expansion of this study and more creative applications of the Bloom Filter. As with any new form of measurement or hypothesis, only replication will validate the hypotheses we propose here. But we believe that this method is promising, particularly for scholars of literary modernism, and it is our hope that even more novel uses for the Bloom Filter might emerge in time.</p>
+<p> </p>
+<h2><strong>Appendix: Corpus</strong></h2>
+
+<table id="tablepress-75-no-2" class="tablepress tablepress-id-75">
+<thead>
+<tr class="row-1 odd">
+	<th class="column-1">PubYear</th><th class="column-2">AuthorName</th><th class="column-3">Title</th><th class="column-4">intervals</th><th class="column-5">lexicaldiversity</th><th class="column-6">r2</th><th class="column-7">slope</th>
+</tr>
+</thead>
+<tbody class="row-hover">
+<tr class="row-2 even">
+	<td class="column-1">1958</td><td class="column-2">Achebe,Chinua</td><td class="column-3">ThingsFallApart</td><td class="column-4">28</td><td class="column-5">0.103</td><td class="column-6">0.8736</td><td class="column-7">-0.0069</td>
+</tr>
+<tr class="row-3 odd">
+	<td class="column-1">1972</td><td class="column-2">Adams,Richard</td><td class="column-3">WatershipDown</td><td class="column-4">92</td><td class="column-5">0.061</td><td class="column-6">0.7903</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-4 even">
+	<td class="column-1">1907</td><td class="column-2">Ade,George</td><td class="column-3">TheSlimPrincess</td><td class="column-4">12</td><td class="column-5">0.202</td><td class="column-6">0.8533</td><td class="column-7">-0.006</td>
+</tr>
+<tr class="row-5 odd">
+	<td class="column-1">2008</td><td class="column-2">Adiga,Aravind</td><td class="column-3">TheWhiteTiger</td><td class="column-4">46</td><td class="column-5">0.103</td><td class="column-6">0.7345</td><td class="column-7">-0.0034</td>
+</tr>
+<tr class="row-6 even">
+	<td class="column-1">1847</td><td class="column-2">Aguilar,Grace</td><td class="column-3">HomeInfluence</td><td class="column-4">96</td><td class="column-5">0.055</td><td class="column-6">0.8134</td><td class="column-7">-0.0026</td>
+</tr>
+<tr class="row-7 odd">
+	<td class="column-1">1850</td><td class="column-2">Aguilar,Grace</td><td class="column-3">ValeofCedars</td><td class="column-4">54</td><td class="column-5">0.097</td><td class="column-6">0.848</td><td class="column-7">-0.0036</td>
+</tr>
+<tr class="row-8 even">
+	<td class="column-1">1872</td><td class="column-2">Ainsworth,William</td><td class="column-3">TheRoyalOak</td><td class="column-4">96</td><td class="column-5">0.081</td><td class="column-6">0.833</td><td class="column-7">-0.0026</td>
+</tr>
+<tr class="row-9 odd">
+	<td class="column-1">2012</td><td class="column-2">Albom,Mitch</td><td class="column-3">TimeKeeper</td><td class="column-4">21</td><td class="column-5">0.153</td><td class="column-6">0.9478</td><td class="column-7">-0.0076</td>
+</tr>
+<tr class="row-10 even">
+	<td class="column-1">1869</td><td class="column-2">Alcott,Louisa</td><td class="column-3">LittleWomen</td><td class="column-4">100</td><td class="column-5">0.061</td><td class="column-6">0.8324</td><td class="column-7">-0.0021</td>
+</tr>
+<tr class="row-11 odd">
+	<td class="column-1">2010</td><td class="column-2">Alexie,Sherman</td><td class="column-3">WarDances</td><td class="column-4">24</td><td class="column-5">0.153</td><td class="column-6">0.6533</td><td class="column-7">-0.0048</td>
+</tr>
+<tr class="row-12 even">
+	<td class="column-1">1868</td><td class="column-2">Alger, Horatio</td><td class="column-3">RaggedDick</td><td class="column-4">26</td><td class="column-5">0.1</td><td class="column-6">0.7974</td><td class="column-7">-0.0054</td>
+</tr>
+<tr class="row-13 odd">
+	<td class="column-1">1879</td><td class="column-2">Alger, Horatio</td><td class="column-3">TelegraphBoy</td><td class="column-4">20</td><td class="column-5">0.103</td><td class="column-6">0.7365</td><td class="column-7">-0.0054</td>
+</tr>
+<tr class="row-14 even">
+	<td class="column-1">2013</td><td class="column-2">AlireSaenz,Benjamin</td><td class="column-3">EverythingBeginsandEndsattheKentucky</td><td class="column-4">32</td><td class="column-5">0.089</td><td class="column-6">0.8372</td><td class="column-7">-0.0059</td>
+</tr>
+<tr class="row-15 odd">
+	<td class="column-1">1864</td><td class="column-2">Anon</td><td class="column-3">FromPillarToPost</td><td class="column-4">33</td><td class="column-5">0.131</td><td class="column-6">0.9375</td><td class="column-7">-0.0026</td>
+</tr>
+<tr class="row-16 even">
+	<td class="column-1">1940</td><td class="column-2">Armstrong,Margaret</td><td class="column-3">Trelawney</td><td class="column-4">148</td><td class="column-5">0.066</td><td class="column-6">0.2623</td><td class="column-7">-0.0051</td>
+</tr>
+<tr class="row-17 odd">
+	<td class="column-1">1891</td><td class="column-2">Atherton,Gertrude</td><td class="column-3">AQuestionOfTime</td><td class="column-4">21</td><td class="column-5">0.152</td><td class="column-6">0.8102</td><td class="column-7">-0.0045</td>
+</tr>
+<tr class="row-18 even">
+	<td class="column-1">1900</td><td class="column-2">Atherton,Gertrude</td><td class="column-3">SenatorNorth</td><td class="column-4">56</td><td class="column-5">0.089</td><td class="column-6">0.9115</td><td class="column-7">-0.0029</td>
+</tr>
+<tr class="row-19 odd">
+	<td class="column-1">2013</td><td class="column-2">Atkinson,Kate</td><td class="column-3">LifeAfterLife</td><td class="column-4">81</td><td class="column-5">0.106</td><td class="column-6">0.7972</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-20 even">
+	<td class="column-1">1985</td><td class="column-2">Atwood,Margaret</td><td class="column-3">TheHandmaidsTale</td><td class="column-4">53</td><td class="column-5">0.102</td><td class="column-6">0.7753</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-21 odd">
+	<td class="column-1">1811</td><td class="column-2">Austen,Jane</td><td class="column-3">SenseandSensibility</td><td class="column-4">67</td><td class="column-5">0.064</td><td class="column-6">0.8192</td><td class="column-7">-0.0033</td>
+</tr>
+<tr class="row-22 even">
+	<td class="column-1">1813</td><td class="column-2">Austen,Jane</td><td class="column-3">PrideandPrejudice</td><td class="column-4">68</td><td class="column-5">0.057</td><td class="column-6">0.8506</td><td class="column-7">-0.0035</td>
+</tr>
+<tr class="row-23 odd">
+	<td class="column-1">1813</td><td class="column-2">Austen,Jane</td><td class="column-3">PrideandPrejudice</td><td class="column-4">68</td><td class="column-5">0.056</td><td class="column-6">0.8336</td><td class="column-7">-0.0035</td>
+</tr>
+<tr class="row-24 even">
+	<td class="column-1">1814</td><td class="column-2">Austen,Jane</td><td class="column-3">MansfieldPark</td><td class="column-4">88</td><td class="column-5">0.053</td><td class="column-6">0.8699</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-25 odd">
+	<td class="column-1">1814</td><td class="column-2">Austen,Jane</td><td class="column-3">MansfieldPark</td><td class="column-4">88</td><td class="column-5">0.053</td><td class="column-6">0.8698</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-26 even">
+	<td class="column-1">1815</td><td class="column-2">Austen,Jane</td><td class="column-3">Emma</td><td class="column-4">88</td><td class="column-5">0.063</td><td class="column-6">0.8675</td><td class="column-7">-0.0027</td>
+</tr>
+<tr class="row-27 odd">
+	<td class="column-1">1916</td><td class="column-2">Baily, Waldron</td><td class="column-3">Thehomewardtrail</td><td class="column-4">33</td><td class="column-5">0.135</td><td class="column-6">0.9158</td><td class="column-7">-0.0041</td>
+</tr>
+<tr class="row-28 even">
+	<td class="column-1">1878</td><td class="column-2">Ballantyne,RM</td><td class="column-3">InTheTrackOfTheTroops</td><td class="column-4">51</td><td class="column-5">0.113</td><td class="column-6">0.8213</td><td class="column-7">-0.0022</td>
+</tr>
+<tr class="row-29 odd">
+	<td class="column-1">2005</td><td class="column-2">Banville,John</td><td class="column-3">TheSea</td><td class="column-4">33</td><td class="column-5">0.153</td><td class="column-6">0.9318</td><td class="column-7">-0.0042</td>
+</tr>
+<tr class="row-30 even">
+	<td class="column-1">2011</td><td class="column-2">Barnes,Julian</td><td class="column-3">SenseofAn</td><td class="column-4">23</td><td class="column-5">0.145</td><td class="column-6">0.934</td><td class="column-7">-0.0063</td>
+</tr>
+<tr class="row-31 odd">
+	<td class="column-1">1885</td><td class="column-2">Barr,Amelia</td><td class="column-3">JanVeeder'sWife</td><td class="column-4">35</td><td class="column-5">0.107</td><td class="column-6">0.8405</td><td class="column-7">-0.0044</td>
+</tr>
+<tr class="row-32 even">
+	<td class="column-1">1900</td><td class="column-2">Barr,Amelia</td><td class="column-3">TheMaidofMaidenLane</td><td class="column-4">44</td><td class="column-5">0.092</td><td class="column-6">0.9127</td><td class="column-7">-0.0039</td>
+</tr>
+<tr class="row-33 odd">
+	<td class="column-1">1911</td><td class="column-2">Barrie,J.M.</td><td class="column-3">PeterPan</td><td class="column-4">25</td><td class="column-5">0.106</td><td class="column-6">0.7937</td><td class="column-7">-0.0051</td>
+</tr>
+<tr class="row-34 even">
+	<td class="column-1">1786</td><td class="column-2">Beckford,William</td><td class="column-3">Vathek</td><td class="column-4">21</td><td class="column-5">0.174</td><td class="column-6">0.9269</td><td class="column-7">-0.0068</td>
+</tr>
+<tr class="row-35 odd">
+	<td class="column-1">2006</td><td class="column-2">Behrens,Peter</td><td class="column-3">LawofDreams</td><td class="column-4">63</td><td class="column-5">0.089</td><td class="column-6">0.829</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-36 even">
+	<td class="column-1">1887</td><td class="column-2">Bellamy,Edward</td><td class="column-3">LookingBackward</td><td class="column-4">44</td><td class="column-5">0.105</td><td class="column-6">0.6479</td><td class="column-7">-0.0035</td>
+</tr>
+<tr class="row-37 odd">
+	<td class="column-1">1902</td><td class="column-2">Bellamy,Edward</td><td class="column-3">Eleonora</td><td class="column-4">42</td><td class="column-5">0.121</td><td class="column-6">0.9143</td><td class="column-7">-0.0042</td>
+</tr>
+<tr class="row-38 even">
+	<td class="column-1">1964</td><td class="column-2">Bellow,Saul</td><td class="column-3">Herzog</td><td class="column-4">77</td><td class="column-5">0.12</td><td class="column-6">0.8867</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-39 odd">
+	<td class="column-1">1902</td><td class="column-2">Bennett,Arnold</td><td class="column-3">GrandBabylonHotel</td><td class="column-4">38</td><td class="column-5">0.104</td><td class="column-6">0.8547</td><td class="column-7">-0.004</td>
+</tr>
+<tr class="row-40 even">
+	<td class="column-1">2005</td><td class="column-2">Bergen,David</td><td class="column-3">TheTimeinBetween</td><td class="column-4">42</td><td class="column-5">0.086</td><td class="column-6">0.8866</td><td class="column-7">-0.0058</td>
+</tr>
+<tr class="row-41 odd">
+	<td class="column-1">1993</td><td class="column-2">Bickmore,Barbara</td><td class="column-3">DistantStar</td><td class="column-4">100</td><td class="column-5">0.072</td><td class="column-6">0.8607</td><td class="column-7">-0.0025</td>
+</tr>
+<tr class="row-42 even">
+	<td class="column-1">1913</td><td class="column-2">Biggers,EarlDerr</td><td class="column-3">SevenKeystoBaldPate</td><td class="column-4">43</td><td class="column-5">0.136</td><td class="column-6">0.8341</td><td class="column-7">-0.0027</td>
+</tr>
+<tr class="row-43 odd">
+	<td class="column-1">1869</td><td class="column-2">Blackmore,R.D.</td><td class="column-3">LornaDoone</td><td class="column-4">142</td><td class="column-5">0.054</td><td class="column-6">0.8561</td><td class="column-7">-0.0016</td>
+</tr>
+<tr class="row-44 even">
+	<td class="column-1">1996</td><td class="column-2">Blake,Jennifer</td><td class="column-3">SilverTonguedDevil</td><td class="column-4">60</td><td class="column-5">0.1</td><td class="column-6">0.9034</td><td class="column-7">-0.0034</td>
+</tr>
+<tr class="row-45 odd">
+	<td class="column-1">1796</td><td class="column-2">Bonhote,Elizabeth</td><td class="column-3">BungayCastle</td><td class="column-4">49</td><td class="column-5">0.089</td><td class="column-6">0.8389</td><td class="column-7">-0.0047</td>
+</tr>
+<tr class="row-46 even">
+	<td class="column-1">1843</td><td class="column-2">Borrow,George</td><td class="column-3">TheBibleinSpain</td><td class="column-4">124</td><td class="column-5">0.073</td><td class="column-6">0.8107</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-47 odd">
+	<td class="column-1">1981</td><td class="column-2">Bowie,Donald</td><td class="column-3">CableHarbor</td><td class="column-4">69</td><td class="column-5">0.111</td><td class="column-6">0.917</td><td class="column-7">-0.003</td>
+</tr>
+<tr class="row-48 even">
+	<td class="column-1">2008</td><td class="column-2">Boyden,Joseph</td><td class="column-3">ThroughBlackSpruce</td><td class="column-4">70</td><td class="column-5">0.068</td><td class="column-6">0.8851</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-49 odd">
+	<td class="column-1">1862</td><td class="column-2">Braddon,Mary</td><td class="column-3">LadyAudley'sSecret</td><td class="column-4">82</td><td class="column-5">0.076</td><td class="column-6">0.841</td><td class="column-7">-0.0029</td>
+</tr>
+<tr class="row-50 even">
+	<td class="column-1">1864</td><td class="column-2">Braddon,Mary</td><td class="column-3">HenryDunbar</td><td class="column-4">86</td><td class="column-5">0.073</td><td class="column-6">0.7223</td><td class="column-7">-0.0025</td>
+</tr>
+<tr class="row-51 odd">
+	<td class="column-1">1883</td><td class="column-2">Braddon,Mary</td><td class="column-3">TheGoldenCalf</td><td class="column-4">89</td><td class="column-5">0.084</td><td class="column-6">0.839</td><td class="column-7">-0.0021</td>
+</tr>
+<tr class="row-52 even">
+	<td class="column-1">1862</td><td class="column-2">Braddon,MaryElizabeth</td><td class="column-3">LadyAudleysSecret</td><td class="column-4">82</td><td class="column-5">0.076</td><td class="column-6">0.8381</td><td class="column-7">-0.0025</td>
+</tr>
+<tr class="row-53 odd">
+	<td class="column-1">1848</td><td class="column-2">Bronte,Ann</td><td class="column-3">TheTenantofWildfellHall</td><td class="column-4">93</td><td class="column-5">0.083</td><td class="column-6">0.8499</td><td class="column-7">-0.0026</td>
+</tr>
+<tr class="row-54 even">
+	<td class="column-1">1847</td><td class="column-2">Bronte,Charlotte</td><td class="column-3">JaneEyre</td><td class="column-4">104</td><td class="column-5">0.091</td><td class="column-6">0.8442</td><td class="column-7">-0.0015</td>
+</tr>
+<tr class="row-55 odd">
+	<td class="column-1">1847</td><td class="column-2">Bronte,Charlotte</td><td class="column-3">JaneEyre</td><td class="column-4">102</td><td class="column-5">0.08</td><td class="column-6">0.8431</td><td class="column-7">-0.0013</td>
+</tr>
+<tr class="row-56 even">
+	<td class="column-1">1847</td><td class="column-2">Bronte,Emily</td><td class="column-3">WutheringHeights</td><td class="column-4">66</td><td class="column-5">0.1</td><td class="column-6">0.9305</td><td class="column-7">-0.0031</td>
+</tr>
+<tr class="row-57 odd">
+	<td class="column-1">1847</td><td class="column-2">Bronte,Emily</td><td class="column-3">WutheringHeights</td><td class="column-4">64</td><td class="column-5">0.087</td><td class="column-6">0.9458</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-58 even">
+	<td class="column-1">1890</td><td class="column-2">Broughton,Rhoda</td><td class="column-3">Alas!</td><td class="column-4">83</td><td class="column-5">0.092</td><td class="column-6">0.8363</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-59 odd">
+	<td class="column-1">1798</td><td class="column-2">Brown,CharlesBrockden</td><td class="column-3">Wieland</td><td class="column-4">47</td><td class="column-5">0.091</td><td class="column-6">0.8579</td><td class="column-7">-0.0043</td>
+</tr>
+<tr class="row-60 even">
+	<td class="column-1">1799</td><td class="column-2">Brown,CharlesBrockden</td><td class="column-3">ArthurMervyn</td><td class="column-4">84</td><td class="column-5">0.068</td><td class="column-6">0.5781</td><td class="column-7">-0.0021</td>
+</tr>
+<tr class="row-61 odd">
+	<td class="column-1">2013</td><td class="column-2">Brown,Dan</td><td class="column-3">Inferno</td><td class="column-4">91</td><td class="column-5">0.101</td><td class="column-6">0.7628</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-62 even">
+	<td class="column-1">1856</td><td class="column-2">Browning,ElizabethBarrett</td><td class="column-3">AuroraLeigh</td><td class="column-4">48</td><td class="column-5">0.122</td><td class="column-6">0.8034</td><td class="column-7">-0.0018</td>
+</tr>
+<tr class="row-63 odd">
+	<td class="column-1">1994</td><td class="column-2">Bunn,TDavis</td><td class="column-3">RidersofthePaleHorse</td><td class="column-4">49</td><td class="column-5">0.125</td><td class="column-6">0.8485</td><td class="column-7">-0.003</td>
+</tr>
+<tr class="row-64 even">
+	<td class="column-1">1994</td><td class="column-2">Bunn,TDavis</td><td class="column-3">RidersofthePaleHorse</td><td class="column-4">49</td><td class="column-5">0.105</td><td class="column-6">0.8672</td><td class="column-7">-0.004</td>
+</tr>
+<tr class="row-65 odd">
+	<td class="column-1">1778</td><td class="column-2">Burney,Fanny</td><td class="column-3">Evelina</td><td class="column-4">86</td><td class="column-5">0.062</td><td class="column-6">0.8258</td><td class="column-7">-0.0029</td>
+</tr>
+<tr class="row-66 even">
+	<td class="column-1">1782</td><td class="column-2">Burney,Fanny</td><td class="column-3">Cecilia</td><td class="column-4">186</td><td class="column-5">0.039</td><td class="column-6">0.737</td><td class="column-7">-0.0014</td>
+</tr>
+<tr class="row-67 odd">
+	<td class="column-1">1796</td><td class="column-2">Burney,Fanny</td><td class="column-3">Camilla</td><td class="column-4">204</td><td class="column-5">0.041</td><td class="column-6">0.805</td><td class="column-7">-0.0013</td>
+</tr>
+<tr class="row-68 even">
+	<td class="column-1">1917</td><td class="column-2">Burroughs,EdgarRice</td><td class="column-3">TarzanoftheApes</td><td class="column-4">48</td><td class="column-5">0.091</td><td class="column-6">0.8119</td><td class="column-7">-0.0035</td>
+</tr>
+<tr class="row-69 odd">
+	<td class="column-1">1959</td><td class="column-2">Burroughs,William</td><td class="column-3">Naked Lunch</td><td class="column-4">49</td><td class="column-5">0.142</td><td class="column-6">0.7496</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-70 even">
+	<td class="column-1">1917</td><td class="column-2">Cahan,Abraham</td><td class="column-3">TheRiseofDavidLevinsky</td><td class="column-4">92</td><td class="column-5">0.07</td><td class="column-6">0.8991</td><td class="column-7">-0.0025</td>
+</tr>
+<tr class="row-71 odd">
+	<td class="column-1">1843</td><td class="column-2">Carlyle,Thomas</td><td class="column-3">PastandPresent</td><td class="column-4">62</td><td class="column-5">0.12</td><td class="column-6">0.5318</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-72 even">
+	<td class="column-1">1865</td><td class="column-2">Carroll,Lewis</td><td class="column-3">Alice'sAdventureinWonderland</td><td class="column-4">14</td><td class="column-5">0.104</td><td class="column-6">0.9473</td><td class="column-7">-0.0145</td>
+</tr>
+<tr class="row-73 odd">
+	<td class="column-1">1871</td><td class="column-2">Carroll,Lewis</td><td class="column-3">ThroughtheLookingGlass.txt</td><td class="column-4">16</td><td class="column-5">0.108</td><td class="column-6">0.8999</td><td class="column-7">-0.0102</td>
+</tr>
+<tr class="row-74 even">
+	<td class="column-1">1912</td><td class="column-2">Cather,Willa</td><td class="column-3">Alexander'sBridge</td><td class="column-4">14</td><td class="column-5">0.141</td><td class="column-6">0.92</td><td class="column-7">-0.008</td>
+</tr>
+<tr class="row-75 odd">
+	<td class="column-1">2013</td><td class="column-2">Catton,Eleanor</td><td class="column-3">Luminaries</td><td class="column-4">155</td><td class="column-5">0.073</td><td class="column-6">0.8215</td><td class="column-7">-0.0022</td>
+</tr>
+<tr class="row-76 even">
+	<td class="column-1">2011</td><td class="column-2">Chan,Darcie</td><td class="column-3">TheMillRiverRecluse</td><td class="column-4">66</td><td class="column-5">0.085</td><td class="column-6">0.768</td><td class="column-7">-0.0033</td>
+</tr>
+<tr class="row-77 odd">
+	<td class="column-1">1857</td><td class="column-2">Chatterton,Georgiana</td><td class="column-3">Lifeanditsrealities</td><td class="column-4">28</td><td class="column-5">0.122</td><td class="column-6">0.9227</td><td class="column-7">-0.006</td>
+</tr>
+<tr class="row-78 even">
+	<td class="column-1">1901</td><td class="column-2">Chesnutt,Mary</td><td class="column-3">MarrowofTradition</td><td class="column-4">50</td><td class="column-5">0.102</td><td class="column-6">0.8532</td><td class="column-7">-0.003</td>
+</tr>
+<tr class="row-79 odd">
+	<td class="column-1">1836</td><td class="column-2">Child,Lydia</td><td class="column-3">Philothea</td><td class="column-4">42</td><td class="column-5">0.103</td><td class="column-6">0.8748</td><td class="column-7">-0.0044</td>
+</tr>
+<tr class="row-80 even">
+	<td class="column-1">1890</td><td class="column-2">Chopin,Kate</td><td class="column-3">AtFault</td><td class="column-4">33</td><td class="column-5">0.148</td><td class="column-6">0.8695</td><td class="column-7">-0.0041</td>
+</tr>
+<tr class="row-81 odd">
+	<td class="column-1">1899</td><td class="column-2">Chopin,Kate</td><td class="column-3">TheAwakening</td><td class="column-4">27</td><td class="column-5">0.122</td><td class="column-6">0.8661</td><td class="column-7">-0.005</td>
+</tr>
+<tr class="row-82 even">
+	<td class="column-1">1899</td><td class="column-2">Chopin,Kate</td><td class="column-3">TheAwakening</td><td class="column-4">28</td><td class="column-5">0.121</td><td class="column-6">0.8714</td><td class="column-7">-0.0044</td>
+</tr>
+<tr class="row-83 odd">
+	<td class="column-1">2008</td><td class="column-2">Christensen,Kate</td><td class="column-3">GreatMan</td><td class="column-4">49</td><td class="column-5">0.126</td><td class="column-6">0.85</td><td class="column-7">-0.0038</td>
+</tr>
+<tr class="row-84 even">
+	<td class="column-1">2011</td><td class="column-2">Clark,MaryHiggins</td><td class="column-3">IllWalkAlone</td><td class="column-4">51</td><td class="column-5">0.083</td><td class="column-6">0.8748</td><td class="column-7">-0.0047</td>
+</tr>
+<tr class="row-85 odd">
+	<td class="column-1">1930</td><td class="column-2">Coates,RobertM</td><td class="column-3">TheOutlawYears</td><td class="column-4">38</td><td class="column-5">0.148</td><td class="column-6">0.8213</td><td class="column-7">-0.0031</td>
+</tr>
+<tr class="row-86 even">
+	<td class="column-1">2014</td><td class="column-2">Coben,Harlan</td><td class="column-3">MissingYou</td><td class="column-4">62</td><td class="column-5">0.097</td><td class="column-6">0.7807</td><td class="column-7">-0.0036</td>
+</tr>
+<tr class="row-87 odd">
+	<td class="column-1">1852</td><td class="column-2">Collins,Wilkie</td><td class="column-3">Basil</td><td class="column-4">63</td><td class="column-5">0.084</td><td class="column-6">0.8294</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-88 even">
+	<td class="column-1">1859</td><td class="column-2">Collins,Wilkie</td><td class="column-3">WomaninWhite</td><td class="column-4">135</td><td class="column-5">0.052</td><td class="column-6">0.812</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-89 odd">
+	<td class="column-1">1860</td><td class="column-2">Collins,Wilkie</td><td class="column-3">TheWomaninWhite</td><td class="column-4">135</td><td class="column-5">0.052</td><td class="column-6">0.8122</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-90 even">
+	<td class="column-1">1868</td><td class="column-2">Collins,Wilkie</td><td class="column-3">Moonstone</td><td class="column-4">105</td><td class="column-5">0.055</td><td class="column-6">0.8177</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-91 odd">
+	<td class="column-1">2012</td><td class="column-2">Connelly,Michael</td><td class="column-3">TheBlackBox</td><td class="column-4">62</td><td class="column-5">0.088</td><td class="column-6">0.7005</td><td class="column-7">-0.003</td>
+</tr>
+<tr class="row-92 even">
+	<td class="column-1">1899</td><td class="column-2">Conrad,Joseph</td><td class="column-3">HeartofDarkness</td><td class="column-4">21</td><td class="column-5">0.159</td><td class="column-6">0.9219</td><td class="column-7">-0.0056</td>
+</tr>
+<tr class="row-93 odd">
+	<td class="column-1">1899</td><td class="column-2">Conrad,Joseph</td><td class="column-3">HeartofDarkness</td><td class="column-4">21</td><td class="column-5">0.159</td><td class="column-6">0.922</td><td class="column-7">-0.0056</td>
+</tr>
+<tr class="row-94 even">
+	<td class="column-1">1907</td><td class="column-2">Conrad,Joseph</td><td class="column-3">SecretAgent</td><td class="column-4">52</td><td class="column-5">0.114</td><td class="column-6">0.8234</td><td class="column-7">-0.0033</td>
+</tr>
+<tr class="row-95 odd">
+	<td class="column-1">1921</td><td class="column-2">Conrad,Joseph</td><td class="column-3">TheShadowLine</td><td class="column-4">21</td><td class="column-5">0.136</td><td class="column-6">0.9035</td><td class="column-7">-0.0053</td>
+</tr>
+<tr class="row-96 even">
+	<td class="column-1">1826</td><td class="column-2">Cooper,JameFenimore</td><td class="column-3">TheLastoftheMohicans</td><td class="column-4">83</td><td class="column-5">0.068</td><td class="column-6">0.8947</td><td class="column-7">-0.0032</td>
+</tr>
+<tr class="row-97 odd">
+	<td class="column-1">1823</td><td class="column-2">Cooper,JamesFenimore</td><td class="column-3">ThePioneers</td><td class="column-4">95</td><td class="column-5">0.075</td><td class="column-6">0.8625</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-98 even">
+	<td class="column-1">1853</td><td class="column-2">Craik,Dinah</td><td class="column-3">Agatha'sHusband</td><td class="column-4">78</td><td class="column-5">0.081</td><td class="column-6">0.8994</td><td class="column-7">-0.0025</td>
+</tr>
+<tr class="row-99 odd">
+	<td class="column-1">1856</td><td class="column-2">Craik,Dinah</td><td class="column-3">JohnHalifax</td><td class="column-4">98</td><td class="column-5">0.081</td><td class="column-6">0.9295</td><td class="column-7">-0.0021</td>
+</tr>
+<tr class="row-100 even">
+	<td class="column-1">1945</td><td class="column-2">Crane,Frances</td><td class="column-3">TheIndigoNecklae</td><td class="column-4">33</td><td class="column-5">0.101</td><td class="column-6">0.9166</td><td class="column-7">-0.0059</td>
+</tr>
+<tr class="row-101 odd">
+	<td class="column-1">1892</td><td class="column-2">Crane,Stephen</td><td class="column-3">MaggieGirlOfTheStreets</td><td class="column-4">13</td><td class="column-5">0.189</td><td class="column-6">0.4886</td><td class="column-7">-0.008</td>
+</tr>
+<tr class="row-102 even">
+	<td class="column-1">1895</td><td class="column-2">Crane,Stephen</td><td class="column-3">TheRedBadgeofCourage</td><td class="column-4">25</td><td class="column-5">0.138</td><td class="column-6">0.8439</td><td class="column-7">-0.0057</td>
+</tr>
+<tr class="row-103 odd">
+	<td class="column-1">1895</td><td class="column-2">Crane,Stephen</td><td class="column-3">RedBadgeOfCourage</td><td class="column-4">26</td><td class="column-5">0.138</td><td class="column-6">0.8636</td><td class="column-7">-0.0048</td>
+</tr>
+<tr class="row-104 even">
+	<td class="column-1">1911</td><td class="column-2">Crockett,Samuel</td><td class="column-3">Theladyofthehundreddresses</td><td class="column-4">42</td><td class="column-5">0.124</td><td class="column-6">0.7131</td><td class="column-7">-0.0022</td>
+</tr>
+<tr class="row-105 odd">
+	<td class="column-1">1898</td><td class="column-2">Crockett,SR</td><td class="column-3">TheRedAxe</td><td class="column-4">59</td><td class="column-5">0.091</td><td class="column-6">0.8864</td><td class="column-7">-0.003</td>
+</tr>
+<tr class="row-106 even">
+	<td class="column-1">1920</td><td class="column-2">Cullum,Ridgwell</td><td class="column-3">TheheartofUnaga</td><td class="column-4">72</td><td class="column-5">0.076</td><td class="column-6">0.9282</td><td class="column-7">-0.0026</td>
+</tr>
+<tr class="row-107 odd">
+	<td class="column-1">1920</td><td class="column-2">Curwood,JamesOliver</td><td class="column-3">TheValleyofSilentMen</td><td class="column-4">40</td><td class="column-5">0.088</td><td class="column-6">0.905</td><td class="column-7">-0.005</td>
+</tr>
+<tr class="row-108 even">
+	<td class="column-1">1861</td><td class="column-2">Davis,Lydia</td><td class="column-3">LifeintheIronMills</td><td class="column-4">8</td><td class="column-5">0.208</td><td class="column-6">0.9627</td><td class="column-7">-0.0076</td>
+</tr>
+<tr class="row-109 odd">
+	<td class="column-1">1920</td><td class="column-2">Day,Clarence</td><td class="column-3">TheSimianWorld</td><td class="column-4">8</td><td class="column-5">0.234</td><td class="column-6">0.5559</td><td class="column-7">-0.0054</td>
+</tr>
+<tr class="row-110 even">
+	<td class="column-1">2013</td><td class="column-2">Day,Sylvia</td><td class="column-3">EntwinedwithYou</td><td class="column-4">60</td><td class="column-5">0.092</td><td class="column-6">0.842</td><td class="column-7">-0.0038</td>
+</tr>
+<tr class="row-111 odd">
+	<td class="column-1">1985</td><td class="column-2">DeLillo,DonWhite</td><td class="column-3">Noise</td><td class="column-4">59</td><td class="column-5">0.133</td><td class="column-6">0.8018</td><td class="column-7">-0.0027</td>
+</tr>
+<tr class="row-112 even">
+	<td class="column-1">1853</td><td class="column-2">Dickens,Charles</td><td class="column-3">BleakHouse</td><td class="column-4">193</td><td class="column-5">0.051</td><td class="column-6">0.8468</td><td class="column-7">-0.0013</td>
+</tr>
+<tr class="row-113 odd">
+	<td class="column-1">1859</td><td class="column-2">Dickens,Charles</td><td class="column-3">ATaleofTwoCities</td><td class="column-4">75</td><td class="column-5">0.079</td><td class="column-6">0.8459</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-114 even">
+	<td class="column-1">1861</td><td class="column-2">Dickens,Charles</td><td class="column-3">GreatExpectations</td><td class="column-4">99</td><td class="column-5">0.067</td><td class="column-6">0.8347</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-115 odd">
+	<td class="column-1">1861</td><td class="column-2">Dickens,Charles</td><td class="column-3">GreatExpectations</td><td class="column-4">99</td><td class="column-5">0.067</td><td class="column-6">0.835</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-116 even">
+	<td class="column-1">1826</td><td class="column-2">Disraeli,Benjamin</td><td class="column-3">VivianGrey</td><td class="column-4">109</td><td class="column-5">0.069</td><td class="column-6">0.7809</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-117 odd">
+	<td class="column-1">1837</td><td class="column-2">Disraeli,Benjamin</td><td class="column-3">Venetia</td><td class="column-4">91</td><td class="column-5">0.062</td><td class="column-6">0.7799</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-118 even">
+	<td class="column-1">1920</td><td class="column-2">DosPassos,John</td><td class="column-3">ThreeSoldiers</td><td class="column-4">73</td><td class="column-5">0.073</td><td class="column-6">0.696</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-119 odd">
+	<td class="column-1">1921</td><td class="column-2">DosPassos,John</td><td class="column-3">ThreeSoldiers</td><td class="column-4">74</td><td class="column-5">0.073</td><td class="column-6">0.7176</td><td class="column-7">-0.0021</td>
+</tr>
+<tr class="row-120 even">
+	<td class="column-1">1889</td><td class="column-2">Doyle,ArthurConan</td><td class="column-3">TheMysteryoftheCloomber</td><td class="column-4">26</td><td class="column-5">0.135</td><td class="column-6">0.7506</td><td class="column-7">-0.0043</td>
+</tr>
+<tr class="row-121 odd">
+	<td class="column-1">1891</td><td class="column-2">Doyle,ArthurConan</td><td class="column-3">TheDoingsofRafflesHaw</td><td class="column-4">20</td><td class="column-5">0.137</td><td class="column-6">0.9304</td><td class="column-7">-0.0068</td>
+</tr>
+<tr class="row-122 even">
+	<td class="column-1">1900</td><td class="column-2">Dreiser,Theodore</td><td class="column-3">SisterCarrie</td><td class="column-4">87</td><td class="column-5">0.068</td><td class="column-6">0.7411</td><td class="column-7">-0.0025</td>
+</tr>
+<tr class="row-123 odd">
+	<td class="column-1">1900</td><td class="column-2">Dreiser,Theodore</td><td class="column-3">SisterCarrie</td><td class="column-4">87</td><td class="column-5">0.068</td><td class="column-6">0.7692</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-124 even">
+	<td class="column-1">1912</td><td class="column-2">Dreiser,Theodore</td><td class="column-3">TheFinancier</td><td class="column-4">109</td><td class="column-5">0.067</td><td class="column-6">0.7517</td><td class="column-7">-0.0022</td>
+</tr>
+<tr class="row-125 odd">
+	<td class="column-1">1915</td><td class="column-2">Dreiser,Theodore</td><td class="column-3">TheGenius</td><td class="column-4">168</td><td class="column-5">0.052</td><td class="column-6">0.7869</td><td class="column-7">-0.0014</td>
+</tr>
+<tr class="row-126 even">
+	<td class="column-1">1896</td><td class="column-2">Dunbar,PaulLaurence</td><td class="column-3">TheUncalled</td><td class="column-4">27</td><td class="column-5">0.118</td><td class="column-6">0.6974</td><td class="column-7">-0.0033</td>
+</tr>
+<tr class="row-127 odd">
+	<td class="column-1">1987</td><td class="column-2">Dvorkin,David</td><td class="column-3">Budspy</td><td class="column-4">50</td><td class="column-5">0.11</td><td class="column-6">0.9017</td><td class="column-7">-0.0041</td>
+</tr>
+<tr class="row-128 even">
+	<td class="column-1">1800</td><td class="column-2">Edgeworth,Maria</td><td class="column-3">CastleRackrent</td><td class="column-4">18</td><td class="column-5">0.122</td><td class="column-6">0.7517</td><td class="column-7">-0.0067</td>
+</tr>
+<tr class="row-129 odd">
+	<td class="column-1">1801</td><td class="column-2">Edgeworth,Maria</td><td class="column-3">Belinda</td><td class="column-4">100</td><td class="column-5">0.06</td><td class="column-6">0.824</td><td class="column-7">-0.0025</td>
+</tr>
+<tr class="row-130 even">
+	<td class="column-1">1806</td><td class="column-2">Edgeworth,Maria</td><td class="column-3">Leonora</td><td class="column-4">36</td><td class="column-5">0.103</td><td class="column-6">0.9008</td><td class="column-7">-0.0052</td>
+</tr>
+<tr class="row-131 odd">
+	<td class="column-1">1860</td><td class="column-2">Eliot,George</td><td class="column-3">TheMillontheFloss</td><td class="column-4">114</td><td class="column-5">0.068</td><td class="column-6">0.831</td><td class="column-7">-0.0019</td>
+</tr>
+<tr class="row-132 even">
+	<td class="column-1">1861</td><td class="column-2">Eliot,George</td><td class="column-3">SilasMarner</td><td class="column-4">39</td><td class="column-5">0.108</td><td class="column-6">0.8683</td><td class="column-7">-0.0039</td>
+</tr>
+<tr class="row-133 odd">
+	<td class="column-1">1862</td><td class="column-2">Eliot,George</td><td class="column-3">Romola</td><td class="column-4">128</td><td class="column-5">0.075</td><td class="column-6">0.9069</td><td class="column-7">-0.0021</td>
+</tr>
+<tr class="row-134 even">
+	<td class="column-1">1871</td><td class="column-2">Eliot,George</td><td class="column-3">Middlemarch</td><td class="column-4">178</td><td class="column-5">0.058</td><td class="column-6">0.8904</td><td class="column-7">-0.0016</td>
+</tr>
+<tr class="row-135 odd">
+	<td class="column-1">1876</td><td class="column-2">Eliot,George</td><td class="column-3">DanielDeronda</td><td class="column-4">174</td><td class="column-5">0.058</td><td class="column-6">0.7949</td><td class="column-7">-0.0013</td>
+</tr>
+<tr class="row-136 even">
+	<td class="column-1">1952</td><td class="column-2">Ellison,Ralph</td><td class="column-3">InvisibleMan</td><td class="column-4">102</td><td class="column-5">0.083</td><td class="column-6">0.839</td><td class="column-7">-0.0022</td>
+</tr>
+<tr class="row-137 odd">
+	<td class="column-1">1988</td><td class="column-2">Fante,John</td><td class="column-3">FullofLife</td><td class="column-4">21</td><td class="column-5">0.154</td><td class="column-6">0.933</td><td class="column-7">-0.0065</td>
+</tr>
+<tr class="row-138 even">
+	<td class="column-1">1988</td><td class="column-2">Farelly,Peter</td><td class="column-3">OutsideProvidence</td><td class="column-4">25</td><td class="column-5">0.152</td><td class="column-6">0.9118</td><td class="column-7">-0.0064</td>
+</tr>
+<tr class="row-139 odd">
+	<td class="column-1">1929</td><td class="column-2">Faulkner,William</td><td class="column-3">SoundAndTheFury</td><td class="column-4">52</td><td class="column-5">0.086</td><td class="column-6">0.0915</td><td class="column-7">-9e-04</td>
+</tr>
+<tr class="row-140 even">
+	<td class="column-1">1930</td><td class="column-2">Faulkner,William</td><td class="column-3">AsILayDying</td><td class="column-4">30</td><td class="column-5">0.102</td><td class="column-6">0.8585</td><td class="column-7">-0.0051</td>
+</tr>
+<tr class="row-141 odd">
+	<td class="column-1">1873</td><td class="column-2">Fawcett,Edgar</td><td class="column-3">Purpleandfinelinen</td><td class="column-4">81</td><td class="column-5">0.09</td><td class="column-6">0.8547</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-142 even">
+	<td class="column-1">2012</td><td class="column-2">Ferguson,Will</td><td class="column-3">419</td><td class="column-4">64</td><td class="column-5">0.125</td><td class="column-6">0.8774</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-143 odd">
+	<td class="column-1">1920</td><td class="column-2">Fitzgerald,FScott</td><td class="column-3">ThisSideofParadise</td><td class="column-4">41</td><td class="column-5">0.138</td><td class="column-6">0.8811</td><td class="column-7">-0.0027</td>
+</tr>
+<tr class="row-144 even">
+	<td class="column-1">1922</td><td class="column-2">Fitzgerald,FScott</td><td class="column-3">TheBeautifulandtheDamned</td><td class="column-4">72</td><td class="column-5">0.11</td><td class="column-6">0.9354</td><td class="column-7">-0.0026</td>
+</tr>
+<tr class="row-145 odd">
+	<td class="column-1">1925</td><td class="column-2">Fitzgerald,FScott</td><td class="column-3">TheGreatGatsby</td><td class="column-4">26</td><td class="column-5">0.13</td><td class="column-6">0.942</td><td class="column-7">-0.0049</td>
+</tr>
+<tr class="row-146 even">
+	<td class="column-1">1934</td><td class="column-2">Fitzgerald,FScott</td><td class="column-3">TenderIsTheNight</td><td class="column-4">61</td><td class="column-5">0.112</td><td class="column-6">0.8795</td><td class="column-7">-0.0025</td>
+</tr>
+<tr class="row-147 odd">
+	<td class="column-1">2014</td><td class="column-2">Flanagan,Richard</td><td class="column-3">NarrowRoad</td><td class="column-4">67</td><td class="column-5">0.093</td><td class="column-6">0.7992</td><td class="column-7">-0.0029</td>
+</tr>
+<tr class="row-148 even">
+	<td class="column-1">1856</td><td class="column-2">Flaubert,Gustave</td><td class="column-3">MadameBovary</td><td class="column-4">65</td><td class="column-5">0.095</td><td class="column-6">0.9285</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-149 odd">
+	<td class="column-1">1993</td><td class="column-2">Flook,Maria</td><td class="column-3">FamilyNight</td><td class="column-4">42</td><td class="column-5">0.138</td><td class="column-6">0.9053</td><td class="column-7">-0.0047</td>
+</tr>
+<tr class="row-150 even">
+	<td class="column-1">2012</td><td class="column-2">Flynn,Gillian</td><td class="column-3">GoneGirl</td><td class="column-4">86</td><td class="column-5">0.098</td><td class="column-6">0.7247</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-151 odd">
+	<td class="column-1">2012</td><td class="column-2">Follett,Ken</td><td class="column-3">WinteroftheWorld</td><td class="column-4">185</td><td class="column-5">0.066</td><td class="column-6">0.8035</td><td class="column-7">-0.0013</td>
+</tr>
+<tr class="row-152 even">
+	<td class="column-1">1915</td><td class="column-2">Ford,FordMaddox</td><td class="column-3">TheGoodSoldier</td><td class="column-4">41</td><td class="column-5">0.101</td><td class="column-6">0.8972</td><td class="column-7">-0.0044</td>
+</tr>
+<tr class="row-153 odd">
+	<td class="column-1">1924</td><td class="column-2">Ford,FordMaddox</td><td class="column-3">ParadesEnd</td><td class="column-4">112</td><td class="column-5">0.091</td><td class="column-6">0.8491</td><td class="column-7">-0.0019</td>
+</tr>
+<tr class="row-154 even">
+	<td class="column-1">1915</td><td class="column-2">Ford,FordMadox</td><td class="column-3">TheGoodSoldier</td><td class="column-4">41</td><td class="column-5">0.101</td><td class="column-6">0.8882</td><td class="column-7">-0.0052</td>
+</tr>
+<tr class="row-155 odd">
+	<td class="column-1">1908</td><td class="column-2">Forster,E.M.</td><td class="column-3">ARoomWithaView</td><td class="column-4">37</td><td class="column-5">0.113</td><td class="column-6">0.9205</td><td class="column-7">-0.0036</td>
+</tr>
+<tr class="row-156 even">
+	<td class="column-1">1910</td><td class="column-2">Forster,E.M.</td><td class="column-3">HowardsEnd</td><td class="column-4">62</td><td class="column-5">0.093</td><td class="column-6">0.9059</td><td class="column-7">-0.0031</td>
+</tr>
+<tr class="row-157 odd">
+	<td class="column-1">1908</td><td class="column-2">Forster,EM</td><td class="column-3">RoomWithAView</td><td class="column-4">37</td><td class="column-5">0.112</td><td class="column-6">0.9099</td><td class="column-7">-0.0032</td>
+</tr>
+<tr class="row-158 even">
+	<td class="column-1">1910</td><td class="column-2">Forster,EM</td><td class="column-3">HowardsEnd</td><td class="column-4">61</td><td class="column-5">0.093</td><td class="column-6">0.9168</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-159 odd">
+	<td class="column-1">1996</td><td class="column-2">Foster,David</td><td class="column-3">InfiniteJest</td><td class="column-4">328</td><td class="column-5">0.087</td><td class="column-6">0.8222</td><td class="column-7">-7e-04</td>
+</tr>
+<tr class="row-160 even">
+	<td class="column-1">1797</td><td class="column-2">Foster,HannahWebster</td><td class="column-3">TheCoquette</td><td class="column-4">29</td><td class="column-5">0.101</td><td class="column-6">0.7815</td><td class="column-7">-0.0053</td>
+</tr>
+<tr class="row-161 odd">
+	<td class="column-1">2014</td><td class="column-2">Fowler,KarenJoy</td><td class="column-3">WeareAll</td><td class="column-4">46</td><td class="column-5">0.115</td><td class="column-6">0.8455</td><td class="column-7">-0.0036</td>
+</tr>
+<tr class="row-162 even">
+	<td class="column-1">1980</td><td class="column-2">Freed,Donald</td><td class="column-3">TheChinaCard</td><td class="column-4">48</td><td class="column-5">0.148</td><td class="column-6">0.8964</td><td class="column-7">-0.0031</td>
+</tr>
+<tr class="row-163 odd">
+	<td class="column-1">1894</td><td class="column-2">Freeman,MaryWilkins</td><td class="column-3">Pembroke</td><td class="column-4">44</td><td class="column-5">0.091</td><td class="column-6">0.7451</td><td class="column-7">-0.004</td>
+</tr>
+<tr class="row-164 even">
+	<td class="column-1">1821</td><td class="column-2">Galt,John</td><td class="column-3">AnnalsoftheParish</td><td class="column-4">35</td><td class="column-5">0.11</td><td class="column-6">0.842</td><td class="column-7">-0.005</td>
+</tr>
+<tr class="row-165 odd">
+	<td class="column-1">1848</td><td class="column-2">Gaskell,Elizabeth</td><td class="column-3">MaryBarton</td><td class="column-4">87</td><td class="column-5">0.068</td><td class="column-6">0.9286</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-166 even">
+	<td class="column-1">1848</td><td class="column-2">Gaskell,Elizabeth</td><td class="column-3">MaryBarton</td><td class="column-4">87</td><td class="column-5">0.068</td><td class="column-6">0.9366</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-167 odd">
+	<td class="column-1">1854</td><td class="column-2">Gaskell,Elizabeth</td><td class="column-3">NorthandSouth</td><td class="column-4">99</td><td class="column-5">0.067</td><td class="column-6">0.8538</td><td class="column-7">-0.0022</td>
+</tr>
+<tr class="row-168 even">
+	<td class="column-1">1854</td><td class="column-2">Gaskell,Elizabeth</td><td class="column-3">NorthAndsouth</td><td class="column-4">99</td><td class="column-5">0.066</td><td class="column-6">0.8503</td><td class="column-7">-0.0019</td>
+</tr>
+<tr class="row-169 odd">
+	<td class="column-1">2012</td><td class="column-2">Giffin,Emily</td><td class="column-3">WhereWeBelong</td><td class="column-4">60</td><td class="column-5">0.104</td><td class="column-6">0.9385</td><td class="column-7">-0.004</td>
+</tr>
+<tr class="row-170 even">
+	<td class="column-1">1891</td><td class="column-2">Gissing,George</td><td class="column-3">NewGrubStreet</td><td class="column-4">102</td><td class="column-5">0.059</td><td class="column-6">0.8537</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-171 odd">
+	<td class="column-1">1891</td><td class="column-2">Gissing,George</td><td class="column-3">NewGrubStreet</td><td class="column-4">102</td><td class="column-5">0.059</td><td class="column-6">0.8586</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-172 even">
+	<td class="column-1">1893</td><td class="column-2">Gissing,George</td><td class="column-3">TheOddWomen</td><td class="column-4">77</td><td class="column-5">0.072</td><td class="column-6">0.9089</td><td class="column-7">-0.003</td>
+</tr>
+<tr class="row-173 odd">
+	<td class="column-1">1893</td><td class="column-2">Gissing,George</td><td class="column-3">OddWomen</td><td class="column-4">77</td><td class="column-5">0.071</td><td class="column-6">0.903</td><td class="column-7">-0.0025</td>
+</tr>
+<tr class="row-174 even">
+	<td class="column-1">1794</td><td class="column-2">Godwin,William</td><td class="column-3">CalebWilliams</td><td class="column-4">81</td><td class="column-5">0.068</td><td class="column-6">0.8674</td><td class="column-7">-0.003</td>
+</tr>
+<tr class="row-175 odd">
+	<td class="column-1">1979</td><td class="column-2">Gordimer,Nadine</td><td class="column-3">BurgersDaughter</td><td class="column-4">73</td><td class="column-5">0.127</td><td class="column-6">0.8128</td><td class="column-7">-0.0021</td>
+</tr>
+<tr class="row-176 even">
+	<td class="column-1">1990</td><td class="column-2">Graham,Heather</td><td class="column-3">TheVikingsWoman</td><td class="column-4">70</td><td class="column-5">0.07</td><td class="column-6">0.8492</td><td class="column-7">-0.0033</td>
+</tr>
+<tr class="row-177 odd">
+	<td class="column-1">1893</td><td class="column-2">Grand,Sarah</td><td class="column-3">TheHeavenlyTwins</td><td class="column-4">156</td><td class="column-5">0.054</td><td class="column-6">0.8379</td><td class="column-7">-0.0017</td>
+</tr>
+<tr class="row-178 even">
+	<td class="column-1">1916</td><td class="column-2">Grey,Zan</td><td class="column-3">TheBorderLegion</td><td class="column-4">55</td><td class="column-5">0.093</td><td class="column-6">0.8705</td><td class="column-7">-0.0032</td>
+</tr>
+<tr class="row-179 odd">
+	<td class="column-1">1870</td><td class="column-2">Griffith,Cecil</td><td class="column-3">Valentine Forde</td><td class="column-4">24</td><td class="column-5">0.123</td><td class="column-6">0.9268</td><td class="column-7">-0.0055</td>
+</tr>
+<tr class="row-180 even">
+	<td class="column-1">2009</td><td class="column-2">Grisham,John</td><td class="column-3">TheAssociate</td><td class="column-4">61</td><td class="column-5">0.1</td><td class="column-6">0.9048</td><td class="column-7">-0.0031</td>
+</tr>
+<tr class="row-181 odd">
+	<td class="column-1">2006</td><td class="column-2">Gruen,Sara</td><td class="column-3">WaterforElephants</td><td class="column-4">57</td><td class="column-5">0.1</td><td class="column-6">0.8667</td><td class="column-7">-0.0041</td>
+</tr>
+<tr class="row-182 even">
+	<td class="column-1">1897</td><td class="column-2">HaggardRider</td><td class="column-3">Jess</td><td class="column-4">60</td><td class="column-5">0.084</td><td class="column-6">0.9307</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-183 odd">
+	<td class="column-1">1885</td><td class="column-2">Hammond,William</td><td class="column-3">Astrong-mindedwoman</td><td class="column-4">82</td><td class="column-5">0.08</td><td class="column-6">0.8408</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-184 even">
+	<td class="column-1">1874</td><td class="column-2">Hardy,Thomas</td><td class="column-3">FarFromtheMaddingCrowd</td><td class="column-4">76</td><td class="column-5">0.088</td><td class="column-6">0.9281</td><td class="column-7">-0.0025</td>
+</tr>
+<tr class="row-185 odd">
+	<td class="column-1">1891</td><td class="column-2">Hardy,Thomas</td><td class="column-3">TessoftheD'Urbervilles</td><td class="column-4">83</td><td class="column-5">0.093</td><td class="column-6">0.9056</td><td class="column-7">-0.0026</td>
+</tr>
+<tr class="row-186 even">
+	<td class="column-1">1891</td><td class="column-2">Hardy,Thomas</td><td class="column-3">TessoftheD'Urbervilles</td><td class="column-4">83</td><td class="column-5">0.092</td><td class="column-6">0.9177</td><td class="column-7">-0.0022</td>
+</tr>
+<tr class="row-187 odd">
+	<td class="column-1">1895</td><td class="column-2">Hardy,Thomas</td><td class="column-3">JudetheObscure</td><td class="column-4">80</td><td class="column-5">0.086</td><td class="column-6">0.8954</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-188 even">
+	<td class="column-1">1893</td><td class="column-2">Harraden,Beatrice</td><td class="column-3">ShipsThatPassintheNight</td><td class="column-4">20</td><td class="column-5">0.104</td><td class="column-6">0.8539</td><td class="column-7">-0.008</td>
+</tr>
+<tr class="row-189 odd">
+	<td class="column-1">1922</td><td class="column-2">Hart,FrancisRussel</td><td class="column-3">AdmiralsoftheCaribbean</td><td class="column-4">28</td><td class="column-5">0.146</td><td class="column-6">0.8516</td><td class="column-7">-0.0071</td>
+</tr>
+<tr class="row-190 even">
+	<td class="column-1">1850</td><td class="column-2">Hawthorne,Nathaniel</td><td class="column-3">TheScarletLetter</td><td class="column-4">48</td><td class="column-5">0.114</td><td class="column-6">0.93</td><td class="column-7">-0.004</td>
+</tr>
+<tr class="row-191 odd">
+	<td class="column-1">1851</td><td class="column-2">Hawthorne,Nathaniel</td><td class="column-3">TheHouseoftheSevenGables</td><td class="column-4">59</td><td class="column-5">0.108</td><td class="column-6">0.8654</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-192 even">
+	<td class="column-1">2007</td><td class="column-2">Hay,Elizabeth</td><td class="column-3">LateNights</td><td class="column-4">55</td><td class="column-5">0.113</td><td class="column-6">0.8808</td><td class="column-7">-0.0034</td>
+</tr>
+<tr class="row-193 odd">
+	<td class="column-1">1796</td><td class="column-2">Hays,Mary</td><td class="column-3">EmmaCourtney</td><td class="column-4">37</td><td class="column-5">0.13</td><td class="column-6">0.9309</td><td class="column-7">-0.0053</td>
+</tr>
+<tr class="row-194 even">
+	<td class="column-1">1965</td><td class="column-2">Heller,Joseph</td><td class="column-3">Catch22</td><td class="column-4">117</td><td class="column-5">0.089</td><td class="column-6">0.4496</td><td class="column-7">-0.0013</td>
+</tr>
+<tr class="row-195 odd">
+	<td class="column-1">1926</td><td class="column-2">Hemingway,Ernest</td><td class="column-3">TheSunAlsoRises</td><td class="column-4">36</td><td class="column-5">0.08</td><td class="column-6">0.7745</td><td class="column-7">-0.0054</td>
+</tr>
+<tr class="row-196 even">
+	<td class="column-1">1949</td><td class="column-2">Hemingway,Ernest</td><td class="column-3">ForWhomTheBellTolls</td><td class="column-4">98</td><td class="column-5">0.064</td><td class="column-6">0.6143</td><td class="column-7">-0.0019</td>
+</tr>
+<tr class="row-197 odd">
+	<td class="column-1">1949</td><td class="column-2">Hemingway,Ernest</td><td class="column-3">ForWhomTheBellTolls</td><td class="column-4">94</td><td class="column-5">0.059</td><td class="column-6">0.6904</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-198 even">
+	<td class="column-1">1904</td><td class="column-2">Henry-Ruffin,MargaretEllen</td><td class="column-3">TheNorthStar</td><td class="column-4">45</td><td class="column-5">0.094</td><td class="column-6">0.8521</td><td class="column-7">-0.0029</td>
+</tr>
+<tr class="row-199 odd">
+	<td class="column-1">1919</td><td class="column-2">Hergesheimer,Joseph</td><td class="column-3">JavaHead</td><td class="column-4">39</td><td class="column-5">0.127</td><td class="column-6">0.9526</td><td class="column-7">-0.0044</td>
+</tr>
+<tr class="row-200 even">
+	<td class="column-1">2008</td><td class="column-2">Hilderbrand,Elin</td><td class="column-3">Barefoot</td><td class="column-4">81</td><td class="column-5">0.092</td><td class="column-6">0.717</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-201 odd">
+	<td class="column-1">1822</td><td class="column-2">Hogg,James</td><td class="column-3">ThreePerilsofMan</td><td class="column-4">114</td><td class="column-5">0.073</td><td class="column-6">0.7561</td><td class="column-7">-0.0017</td>
+</tr>
+<tr class="row-202 even">
+	<td class="column-1">1885</td><td class="column-2">Hollis,Margery</td><td class="column-3">AnthonyFairfax</td><td class="column-4">22</td><td class="column-5">0.127</td><td class="column-6">0.9318</td><td class="column-7">-0.0047</td>
+</tr>
+<tr class="row-203 odd">
+	<td class="column-1">1894</td><td class="column-2">Hope,Anthony</td><td class="column-3">ThePrisonerofZenda</td><td class="column-4">28</td><td class="column-5">0.104</td><td class="column-6">0.8883</td><td class="column-7">-0.0053</td>
+</tr>
+<tr class="row-204 even">
+	<td class="column-1">2007</td><td class="column-2">Hosseini,Khaled</td><td class="column-3">AThousandSplendid</td><td class="column-4">59</td><td class="column-5">0.106</td><td class="column-6">0.8472</td><td class="column-7">-0.0027</td>
+</tr>
+<tr class="row-205 odd">
+	<td class="column-1">1885</td><td class="column-2">Howells,WilliamDean</td><td class="column-3">SilasLapham</td><td class="column-4">69</td><td class="column-5">0.069</td><td class="column-6">0.8539</td><td class="column-7">-0.003</td>
+</tr>
+<tr class="row-206 even">
+	<td class="column-1">1917</td><td class="column-2">Howells,WilliamDean</td><td class="column-3">ConfessionsStAugustine</td><td class="column-4">6</td><td class="column-5">0.251</td><td class="column-6">0.7568</td><td class="column-7">-0.0071</td>
+</tr>
+<tr class="row-207 odd">
+	<td class="column-1">1922</td><td class="column-2">Hudson,WH</td><td class="column-3">ACrystalAge</td><td class="column-4">34</td><td class="column-5">0.111</td><td class="column-6">0.8152</td><td class="column-7">-0.0037</td>
+</tr>
+<tr class="row-208 even">
+	<td class="column-1">1989</td><td class="column-2">Irving,John</td><td class="column-3">APrayerforOwenMeany</td><td class="column-4">141</td><td class="column-5">0.093</td><td class="column-6">0.7797</td><td class="column-7">-0.0016</td>
+</tr>
+<tr class="row-209 odd">
+	<td class="column-1">2010</td><td class="column-2">Jacobson,Howard</td><td class="column-3">FinklerQuestion</td><td class="column-4">64</td><td class="column-5">0.102</td><td class="column-6">0.7956</td><td class="column-7">-0.003</td>
+</tr>
+<tr class="row-210 even">
+	<td class="column-1">2011</td><td class="column-2">James,EL</td><td class="column-3">FiftyShadesofGrey</td><td class="column-4">85</td><td class="column-5">0.08</td><td class="column-6">0.7231</td><td class="column-7">-0.003</td>
+</tr>
+<tr class="row-211 odd">
+	<td class="column-1">1881</td><td class="column-2">James,Henry</td><td class="column-3">PortraitofaLady</td><td class="column-4">124</td><td class="column-5">0.054</td><td class="column-6">0.9044</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-212 even">
+	<td class="column-1">1898</td><td class="column-2">James,Henry</td><td class="column-3">TurnoftheScrew copy</td><td class="column-4">22</td><td class="column-5">0.118</td><td class="column-6">0.9356</td><td class="column-7">-0.005</td>
+</tr>
+<tr class="row-213 odd">
+	<td class="column-1">1903</td><td class="column-2">James,Henry</td><td class="column-3">TheAmbassadors</td><td class="column-4">86</td><td class="column-5">0.07</td><td class="column-6">0.8998</td><td class="column-7">-0.0027</td>
+</tr>
+<tr class="row-214 even">
+	<td class="column-1">1903</td><td class="column-2">James,Henry</td><td class="column-3">TheAmbassadors copy</td><td class="column-4">86</td><td class="column-5">0.069</td><td class="column-6">0.903</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-215 odd">
+	<td class="column-1">1913</td><td class="column-2">James,Stephens</td><td class="column-3">TheCrockofGold</td><td class="column-4">30</td><td class="column-5">0.117</td><td class="column-6">0.5269</td><td class="column-7">-0.0029</td>
+</tr>
+<tr class="row-216 even">
+	<td class="column-1">2005</td><td class="column-2">Jin,Ha</td><td class="column-3">WarTrash</td><td class="column-4">74</td><td class="column-5">0.089</td><td class="column-6">0.8432</td><td class="column-7">-0.003</td>
+</tr>
+<tr class="row-217 odd">
+	<td class="column-1">1978</td><td class="column-2">Johnson,Joyce</td><td class="column-3">BadConnections</td><td class="column-4">35</td><td class="column-5">0.135</td><td class="column-6">0.8422</td><td class="column-7">-0.0046</td>
+</tr>
+<tr class="row-218 even">
+	<td class="column-1">1984</td><td class="column-2">Johnstone,WilliamW</td><td class="column-3">TheLastMountainMan</td><td class="column-4">46</td><td class="column-5">0.085</td><td class="column-6">0.9012</td><td class="column-7">-0.005</td>
+</tr>
+<tr class="row-219 odd">
+	<td class="column-1">1991</td><td class="column-2">Jones,MatthewF</td><td class="column-3">TheCooterFarm</td><td class="column-4">50</td><td class="column-5">0.109</td><td class="column-6">0.8929</td><td class="column-7">-0.0039</td>
+</tr>
+<tr class="row-220 even">
+	<td class="column-1">1914</td><td class="column-2">Joyce,James</td><td class="column-3">Dubliners</td><td class="column-4">36</td><td class="column-5">0.112</td><td class="column-6">0.8226</td><td class="column-7">-0.0047</td>
+</tr>
+<tr class="row-221 odd">
+	<td class="column-1">1916</td><td class="column-2">Joyce,James</td><td class="column-3">APortraitoftheArtistasaYoungMan</td><td class="column-4">46</td><td class="column-5">0.112</td><td class="column-6">0.3068</td><td class="column-7">-0.0014</td>
+</tr>
+<tr class="row-222 even">
+	<td class="column-1">1916</td><td class="column-2">Joyce,James</td><td class="column-3">PortraitofanArtist</td><td class="column-4">46</td><td class="column-5">0.112</td><td class="column-6">0.3089</td><td class="column-7">-0.0014</td>
+</tr>
+<tr class="row-223 odd">
+	<td class="column-1">1922</td><td class="column-2">Joyce,James</td><td class="column-3">Ulysses</td><td class="column-4">151</td><td class="column-5">0.115</td><td class="column-6">0.5951</td><td class="column-7">-8e-04</td>
+</tr>
+<tr class="row-224 even">
+	<td class="column-1">1922</td><td class="column-2">Joyce,James</td><td class="column-3">Ulysses</td><td class="column-4">151</td><td class="column-5">0.115</td><td class="column-6">0.594</td><td class="column-7">-8e-04</td>
+</tr>
+<tr class="row-225 odd">
+	<td class="column-1">1912</td><td class="column-2">Keays,Hersilia</td><td class="column-3">TheroadtoDamascus</td><td class="column-4">52</td><td class="column-5">0.09</td><td class="column-6">0.8967</td><td class="column-7">-0.0045</td>
+</tr>
+<tr class="row-226 even">
+	<td class="column-1">1891</td><td class="column-2">Kelley,Emma</td><td class="column-3">Megda</td><td class="column-4">50</td><td class="column-5">0.084</td><td class="column-6">0.7992</td><td class="column-7">-0.0035</td>
+</tr>
+<tr class="row-227 odd">
+	<td class="column-1">1957</td><td class="column-2">Kerouac,Jack</td><td class="column-3">OntheRoad</td><td class="column-4">63</td><td class="column-5">0.099</td><td class="column-6">0.8122</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-228 even">
+	<td class="column-1">2011</td><td class="column-2">King,Stephen</td><td class="column-3">DoctorSleep</td><td class="column-4">95</td><td class="column-5">0.087</td><td class="column-6">0.8531</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-229 odd">
+	<td class="column-1">2014</td><td class="column-2">King,Thomas</td><td class="column-3">TheBackoftheTurtle</td><td class="column-4">63</td><td class="column-5">0.106</td><td class="column-6">0.8356</td><td class="column-7">-0.0033</td>
+</tr>
+<tr class="row-230 even">
+	<td class="column-1">1849</td><td class="column-2">Kingsley,Charles</td><td class="column-3">AltonLocke</td><td class="column-4">93</td><td class="column-5">0.097</td><td class="column-6">0.7559</td><td class="column-7">-0.0015</td>
+</tr>
+<tr class="row-231 odd">
+	<td class="column-1">1853</td><td class="column-2">Kingsley,Charles</td><td class="column-3">Hypatia</td><td class="column-4">91</td><td class="column-5">0.086</td><td class="column-6">0.9016</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-232 even">
+	<td class="column-1">1988</td><td class="column-2">Kingsolver,Barbara</td><td class="column-3">The Bean Trees</td><td class="column-4">48</td><td class="column-5">0.107</td><td class="column-6">0.7685</td><td class="column-7">-0.0034</td>
+</tr>
+<tr class="row-233 odd">
+	<td class="column-1">1894</td><td class="column-2">Kipling,Rudyard</td><td class="column-3">TheJungleBook</td><td class="column-4">27</td><td class="column-5">0.1</td><td class="column-6">0.7808</td><td class="column-7">-0.0045</td>
+</tr>
+<tr class="row-234 even">
+	<td class="column-1">1900</td><td class="column-2">Kipling,Rudyard</td><td class="column-3">Kim</td><td class="column-4">58</td><td class="column-5">0.112</td><td class="column-6">0.7295</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-235 odd">
+	<td class="column-1">1995</td><td class="column-2">Korman,Keith</td><td class="column-3">SecretDreams</td><td class="column-4">89</td><td class="column-5">0.089</td><td class="column-6">0.8211</td><td class="column-7">-0.0021</td>
+</tr>
+<tr class="row-236 even">
+	<td class="column-1">2006</td><td class="column-2">Lam,Vincent</td><td class="column-3">BloodlettingandMiraculousCures</td><td class="column-4">47</td><td class="column-5">0.129</td><td class="column-6">0.6064</td><td class="column-7">-0.0021</td>
+</tr>
+<tr class="row-237 odd">
+	<td class="column-1">2006</td><td class="column-2">Larsson,Stieg</td><td class="column-3">TheGirlWhoPlayedWithFire</td><td class="column-4">106</td><td class="column-5">0.073</td><td class="column-6">0.8112</td><td class="column-7">-0.0026</td>
+</tr>
+<tr class="row-238 even">
+	<td class="column-1">1964</td><td class="column-2">Laurence,Margaret</td><td class="column-3">TheStoneAngel</td><td class="column-4">51</td><td class="column-5">0.119</td><td class="column-6">0.7517</td><td class="column-7">-0.0034</td>
+</tr>
+<tr class="row-239 odd">
+	<td class="column-1">1913</td><td class="column-2">Laut,Agnes</td><td class="column-3">The new dawn</td><td class="column-4">72</td><td class="column-5">0.107</td><td class="column-6">0.8381</td><td class="column-7">-0.0015</td>
+</tr>
+<tr class="row-240 even">
+	<td class="column-1">1913</td><td class="column-2">Lawrence,D.H.</td><td class="column-3">SonsandLovers</td><td class="column-4">87</td><td class="column-5">0.067</td><td class="column-6">0.938</td><td class="column-7">-0.0031</td>
+</tr>
+<tr class="row-241 odd">
+	<td class="column-1">1928</td><td class="column-2">Lawrence,DH</td><td class="column-3">LadyChatterleysLover</td><td class="column-4">64</td><td class="column-5">0.081</td><td class="column-6">0.8141</td><td class="column-7">-0.0027</td>
+</tr>
+<tr class="row-242 even">
+	<td class="column-1">1795</td><td class="column-2">Lewis,Matthew</td><td class="column-3">TheMonk</td><td class="column-4">78</td><td class="column-5">0.069</td><td class="column-6">0.8204</td><td class="column-7">-0.0032</td>
+</tr>
+<tr class="row-243 odd">
+	<td class="column-1">1805</td><td class="column-2">Lewis,Matthew</td><td class="column-3">TheBravoofVenice</td><td class="column-4">19</td><td class="column-5">0.144</td><td class="column-6">0.9502</td><td class="column-7">-0.0093</td>
+</tr>
+<tr class="row-244 even">
+	<td class="column-1">1918</td><td class="column-2">Lewis,Sinclai</td><td class="column-3">TheJob</td><td class="column-4">53</td><td class="column-5">0.144</td><td class="column-6">0.8826</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-245 odd">
+	<td class="column-1">1917</td><td class="column-2">Lewis,Sinclair</td><td class="column-3">TheInnocents</td><td class="column-4">24</td><td class="column-5">0.181</td><td class="column-6">0.7957</td><td class="column-7">-0.0039</td>
+</tr>
+<tr class="row-246 even">
+	<td class="column-1">1903</td><td class="column-2">London,Jack</td><td class="column-3">TheCalloftheWild</td><td class="column-4">17</td><td class="column-5">0.153</td><td class="column-6">0.8357</td><td class="column-7">-0.0065</td>
+</tr>
+<tr class="row-247 odd">
+	<td class="column-1">1903</td><td class="column-2">London,Jack</td><td class="column-3">CallOfTheWild</td><td class="column-4">17</td><td class="column-5">0.153</td><td class="column-6">0.8556</td><td class="column-7">-0.005</td>
+</tr>
+<tr class="row-248 even">
+	<td class="column-1">1904</td><td class="column-2">London,Jack</td><td class="column-3">SeaWitch</td><td class="column-4">58</td><td class="column-5">0.101</td><td class="column-6">0.8983</td><td class="column-7">-0.0027</td>
+</tr>
+<tr class="row-249 odd">
+	<td class="column-1">1906</td><td class="column-2">London,Jack</td><td class="column-3">WhiteFang</td><td class="column-4">40</td><td class="column-5">0.102</td><td class="column-6">0.8613</td><td class="column-7">-0.005</td>
+</tr>
+<tr class="row-250 even">
+	<td class="column-1">1909</td><td class="column-2">London,Jack</td><td class="column-3">MartinEden</td><td class="column-4">77</td><td class="column-5">0.086</td><td class="column-6">0.8718</td><td class="column-7">-0.0022</td>
+</tr>
+<tr class="row-251 odd">
+	<td class="column-1">1987</td><td class="column-2">Longyear,BarryB</td><td class="column-3">SeaOfGlass</td><td class="column-4">56</td><td class="column-5">0.086</td><td class="column-6">0.6866</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-252 even">
+	<td class="column-1">1884</td><td class="column-2">Lyall,Edna</td><td class="column-3">WeTwo</td><td class="column-4">94</td><td class="column-5">0.065</td><td class="column-6">0.8668</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-253 odd">
+	<td class="column-1">2009</td><td class="column-2">Macintyre,Linden</td><td class="column-3">BishopsMan</td><td class="column-4">59</td><td class="column-5">0.101</td><td class="column-6">0.8583</td><td class="column-7">-0.0036</td>
+</tr>
+<tr class="row-254 even">
+	<td class="column-1">1771</td><td class="column-2">Mackenzie,Henry</td><td class="column-3">TheManofFeeling</td><td class="column-4">20</td><td class="column-5">0.153</td><td class="column-6">0.8513</td><td class="column-7">-0.0062</td>
+</tr>
+<tr class="row-255 odd">
+	<td class="column-1">1855</td><td class="column-2">Manning,Anne</td><td class="column-3">TheoldChelseabun-house</td><td class="column-4">29</td><td class="column-5">0.133</td><td class="column-6">0.8851</td><td class="column-7">-0.0027</td>
+</tr>
+<tr class="row-256 even">
+	<td class="column-1">1930</td><td class="column-2">Mansfield,Katherine</td><td class="column-3">TheAloe</td><td class="column-4">14</td><td class="column-5">0.172</td><td class="column-6">0.8654</td><td class="column-7">-0.0068</td>
+</tr>
+<tr class="row-257 odd">
+	<td class="column-1">2009</td><td class="column-2">Mantel,Hilary</td><td class="column-3">WolfHall</td><td class="column-4">120</td><td class="column-5">0.076</td><td class="column-6">0.8393</td><td class="column-7">-0.0017</td>
+</tr>
+<tr class="row-258 even">
+	<td class="column-1">1921</td><td class="column-2">Maquis,Don</td><td class="column-3">TheOldSoak</td><td class="column-4">12</td><td class="column-5">0.17</td><td class="column-6">0.0443</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-259 odd">
+	<td class="column-1">1892</td><td class="column-2">Marsham,Clara</td><td class="column-3">CousinSimon</td><td class="column-4">24</td><td class="column-5">0.114</td><td class="column-6">0.9046</td><td class="column-7">-0.0056</td>
+</tr>
+<tr class="row-260 even">
+	<td class="column-1">1986</td><td class="column-2">Martin,Lori</td><td class="column-3">TheDarklingHills</td><td class="column-4">55</td><td class="column-5">0.087</td><td class="column-6">0.8897</td><td class="column-7">-0.0032</td>
+</tr>
+<tr class="row-261 odd">
+	<td class="column-1">1838</td><td class="column-2">Martineau,Harriet</td><td class="column-3">Deerbrook</td><td class="column-4">122</td><td class="column-5">0.059</td><td class="column-6">0.8341</td><td class="column-7">-0.0019</td>
+</tr>
+<tr class="row-262 even">
+	<td class="column-1">1919</td><td class="column-2">Maugham,WSomerset</td><td class="column-3">TheMoonandSixpence</td><td class="column-4">41</td><td class="column-5">0.107</td><td class="column-6">0.7586</td><td class="column-7">-0.0037</td>
+</tr>
+<tr class="row-263 odd">
+	<td class="column-1">1865</td><td class="column-2">Mayhew,Augustus</td><td class="column-3">Facesforfortunes</td><td class="column-4">33</td><td class="column-5">0.17</td><td class="column-6">0.8883</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-264 even">
+	<td class="column-1">1851</td><td class="column-2">Melville,Hermann</td><td class="column-3">MobyDick</td><td class="column-4">121</td><td class="column-5">0.094</td><td class="column-6">0.7734</td><td class="column-7">-0.0014</td>
+</tr>
+<tr class="row-265 odd">
+	<td class="column-1">2008</td><td class="column-2">Meyer,Stephanie</td><td class="column-3">TheHost</td><td class="column-4">117</td><td class="column-5">0.065</td><td class="column-6">0.8267</td><td class="column-7">-0.0021</td>
+</tr>
+<tr class="row-266 even">
+	<td class="column-1">2014</td><td class="column-2">Michaels,Sean</td><td class="column-3">UsConductors</td><td class="column-4">54</td><td class="column-5">0.122</td><td class="column-6">0.7951</td><td class="column-7">-0.003</td>
+</tr>
+<tr class="row-267 odd">
+	<td class="column-1">1989</td><td class="column-2">Miller,GWayne</td><td class="column-3">ThunderRise</td><td class="column-4">79</td><td class="column-5">0.105</td><td class="column-6">0.8445</td><td class="column-7">-0.0025</td>
+</tr>
+<tr class="row-268 even">
+	<td class="column-1">1992</td><td class="column-2">Mitchell,VE</td><td class="column-3">Imbalance</td><td class="column-4">47</td><td class="column-5">0.113</td><td class="column-6">0.8847</td><td class="column-7">-0.0041</td>
+</tr>
+<tr class="row-269 odd">
+	<td class="column-1">1809</td><td class="column-2">More,Hannah</td><td class="column-3">CoelebsinSearchofaWife</td><td class="column-4">78</td><td class="column-5">0.076</td><td class="column-6">0.8515</td><td class="column-7">-0.0027</td>
+</tr>
+<tr class="row-270 even">
+	<td class="column-1">2013</td><td class="column-2">Moriarty,Liane</td><td class="column-3">TheHusbandsSecret</td><td class="column-4">63</td><td class="column-5">0.092</td><td class="column-6">0.8817</td><td class="column-7">-0.0038</td>
+</tr>
+<tr class="row-271 odd">
+	<td class="column-1">1985</td><td class="column-2">Morris,Janet</td><td class="column-3">BeyonTtheVeil</td><td class="column-4">60</td><td class="column-5">0.115</td><td class="column-6">0.9233</td><td class="column-7">-0.0025</td>
+</tr>
+<tr class="row-272 even">
+	<td class="column-1">1987</td><td class="column-2">Morrison,Toni</td><td class="column-3">Beloved</td><td class="column-4">54</td><td class="column-5">0.09</td><td class="column-6">0.828</td><td class="column-7">-0.0033</td>
+</tr>
+<tr class="row-273 odd">
+	<td class="column-1">1904</td><td class="column-2">Murfree,MaryNoailles</td><td class="column-3">TheFrontiersman</td><td class="column-4">38</td><td class="column-5">0.15</td><td class="column-6">0.8395</td><td class="column-7">-0.0042</td>
+</tr>
+<tr class="row-274 even">
+	<td class="column-1">1998</td><td class="column-2">Myers,Tamar</td><td class="column-3">BetweenaWokandaHardPlace</td><td class="column-4">37</td><td class="column-5">0.143</td><td class="column-6">0.917</td><td class="column-7">-0.0041</td>
+</tr>
+<tr class="row-275 odd">
+	<td class="column-1">1958</td><td class="column-2">Nabokov,Vladimir</td><td class="column-3">Lolita</td><td class="column-4">68</td><td class="column-5">0.146</td><td class="column-6">0.8938</td><td class="column-7">-0.0019</td>
+</tr>
+<tr class="row-276 even">
+	<td class="column-1">1877</td><td class="column-2">Neville,Constance</td><td class="column-3">BehindTheArras</td><td class="column-4">64</td><td class="column-5">0.095</td><td class="column-6">0.9134</td><td class="column-7">-0.0026</td>
+</tr>
+<tr class="row-277 odd">
+	<td class="column-1">1901</td><td class="column-2">Nordau,Max</td><td class="column-3">Thecomedyofsentiment</td><td class="column-4">27</td><td class="column-5">0.131</td><td class="column-6">0.9544</td><td class="column-7">-0.0043</td>
+</tr>
+<tr class="row-278 even">
+	<td class="column-1">1899</td><td class="column-2">Norris,Frank</td><td class="column-3">McTeague</td><td class="column-4">63</td><td class="column-5">0.086</td><td class="column-6">0.7337</td><td class="column-7">-0.0026</td>
+</tr>
+<tr class="row-279 odd">
+	<td class="column-1">1901</td><td class="column-2">Norris,Frank</td><td class="column-3">TheOctopus</td><td class="column-4">111</td><td class="column-5">0.074</td><td class="column-6">0.7418</td><td class="column-7">-0.0017</td>
+</tr>
+<tr class="row-280 even">
+	<td class="column-1">1901</td><td class="column-2">Norris,Frank</td><td class="column-3">TheOctopus</td><td class="column-4">111</td><td class="column-5">0.074</td><td class="column-6">0.7762</td><td class="column-7">-0.0015</td>
+</tr>
+<tr class="row-281 odd">
+	<td class="column-1">1903</td><td class="column-2">Norris,Frank</td><td class="column-3">ThePit</td><td class="column-4">69</td><td class="column-5">0.089</td><td class="column-6">0.8796</td><td class="column-7">-0.0029</td>
+</tr>
+<tr class="row-282 even">
+	<td class="column-1">1952</td><td class="column-2">OConnor,Flannery</td><td class="column-3">WiseBlood</td><td class="column-4">27</td><td class="column-5">0.095</td><td class="column-6">0.7328</td><td class="column-7">-0.006</td>
+</tr>
+<tr class="row-283 odd">
+	<td class="column-1">2009</td><td class="column-2">ONeill,Joseph</td><td class="column-3">Netherland</td><td class="column-4">48</td><td class="column-5">0.155</td><td class="column-6">0.8935</td><td class="column-7">-0.0029</td>
+</tr>
+<tr class="row-284 even">
+	<td class="column-1">1804</td><td class="column-2">Opie,Amelia</td><td class="column-3">AdelineMowbray</td><td class="column-4">61</td><td class="column-5">0.075</td><td class="column-6">0.9052</td><td class="column-7">-0.0038</td>
+</tr>
+<tr class="row-285 odd">
+	<td class="column-1">1905</td><td class="column-2">Orczy,Emma</td><td class="column-3">TheScarletPimpernel</td><td class="column-4">48</td><td class="column-5">0.094</td><td class="column-6">0.8617</td><td class="column-7">-0.0036</td>
+</tr>
+<tr class="row-286 even">
+	<td class="column-1">1949</td><td class="column-2">Orwell,George</td><td class="column-3">NineteenEightyFour</td><td class="column-4">59</td><td class="column-5">0.092</td><td class="column-6">0.4507</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-287 odd">
+	<td class="column-1">2012</td><td class="column-2">Otsuka,Julie</td><td class="column-3">BuddhaIn</td><td class="column-4">19</td><td class="column-5">0.157</td><td class="column-6">0.3525</td><td class="column-7">-0.0039</td>
+</tr>
+<tr class="row-288 even">
+	<td class="column-1">2009</td><td class="column-2">Patterson,James</td><td class="column-3">8thConfession</td><td class="column-4">39</td><td class="column-5">0.14</td><td class="column-6">0.8603</td><td class="column-7">-0.0039</td>
+</tr>
+<tr class="row-289 odd">
+	<td class="column-1">1815</td><td class="column-2">Peacock,ThomasLove</td><td class="column-3">HeadlongHall</td><td class="column-4">16</td><td class="column-5">0.211</td><td class="column-6">0.7514</td><td class="column-7">-0.0077</td>
+</tr>
+<tr class="row-290 even">
+	<td class="column-1">1818</td><td class="column-2">Peacock,ThomasLove</td><td class="column-3">NightmareAbbey</td><td class="column-4">15</td><td class="column-5">0.185</td><td class="column-6">0.8041</td><td class="column-7">-0.0075</td>
+</tr>
+<tr class="row-291 odd">
+	<td class="column-1">1821</td><td class="column-2">Peacock,ThomasLove</td><td class="column-3">MaidMarian</td><td class="column-4">20</td><td class="column-5">0.156</td><td class="column-6">0.547</td><td class="column-7">-0.0041</td>
+</tr>
+<tr class="row-292 even">
+	<td class="column-1">1991</td><td class="column-2">Philbrick,Rodman</td><td class="column-3">TheSeventhSleeper</td><td class="column-4">58</td><td class="column-5">0.123</td><td class="column-6">0.8739</td><td class="column-7">-0.0026</td>
+</tr>
+<tr class="row-293 odd">
+	<td class="column-1">2010</td><td class="column-2">Picoult,Jodi</td><td class="column-3">HouseRules</td><td class="column-4">98</td><td class="column-5">0.081</td><td class="column-6">0.9029</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-294 even">
+	<td class="column-1">1986</td><td class="column-2">Plain,Belva</td><td class="column-3">TheGoldenCup</td><td class="column-4">85</td><td class="column-5">0.084</td><td class="column-6">0.8622</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-295 odd">
+	<td class="column-1">1963</td><td class="column-2">Plath,Sylvia</td><td class="column-3">TheBellJar</td><td class="column-4">39</td><td class="column-5">0.117</td><td class="column-6">0.8863</td><td class="column-7">-0.0056</td>
+</tr>
+<tr class="row-296 even">
+	<td class="column-1">1838</td><td class="column-2">Poe,EdgarAllen</td><td class="column-3">TheNarrativeofArthurGordonPym</td><td class="column-4">56</td><td class="column-5">0.101</td><td class="column-6">0.2393</td><td class="column-7">-0.0017</td>
+</tr>
+<tr class="row-297 odd">
+	<td class="column-1">2006</td><td class="column-2">Powers,Richard</td><td class="column-3">EchoMaker</td><td class="column-4">97</td><td class="column-5">0.106</td><td class="column-6">0.834</td><td class="column-7">-0.0019</td>
+</tr>
+<tr class="row-298 even">
+	<td class="column-1">1892</td><td class="column-2">Praed,Campbell</td><td class="column-3">RomannceofachaÃÇlet</td><td class="column-4">39</td><td class="column-5">0.11</td><td class="column-6">0.7847</td><td class="column-7">-0.004</td>
+</tr>
+<tr class="row-299 odd">
+	<td class="column-1">1993</td><td class="column-2">Proulx,EAnnie</td><td class="column-3">TheShippingNews</td><td class="column-4">62</td><td class="column-5">0.119</td><td class="column-6">0.8146</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-300 even">
+	<td class="column-1">2009</td><td class="column-2">Pullinger,Kate</td><td class="column-3">MistressofNothing</td><td class="column-4">43</td><td class="column-5">0.093</td><td class="column-6">0.8986</td><td class="column-7">-0.0053</td>
+</tr>
+<tr class="row-301 odd">
+	<td class="column-1">1973</td><td class="column-2">Pynchon,Thomas</td><td class="column-3">GravitysRainbow</td><td class="column-4">198</td><td class="column-5">0.102</td><td class="column-6">0.8421</td><td class="column-7">-9e-04</td>
+</tr>
+<tr class="row-302 even">
+	<td class="column-1">1790</td><td class="column-2">Radcliffe,Ann</td><td class="column-3">ASicilianRomance</td><td class="column-4">39</td><td class="column-5">0.091</td><td class="column-6">0.8761</td><td class="column-7">-0.0064</td>
+</tr>
+<tr class="row-303 odd">
+	<td class="column-1">1794</td><td class="column-2">Radcliffe,Ann</td><td class="column-3">TheMysteriesofUdolpho</td><td class="column-4">167</td><td class="column-5">0.04</td><td class="column-6">0.8155</td><td class="column-7">-0.0019</td>
+</tr>
+<tr class="row-304 even">
+	<td class="column-1">1938</td><td class="column-2">Rawlings,MarjorieKinman</td><td class="column-3">TheYearling</td><td class="column-4">69</td><td class="column-5">0.069</td><td class="column-6">0.8754</td><td class="column-7">-0.0033</td>
+</tr>
+<tr class="row-305 odd">
+	<td class="column-1">1903</td><td class="column-2">Read,Opie</td><td class="column-3">TheHarkriders</td><td class="column-4">36</td><td class="column-5">0.112</td><td class="column-6">0.9014</td><td class="column-7">-0.0038</td>
+</tr>
+<tr class="row-306 even">
+	<td class="column-1">1921</td><td class="column-2">Rhodes,EugeneManlove</td><td class="column-3">StepsonsOfLight</td><td class="column-4">30</td><td class="column-5">0.145</td><td class="column-6">0.8796</td><td class="column-7">-0.0038</td>
+</tr>
+<tr class="row-307 odd">
+	<td class="column-1">2008</td><td class="column-2">Ricci,Nino</td><td class="column-3">OriginofSpecies</td><td class="column-4">101</td><td class="column-5">0.092</td><td class="column-6">0.7616</td><td class="column-7">-0.0019</td>
+</tr>
+<tr class="row-308 even">
+	<td class="column-1">1915</td><td class="column-2">Richardson,Dorothy</td><td class="column-3">PointedRoofs</td><td class="column-4">32</td><td class="column-5">0.132</td><td class="column-6">0.8702</td><td class="column-7">-0.0052</td>
+</tr>
+<tr class="row-309 odd">
+	<td class="column-1">1902</td><td class="column-2">Rives,Hallie</td><td class="column-3">HeartsCourageous</td><td class="column-4">46</td><td class="column-5">0.139</td><td class="column-6">0.807</td><td class="column-7">-0.0022</td>
+</tr>
+<tr class="row-310 even">
+	<td class="column-1">1857</td><td class="column-2">Rives,Judith</td><td class="column-3">HomeAndTheWorld</td><td class="column-4">61</td><td class="column-5">0.108</td><td class="column-6">0.8886</td><td class="column-7">-0.0033</td>
+</tr>
+<tr class="row-311 odd">
+	<td class="column-1">2010</td><td class="column-2">Roberts,Nora</td><td class="column-3">SavortheMoment</td><td class="column-4">53</td><td class="column-5">0.106</td><td class="column-6">0.8673</td><td class="column-7">-0.0035</td>
+</tr>
+<tr class="row-312 even">
+	<td class="column-1">2014</td><td class="column-2">Roberts,Nora</td><td class="column-3">TheCollector</td><td class="column-4">81</td><td class="column-5">0.091</td><td class="column-6">0.754</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-313 odd">
+	<td class="column-1">1886</td><td class="column-2">Roe,Edward</td><td class="column-3">Hefellinlovewithhiswife</td><td class="column-4">56</td><td class="column-5">0.083</td><td class="column-6">0.9008</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-314 even">
+	<td class="column-1">2007</td><td class="column-2">Roth,Philip</td><td class="column-3">Everyman</td><td class="column-4">21</td><td class="column-5">0.146</td><td class="column-6">0.742</td><td class="column-7">-0.0045</td>
+</tr>
+<tr class="row-315 odd">
+	<td class="column-1">1794</td><td class="column-2">Rowson,Susanna</td><td class="column-3">CharlotteTemple</td><td class="column-4">20</td><td class="column-5">0.124</td><td class="column-6">0.8619</td><td class="column-7">-0.0082</td>
+</tr>
+<tr class="row-316 even">
+	<td class="column-1">1989</td><td class="column-2">Rule,Jane</td><td class="column-3">AftertheFire</td><td class="column-4">33</td><td class="column-5">0.111</td><td class="column-6">0.9432</td><td class="column-7">-0.0061</td>
+</tr>
+<tr class="row-317 odd">
+	<td class="column-1">1980</td><td class="column-2">Rushdie,Salman</td><td class="column-3">MidnightsChildren</td><td class="column-4">126</td><td class="column-5">0.105</td><td class="column-6">0.8453</td><td class="column-7">-0.0015</td>
+</tr>
+<tr class="row-318 even">
+	<td class="column-1">1915</td><td class="column-2">Sabatini,Rafael</td><td class="column-3">TheSeaHawk</td><td class="column-4">66</td><td class="column-5">0.092</td><td class="column-6">0.9108</td><td class="column-7">-0.0029</td>
+</tr>
+<tr class="row-319 odd">
+	<td class="column-1">1892</td><td class="column-2">Savage,Richard</td><td class="column-3">ThelittleladyofLagunitas</td><td class="column-4">71</td><td class="column-5">0.111</td><td class="column-6">0.692</td><td class="column-7">-0.0015</td>
+</tr>
+<tr class="row-320 even">
+	<td class="column-1">1883</td><td class="column-2">Schreiner,Olive</td><td class="column-3">StoryofanAfricanFarm</td><td class="column-4">53</td><td class="column-5">0.076</td><td class="column-6">0.6992</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-321 odd">
+	<td class="column-1">1814</td><td class="column-2">Scott,Walter</td><td class="column-3">Waverley</td><td class="column-4">114</td><td class="column-5">0.085</td><td class="column-6">0.809</td><td class="column-7">-0.0019</td>
+</tr>
+<tr class="row-322 even">
+	<td class="column-1">1814</td><td class="column-2">Scott,Walter</td><td class="column-3">Waverly</td><td class="column-4">110</td><td class="column-5">0.086</td><td class="column-6">0.8393</td><td class="column-7">-0.0018</td>
+</tr>
+<tr class="row-323 odd">
+	<td class="column-1">1817</td><td class="column-2">Scott,Walter</td><td class="column-3">RobRoy</td><td class="column-4">91</td><td class="column-5">0.098</td><td class="column-6">0.7897</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-324 even">
+	<td class="column-1">1820</td><td class="column-2">Scott,Walter</td><td class="column-3">Ivanhoe</td><td class="column-4">101</td><td class="column-5">0.083</td><td class="column-6">0.7505</td><td class="column-7">-0.0018</td>
+</tr>
+<tr class="row-325 odd">
+	<td class="column-1">1921</td><td class="column-2">Seltzer,Charles</td><td class="column-3">DragHarlan</td><td class="column-4">20</td><td class="column-5">0.128</td><td class="column-6">0.8703</td><td class="column-7">-0.0043</td>
+</tr>
+<tr class="row-326 even">
+	<td class="column-1">1877</td><td class="column-2">Sewell,Anna</td><td class="column-3">BlackBeauty</td><td class="column-4">30</td><td class="column-5">0.071</td><td class="column-6">0.897</td><td class="column-7">-0.0051</td>
+</tr>
+<tr class="row-327 odd">
+	<td class="column-1">2008</td><td class="column-2">Shaffer,MaryAnn</td><td class="column-3">TheGuernseyLiteraryandPotatoPeelPie</td><td class="column-4">40</td><td class="column-5">0.125</td><td class="column-6">0.6894</td><td class="column-7">-0.0026</td>
+</tr>
+<tr class="row-328 even">
+	<td class="column-1">1818</td><td class="column-2">Shelley,Mary</td><td class="column-3">Frankenstein</td><td class="column-4">42</td><td class="column-5">0.097</td><td class="column-6">0.8633</td><td class="column-7">-0.0045</td>
+</tr>
+<tr class="row-329 odd">
+	<td class="column-1">1819</td><td class="column-2">Shelley,Mary</td><td class="column-3">Mathilda</td><td class="column-4">20</td><td class="column-5">0.131</td><td class="column-6">0.839</td><td class="column-7">-0.0046</td>
+</tr>
+<tr class="row-330 even">
+	<td class="column-1">1994</td><td class="column-2">Shields,Carol</td><td class="column-3">TheStoneDiaries</td><td class="column-4">58</td><td class="column-5">0.134</td><td class="column-6">0.8696</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-331 odd">
+	<td class="column-1">1906</td><td class="column-2">Sinclair,Upton</td><td class="column-3">TheJungle</td><td class="column-4">80</td><td class="column-5">0.078</td><td class="column-6">0.6554</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-332 even">
+	<td class="column-1">1906</td><td class="column-2">Sinclair,Upton</td><td class="column-3">TheJungle</td><td class="column-4">80</td><td class="column-5">0.078</td><td class="column-6">0.6632</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-333 odd">
+	<td class="column-1">1917</td><td class="column-2">Sinclair,Upton</td><td class="column-3">KingCoal</td><td class="column-4">67</td><td class="column-5">0.078</td><td class="column-6">0.7987</td><td class="column-7">-0.0026</td>
+</tr>
+<tr class="row-334 even">
+	<td class="column-1">1983</td><td class="column-2">Singer,Shelley</td><td class="column-3">SamsonsDeal</td><td class="column-4">40</td><td class="column-5">0.102</td><td class="column-6">0.8723</td><td class="column-7">-0.005</td>
+</tr>
+<tr class="row-335 odd">
+	<td class="column-1">2010</td><td class="column-2">Skibsrud,Johanna</td><td class="column-3">Sentimentalists</td><td class="column-4">29</td><td class="column-5">0.108</td><td class="column-6">0.7117</td><td class="column-7">-0.0081</td>
+</tr>
+<tr class="row-336 even">
+	<td class="column-1">1991</td><td class="column-2">Smiley,Jane</td><td class="column-3">AThousandAcres</td><td class="column-4">72</td><td class="column-5">0.09</td><td class="column-6">0.8107</td><td class="column-7">-0.0027</td>
+</tr>
+<tr class="row-337 odd">
+	<td class="column-1">2000</td><td class="column-2">Smith,Zadie</td><td class="column-3">WhiteTeeth</td><td class="column-4">102</td><td class="column-5">0.103</td><td class="column-6">0.7345</td><td class="column-7">-0.0017</td>
+</tr>
+<tr class="row-338 even">
+	<td class="column-1">1771</td><td class="column-2">Smollett,Tobias</td><td class="column-3">TheExpedictionofHenryClinker</td><td class="column-4">85</td><td class="column-5">0.101</td><td class="column-6">0.9107</td><td class="column-7">-0.003</td>
+</tr>
+<tr class="row-339 odd">
+	<td class="column-1">1992</td><td class="column-2">Sontag,Susan</td><td class="column-3">TheVolcanoLoverARomance</td><td class="column-4">79</td><td class="column-5">0.103</td><td class="column-6">0.8122</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-340 even">
+	<td class="column-1">2012</td><td class="column-2">Spalding,Linda</td><td class="column-3">Purchase</td><td class="column-4">53</td><td class="column-5">0.09</td><td class="column-6">0.85</td><td class="column-7">-0.003</td>
+</tr>
+<tr class="row-341 odd">
+	<td class="column-1">2010</td><td class="column-2">Sparks,Nicholas</td><td class="column-3">SafeHaven</td><td class="column-4">64</td><td class="column-5">0.08</td><td class="column-6">0.5368</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-342 even">
+	<td class="column-1">1906</td><td class="column-2">Stein,Gertrude</td><td class="column-3">ThreeLives</td><td class="column-4">44</td><td class="column-5">0.039</td><td class="column-6">0.7235</td><td class="column-7">-0.0076</td>
+</tr>
+<tr class="row-343 odd">
+	<td class="column-1">1909</td><td class="column-2">Stein,Gertrude</td><td class="column-3">ThreeLives</td><td class="column-4">44</td><td class="column-5">0.039</td><td class="column-6">0.7238</td><td class="column-7">-0.0064</td>
+</tr>
+<tr class="row-344 even">
+	<td class="column-1">1933</td><td class="column-2">Stein,Gertrude</td><td class="column-3">AutobiographyofAliceBToklas</td><td class="column-4">50</td><td class="column-5">0.073</td><td class="column-6">0.8553</td><td class="column-7">-0.0039</td>
+</tr>
+<tr class="row-345 odd">
+	<td class="column-1">1913</td><td class="column-2">Stevenson,George</td><td class="column-3">Topham'sfolly</td><td class="column-4">47</td><td class="column-5">0.113</td><td class="column-6">0.8483</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-346 even">
+	<td class="column-1">1882</td><td class="column-2">Stevenson,RobertLouis</td><td class="column-3">TreasureIsland</td><td class="column-4">36</td><td class="column-5">0.096</td><td class="column-6">0.8473</td><td class="column-7">-0.0038</td>
+</tr>
+<tr class="row-347 odd">
+	<td class="column-1">1886</td><td class="column-2">Stevenson,RobertLouis</td><td class="column-3">JekyllandHyde</td><td class="column-4">13</td><td class="column-5">0.162</td><td class="column-6">0.5968</td><td class="column-7">-0.0053</td>
+</tr>
+<tr class="row-348 even">
+	<td class="column-1">1886</td><td class="column-2">Stevenson,RobertLouis</td><td class="column-3">JekyllandHyde</td><td class="column-4">13</td><td class="column-5">0.162</td><td class="column-6">0.5621</td><td class="column-7">-0.0042</td>
+</tr>
+<tr class="row-349 odd">
+	<td class="column-1">2009</td><td class="column-2">Stockett,Kathryn</td><td class="column-3">TheHelp</td><td class="column-4">88</td><td class="column-5">0.071</td><td class="column-6">0.8418</td><td class="column-7">-0.0026</td>
+</tr>
+<tr class="row-350 even">
+	<td class="column-1">1897</td><td class="column-2">Stoker,Bram</td><td class="column-3">Dracula</td><td class="column-4">83</td><td class="column-5">0.061</td><td class="column-6">0.8644</td><td class="column-7">-0.0025</td>
+</tr>
+<tr class="row-351 odd">
+	<td class="column-1">1897</td><td class="column-2">Stoker,Bram</td><td class="column-3">Dracula</td><td class="column-4">84</td><td class="column-5">0.065</td><td class="column-6">0.848</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-352 even">
+	<td class="column-1">1997</td><td class="column-2">Stone,Michael</td><td class="column-3">ALongReach</td><td class="column-4">43</td><td class="column-5">0.104</td><td class="column-6">0.8614</td><td class="column-7">-0.0052</td>
+</tr>
+<tr class="row-353 odd">
+	<td class="column-1">1853</td><td class="column-2">Stowe,HarrietBeecher</td><td class="column-3">UncleTom'sCabin</td><td class="column-4">100</td><td class="column-5">0.077</td><td class="column-6">0.8111</td><td class="column-7">-0.0018</td>
+</tr>
+<tr class="row-354 even">
+	<td class="column-1">1990</td><td class="column-2">Stoyenoff,NormaDavis</td><td class="column-3">OneNighttoRemember</td><td class="column-4">19</td><td class="column-5">0.146</td><td class="column-6">0.9275</td><td class="column-7">-0.0091</td>
+</tr>
+<tr class="row-355 odd">
+	<td class="column-1">1924</td><td class="column-2">Stribling,TS</td><td class="column-3">RedSand</td><td class="column-4">36</td><td class="column-5">0.125</td><td class="column-6">0.8056</td><td class="column-7">-0.0038</td>
+</tr>
+<tr class="row-356 even">
+	<td class="column-1">1880</td><td class="column-2">Tabor,Eliza</td><td class="column-3">ASylvanQueen</td><td class="column-4">91</td><td class="column-5">0.095</td><td class="column-6">0.8215</td><td class="column-7">-0.0021</td>
+</tr>
+<tr class="row-357 odd">
+	<td class="column-1">1847</td><td class="column-2">Thackeray,William</td><td class="column-3">VanityFair</td><td class="column-4">170</td><td class="column-5">0.063</td><td class="column-6">0.8688</td><td class="column-7">-0.0014</td>
+</tr>
+<tr class="row-358 even">
+	<td class="column-1">1848</td><td class="column-2">Thackeray,William</td><td class="column-3">VanityFair</td><td class="column-4">170</td><td class="column-5">0.063</td><td class="column-6">0.8651</td><td class="column-7">-0.0014</td>
+</tr>
+<tr class="row-359 odd">
+	<td class="column-1">1857</td><td class="column-2">Trollope,Anthony</td><td class="column-3">BarchesterTowers</td><td class="column-4">108</td><td class="column-5">0.059</td><td class="column-6">0.797</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-360 even">
+	<td class="column-1">1857</td><td class="column-2">Trollope,Anthony</td><td class="column-3">BarchesterTowers</td><td class="column-4">109</td><td class="column-5">0.06</td><td class="column-6">0.7942</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-361 odd">
+	<td class="column-1">1869</td><td class="column-2">Trollope,Anthony</td><td class="column-3">PhineasFinn</td><td class="column-4">140</td><td class="column-5">0.046</td><td class="column-6">0.8299</td><td class="column-7">-0.002</td>
+</tr>
+<tr class="row-362 even">
+	<td class="column-1">1875</td><td class="column-2">Trollope,Anthony</td><td class="column-3">TheWayWeLiveNow</td><td class="column-4">190</td><td class="column-5">0.041</td><td class="column-6">0.8332</td><td class="column-7">-0.0017</td>
+</tr>
+<tr class="row-363 odd">
+	<td class="column-1">1876</td><td class="column-2">Trollope,FrancesEleanor</td><td class="column-3">ACharmingFellow</td><td class="column-4">103</td><td class="column-5">0.07</td><td class="column-6">0.8834</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-364 even">
+	<td class="column-1">1888</td><td class="column-2">Trollope,FrancesEleanor</td><td class="column-3">ThatUnfortunateMarriage</td><td class="column-4">95</td><td class="column-5">0.072</td><td class="column-6">0.8846</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-365 odd">
+	<td class="column-1">1837</td><td class="column-2">Trollope,FrancesMilton</td><td class="column-3">TheVicarofWrexham</td><td class="column-4">95</td><td class="column-5">0.065</td><td class="column-6">0.8359</td><td class="column-7">-0.0024</td>
+</tr>
+<tr class="row-366 even">
+	<td class="column-1">1855</td><td class="column-2">Trollope,FrancesMilton</td><td class="column-3">TheWidowBarnaby</td><td class="column-4">110</td><td class="column-5">0.055</td><td class="column-6">0.9066</td><td class="column-7">-0.0025</td>
+</tr>
+<tr class="row-367 odd">
+	<td class="column-1">1876</td><td class="column-2">Twain,Mark</td><td class="column-3">TheAdventuresofTomSawyer</td><td class="column-4">38</td><td class="column-5">0.12</td><td class="column-6">0.8929</td><td class="column-7">-0.0037</td>
+</tr>
+<tr class="row-368 even">
+	<td class="column-1">1876</td><td class="column-2">Twain,Mark</td><td class="column-3">TomSawyer</td><td class="column-4">38</td><td class="column-5">0.116</td><td class="column-6">0.8898</td><td class="column-7">-0.0031</td>
+</tr>
+<tr class="row-369 odd">
+	<td class="column-1">1884</td><td class="column-2">Twain,Mark</td><td class="column-3">TheAdventuresofHuckleberryFinn</td><td class="column-4">56</td><td class="column-5">0.067</td><td class="column-6">0.8902</td><td class="column-7">-0.0036</td>
+</tr>
+<tr class="row-370 even">
+	<td class="column-1">1884</td><td class="column-2">Twain,Mark</td><td class="column-3">HuckFinn</td><td class="column-4">56</td><td class="column-5">0.066</td><td class="column-6">0.8843</td><td class="column-7">-0.003</td>
+</tr>
+<tr class="row-371 odd">
+	<td class="column-1">1896</td><td class="column-2">Upward,Allen</td><td class="column-3">Acrownofstraw</td><td class="column-4">45</td><td class="column-5">0.106</td><td class="column-6">0.8764</td><td class="column-7">-0.004</td>
+</tr>
+<tr class="row-372 even">
+	<td class="column-1">1889</td><td class="column-2">Van Dyke,Theodore</td><td class="column-3">RifleRodAndGuninCalifornia</td><td class="column-4">48</td><td class="column-5">0.108</td><td class="column-6">0.4028</td><td class="column-7">-0.0027</td>
+</tr>
+<tr class="row-373 odd">
+	<td class="column-1">2009</td><td class="column-2">Verghese,Abraham</td><td class="column-3">CuttingforStone</td><td class="column-4">118</td><td class="column-5">0.089</td><td class="column-6">0.8489</td><td class="column-7">-0.0016</td>
+</tr>
+<tr class="row-374 even">
+	<td class="column-1">1969</td><td class="column-2">Vonnegut,Kurt</td><td class="column-3">Slaughterhouse</td><td class="column-4">28</td><td class="column-5">0.143</td><td class="column-6">0.8838</td><td class="column-7">-0.0061</td>
+</tr>
+<tr class="row-375 odd">
+	<td class="column-1">1982</td><td class="column-2">Walker,Alice</td><td class="column-3">TheColorPurple</td><td class="column-4">39</td><td class="column-5">0.082</td><td class="column-6">0.2819</td><td class="column-7">-0.0021</td>
+</tr>
+<tr class="row-376 even">
+	<td class="column-1">1888</td><td class="column-2">Ward,Mrs.Humphry</td><td class="column-3">RobertElsmere</td><td class="column-4">163</td><td class="column-5">0.066</td><td class="column-6">0.8524</td><td class="column-7">-0.0014</td>
+</tr>
+<tr class="row-377 odd">
+	<td class="column-1">2010</td><td class="column-2">Warren,Dianne</td><td class="column-3">CoolWater</td><td class="column-4">56</td><td class="column-5">0.089</td><td class="column-6">0.9373</td><td class="column-7">-0.0043</td>
+</tr>
+<tr class="row-378 even">
+	<td class="column-1">1917</td><td class="column-2">Webb,Mary</td><td class="column-3">GonetoEart</td><td class="column-4">45</td><td class="column-5">0.11</td><td class="column-6">0.9404</td><td class="column-7">-0.0038</td>
+</tr>
+<tr class="row-379 odd">
+	<td class="column-1">1893</td><td class="column-2">Wedmore,Frederick</td><td class="column-3">Renunciations</td><td class="column-4">7</td><td class="column-5">0.25</td><td class="column-6">0.7301</td><td class="column-7">-0.0035</td>
+</tr>
+<tr class="row-380 even">
+	<td class="column-1">1895</td><td class="column-2">Wells,H.G.</td><td class="column-3">TheTimeMachine</td><td class="column-4">17</td><td class="column-5">0.149</td><td class="column-6">0.7821</td><td class="column-7">-0.0058</td>
+</tr>
+<tr class="row-381 odd">
+	<td class="column-1">1918</td><td class="column-2">West,Nathaniel</td><td class="column-3">ReturnOfTheSoldier</td><td class="column-4">16</td><td class="column-5">0.156</td><td class="column-6">0.9013</td><td class="column-7">-0.0047</td>
+</tr>
+<tr class="row-382 even">
+	<td class="column-1">1905</td><td class="column-2">Wharton,Edith</td><td class="column-3">TheHouseofMirth</td><td class="column-4">73</td><td class="column-5">0.092</td><td class="column-6">0.9023</td><td class="column-7">-0.003</td>
+</tr>
+<tr class="row-383 odd">
+	<td class="column-1">1905</td><td class="column-2">Wharton,Edith</td><td class="column-3">HouseOfMirth copy</td><td class="column-4">73</td><td class="column-5">0.092</td><td class="column-6">0.9014</td><td class="column-7">-0.003</td>
+</tr>
+<tr class="row-384 even">
+	<td class="column-1">1911</td><td class="column-2">Wharton,Edith</td><td class="column-3">EthanFrome</td><td class="column-4">18</td><td class="column-5">0.137</td><td class="column-6">0.9614</td><td class="column-7">-0.0082</td>
+</tr>
+<tr class="row-385 odd">
+	<td class="column-1">1911</td><td class="column-2">Wharton,Edith</td><td class="column-3">EthanFrome</td><td class="column-4">18</td><td class="column-5">0.136</td><td class="column-6">0.9575</td><td class="column-7">-0.0071</td>
+</tr>
+<tr class="row-386 even">
+	<td class="column-1">1913</td><td class="column-2">Wharton,Edith</td><td class="column-3">CustomoftheCountry</td><td class="column-4">78</td><td class="column-5">0.089</td><td class="column-6">0.9073</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-387 odd">
+	<td class="column-1">1920</td><td class="column-2">Wharton,Edith</td><td class="column-3">TheAgeofInnocence</td><td class="column-4">57</td><td class="column-5">0.102</td><td class="column-6">0.8896</td><td class="column-7">-0.0033</td>
+</tr>
+<tr class="row-388 even">
+	<td class="column-1">1920</td><td class="column-2">Wharton,Edith</td><td class="column-3">AgeofInnocence</td><td class="column-4">58</td><td class="column-5">0.101</td><td class="column-6">0.8732</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-389 odd">
+	<td class="column-1">1890</td><td class="column-2">Wilde,Oscar</td><td class="column-3">ThePictureofDorianGray</td><td class="column-4">42</td><td class="column-5">0.092</td><td class="column-6">0.7748</td><td class="column-7">-0.0041</td>
+</tr>
+<tr class="row-390 even">
+	<td class="column-1">1890</td><td class="column-2">Wilde,Oscar</td><td class="column-3">PictureofDorianGrey</td><td class="column-4">42</td><td class="column-5">0.093</td><td class="column-6">0.7768</td><td class="column-7">-0.0042</td>
+</tr>
+<tr class="row-391 odd">
+	<td class="column-1">1914</td><td class="column-2">Williams,Irving</td><td class="column-3">BigWallace</td><td class="column-4">22</td><td class="column-5">0.141</td><td class="column-6">0.7726</td><td class="column-7">-0.0044</td>
+</tr>
+<tr class="row-392 even">
+	<td class="column-1">1994</td><td class="column-2">Willis,Connie</td><td class="column-3">UnchartedTerritory</td><td class="column-4">22</td><td class="column-5">0.117</td><td class="column-6">0.8665</td><td class="column-7">-0.0085</td>
+</tr>
+<tr class="row-393 odd">
+	<td class="column-1">1982</td><td class="column-2">Wilson,Steve</td><td class="column-3">DealersWheels</td><td class="column-4">33</td><td class="column-5">0.132</td><td class="column-6">0.8918</td><td class="column-7">-0.0052</td>
+</tr>
+<tr class="row-394 even">
+	<td class="column-1">1894</td><td class="column-2">Wolf,Emma</td><td class="column-3">Aprodigalinlove</td><td class="column-4">39</td><td class="column-5">0.122</td><td class="column-6">0.8173</td><td class="column-7">-0.0037</td>
+</tr>
+<tr class="row-395 odd">
+	<td class="column-1">1987</td><td class="column-2">Wolfe,Tom</td><td class="column-3">TheBonfireoftheVanities</td><td class="column-4">147</td><td class="column-5">0.086</td><td class="column-6">0.7999</td><td class="column-7">-0.0016</td>
+</tr>
+<tr class="row-396 even">
+	<td class="column-1">1788</td><td class="column-2">Wollstonecraft,Mary</td><td class="column-3">Mary</td><td class="column-4">13</td><td class="column-5">0.176</td><td class="column-6">0.9016</td><td class="column-7">-0.0085</td>
+</tr>
+<tr class="row-397 odd">
+	<td class="column-1">1798</td><td class="column-2">Wollstonecraft,Mary</td><td class="column-3">Maria</td><td class="column-4">25</td><td class="column-5">0.141</td><td class="column-6">0.9204</td><td class="column-7">-0.0057</td>
+</tr>
+<tr class="row-398 even">
+	<td class="column-1">1922</td><td class="column-2">Woolf,Virginia</td><td class="column-3">JacobsRoom</td><td class="column-4">31</td><td class="column-5">0.146</td><td class="column-6">0.8254</td><td class="column-7">-0.0028</td>
+</tr>
+<tr class="row-399 odd">
+	<td class="column-1">1925</td><td class="column-2">Woolf,Virginia</td><td class="column-3">Mrs.Dalloway</td><td class="column-4">35</td><td class="column-5">0.12</td><td class="column-6">0.8085</td><td class="column-7">-0.0044</td>
+</tr>
+<tr class="row-400 even">
+	<td class="column-1">1925</td><td class="column-2">Woolf,Virginia</td><td class="column-3">MrsDalloway</td><td class="column-4">35</td><td class="column-5">0.12</td><td class="column-6">0.8083</td><td class="column-7">-0.0044</td>
+</tr>
+<tr class="row-401 odd">
+	<td class="column-1">1927</td><td class="column-2">Woolf,Virginia</td><td class="column-3">TotheLighthouse</td><td class="column-4">38</td><td class="column-5">0.104</td><td class="column-6">0.7711</td><td class="column-7">-0.0048</td>
+</tr>
+<tr class="row-402 even">
+	<td class="column-1">1927</td><td class="column-2">Woolf,Virginia</td><td class="column-3">ToTheLighthouse</td><td class="column-4">38</td><td class="column-5">0.104</td><td class="column-6">0.771</td><td class="column-7">-0.0048</td>
+</tr>
+<tr class="row-403 odd">
+	<td class="column-1">1928</td><td class="column-2">Woolf,Virginia</td><td class="column-3">Orlando</td><td class="column-4">43</td><td class="column-5">0.123</td><td class="column-6">0.8841</td><td class="column-7">-0.0036</td>
+</tr>
+<tr class="row-404 even">
+	<td class="column-1">2008</td><td class="column-2">Wroblewski,David</td><td class="column-3">TheStoryofEdgarSawtelle</td><td class="column-4">107</td><td class="column-5">0.073</td><td class="column-6">0.7712</td><td class="column-7">-0.0023</td>
+</tr>
+<tr class="row-405 odd">
+	<td class="column-1">1844</td><td class="column-2">Yonge,Charlotte</td><td class="column-3">Abbeychurch</td><td class="column-4">40</td><td class="column-5">0.088</td><td class="column-6">0.7459</td><td class="column-7">-0.0049</td>
+</tr>
+<tr class="row-406 even">
+	<td class="column-1">1850</td><td class="column-2">Yonge,Charlotte</td><td class="column-3">Henrietta'sWish</td><td class="column-4">48</td><td class="column-5">0.082</td><td class="column-6">0.9209</td><td class="column-7">-0.0041</td>
+</tr>
+<tr class="row-407 odd">
+	<td class="column-1">1853</td><td class="column-2">Yonge,Charlotte</td><td class="column-3">TheHeirofRedcliffe</td><td class="column-4">128</td><td class="column-5">0.052</td><td class="column-6">0.8956</td><td class="column-7">-0.0021</td>
+</tr>
+<tr class="row-408 even">
+	<td class="column-1">1979</td><td class="column-2">Yorgason,BlaineM	TheWindwalker</td><td class="column-3"></td><td class="column-4">11</td><td class="column-5">0.116</td><td class="column-6">0.6665</td><td class="column-7">-0.0076</td>
+</tr>
+<tr class="row-409 odd">
+	<td class="column-1">2007</td><td class="column-2">Young,WilliamP</td><td class="column-3">TheShack</td><td class="column-4">44</td><td class="column-5">0.105</td><td class="column-6">0.9351</td><td class="column-7">-0.0048</td>
+</tr>
+</tbody>
+</table>
+<!-- #tablepress-75-no-2 from cache -->
+<p> </p>
+<p><a href="http://creativecommons.org/licenses/by/4.0/" rel="license"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License" /></a><br />
+Unless otherwise specified, all work in this journal is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
+<p> </p>
+ 
+					
+					
+					
+										</div>
+	</div>
+<div id='footnote_div'><ol class="footnotes"><li id="footnote_0_1809" class="footnote">The authors would like to thank Thomas Padilla for his early work on this project. The preliminary study of the Bloom Filter's application to literary texts was conducted by Hintze, Higgins, and Thomas Padilla, and presented at DH2015 as "Patterns of Novelty in Literary Data." [<a href="#identifier_0_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_1_1809" class="footnote">Astradur Eysteinsson, <em>The Concept of Modernism</em> (1990):  David Harvey, "Modernity and Modernism," <em>Modernism, </em>ed. Tim Middleton (2003): 269; Susan Stanford Friedman, "Periodizing Modernism," <em>Modernism/modernity</em> 13.3 (September, 2006): 433. [<a href="#identifier_1_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_2_1809" class="footnote">Jed Rasula, "Make it New." <em>Modernism/modernity</em> 17.4 (November, 2010): 713-733. [<a href="#identifier_2_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_3_1809" class="footnote">"Michael Levenson, "Novelty, Modernity, Adjacency." <em>New Literary History </em>42.4 (2011): 663-680. [<a href="#identifier_3_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_4_1809" class="footnote">See North, Michael. <em>Novelty: A History of the New </em>(2015). [<a href="#identifier_4_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_5_1809" class="footnote">Novelty is not only always relative to what has come before it, but it also lays the groundwork for whatever novelty may surpass it, rearranging what scientists have called "the adjacent possible." Recent research attempting to test the intuition that one novelty begets another, has shown that the concept of novelty (describing a formation that is new only from a particular perspective, e.g. in the reader's experience moving page by page through a novel) is strongly linked to the concept of innovation (describing a formation that is new to all perspectives, e.g. to all readers in relation to their larger reading lives). Both forms of newness, local and global, appear to align with the same mathematical models whereby if "a novelty of any kind occurs, it does not occur alone. It comes with an entourage of surrounding possibilities, a cloud of other potentially new ideas or experiences that are thematically adjacent to it and hence can be triggered by it." See F. Tria,  V. Loreto, V. D. P. Servedio, and S. H. Strogatz. "The Dynamics of Correlated Novelties." <em>Nature</em> (July 2014). [<a href="#identifier_5_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_6_1809" class="footnote">T.S. Eliot and Frank Kermode, <em>Selected Prose of T.S. Eliot</em>. (New York: Farrar, Straus, and Giroux, 1988), 38. [<a href="#identifier_6_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_7_1809" class="footnote">Michael Levenson, "Novelty, Modernity, Adjacency." <em>New Literary History </em>42.4 (2011): 668-70. [<a href="#identifier_7_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_8_1809" class="footnote">Indeed, as Alberto Piazza reflects in his Afterward to Franco Moretti's <em>Graphs, Maps, and Trees, </em>literary theorists and biologists share a great many metaphors: Scientists and philosophers alike rely on the alphabetic sequence and, even, the metaphor of poetic inspiration to describe complex, evolutionary problems; DNA is translated and transcribed, not to mention written, copied, and, increasingly, edited. See Franco Moretti, <em>Graphs, Maps, and Trees</em>. (New York: Verso, 2007). [<a href="#identifier_8_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_9_1809" class="footnote">For more on the ways that Bloom Filter has been used to measure genetic novelty, see Jason Pell, Arend Hintze, Rosangela Canino-Koning, Adina Howe, James M. Tiedje, and C. Titus Brown, "Scaling Metagenome Sequence Assembly with Probabilistic de Bruijn Graphs." <em>Proceedings of the National Academy of Sciences</em> 109, no. 33 (2012): 13272-13277. [<a href="#identifier_9_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_10_1809" class="footnote">The Bloom Filter and the models that we employ in this essay are similar to the sorts of sequence analysis that has recently found its way into computational studies of culture. See Alexander T.J. Barron, Jenny Huang, Rebecca L. Spang, and Simon DeDeo, "Individuals, Institutions, and Innovation in the Debates of the French Revolution." <em>Proceedings of the National Academy of Sciences of the United States of America</em> (2018); Shaobin Xu, David A. Smith, Abigail Mullen, and Ryan Cordell, "Detecting and Evaluating Local Text Reuse in Social Networks."<em> Proceedings of the Joint Workshop on Social Dynamics and Personal Attributes, Association for Computational Linguistics </em>(2014): 50-57; and Richard Jean So, Hoyt Long, and Yuancheng Zhu, "The Dark Code: Race, Computation and the History of White-Black Literary Relations, 1880-2000." <em>CA, </em>forthcoming. [<a href="#identifier_10_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_11_1809" class="footnote">Punctuation and spaces are included in each k-mer, which are encoded according to their ASCII value using a modulo-32 operation to reduce the number of bits required to encode each character from 8 to 5. [<a href="#identifier_11_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_12_1809" class="footnote">All code is available for use in our GitHub Repository: <a href="https://github.com/devinhiggins/Novelty-Filter">https://github.com/devinhiggins/Novelty-Filter</a> [<a href="#identifier_12_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_13_1809" class="footnote">While it might be theoretically possible for novelty to steadily increase over a text, it is highly implausible; every graph produced by the Bloom Filter has a negative slope. [<a href="#identifier_13_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_14_1809" class="footnote">See script and marked up texts at <a href="https://github.com/devinhiggins/Novelty-Filter/blob/master/texts/modernism/Joyce_Ulysses_intervals.txt">https://github.com/devinhiggins/Novelty-Filter/blob/master/texts/modernism/Joyce_Ulysses_intervals.txt</a> [<a href="#identifier_14_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_15_1809" class="footnote">Our thanks to Andrew Piper and the McGill University .txtlab for both sharing their post-1923 corpus, and making the Novel 450 corpus available for further research. [<a href="#identifier_15_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_16_1809" class="footnote">One would be forgiven for wondering at this point whether the Bloom Filter is simply biased toward longer texts: A line drawn from the novelty reading at point A (the beginning of the text) to point B (the ending) has a shallower slope the farther apart they are. Yet our data reveals that the longer texts we examine here really are generating as much new textual novelty over their length than their shorter yet otherwise identical counterparts. A bias in favor of "more novel" longer texts would be operative only if the novelty decay plateaued at some point, in which case extending the plateau a few hundred more pages would certainly seem to "artificially" elevate the calculated slope. Our analysis shows, however, that attempts to fit non-linear patterns of decay to the data do not return increased accuracy, and we do not see evidence of this plateauing effect. In fact, the high r<sup>2</sup> values our maximalist texts tend to receive, indicate that their shallowly sloping novelty does not subside in ways a non-linear measure would capture. [<a href="#identifier_16_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_17_1809" class="footnote">Stefano Ercolino has remarked on the relationship between length and maximalism, arguing that, "Length is not simply a neutral material aspect as regards the maximalist novel, but something more... It is a possibility that turns out to be related both to the strongly innovative and experimental nature of maximalist novels and to their ambition to realize synthetic-totalizing representations of the world." See Ercolino, "The Maximalist Novel." <em>Comparative Literature</em> 64.3 (2012): 241-256. [<a href="#identifier_17_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_18_1809" class="footnote">William James, "The Compounding of Consciousness" in <em>Writings: 1902-1910 </em>(New York: Library of America, 1987): 715. [<a href="#identifier_18_1809" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_19_1809" class="footnote">Mark Goble writes, "It might even be the case that modernism persists for us today largely as an aesthetic of obsolescence... precisely because we no longer feel required to insist on modernism's novelty as the most important measure of its value," (147). See "Obsolescence" in Eric Hayot and Rebecca Walkowitz, <em>A New Vocabulary for Global Modernism</em>. (New York: Columbia UP, 2016): 146. See also Liesl Olson, <em>Modernism and the Ordinary</em>. (New York: Oxford UP, 2009). Juan A Suárez, <em>Pop Modernism: Noise and the Reinvention of the Everyday. </em>(Champagne: U Illinois P, 2007). Bryony Randall, <em>Modernism, Daily Time and Everyday Life</em>. (New York: Cambridge UP, 2007). [<a href="#identifier_19_1809" class="footnote-link footnote-back-link">↩</a>]</li></ol></div>

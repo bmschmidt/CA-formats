@@ -1,0 +1,894 @@
+
+    <head>
+    <meta name="author" content="Nikki Stevens">
+    <title>Data Set Failures and Intersectional Data</title>
+    <meta name="date" content="06.12.19">
+    <meta name="shortauthor" content="Nikki Stevens">
+    <meta name="shorttitle" content="Data Set Failures and Intersectional Data">
+    </head>
+    
+	<div class="entry print-only">
+						 
+		 
+		<div class="post-2505 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-leftfeatured tag-ongrid" id="post-2505">
+			<!-- Show post on single page if option enabled -->
+
+		
+					
+<h6><em>Peer-Reviewed By: Anon.</em></h6>
+
+
+
+<h6><em>Clusters: <a href="http://culturalanalytics.org/2018/01/data/" target="_blank" rel="noreferrer noopener">Data</a></em></h6>
+
+
+
+<h6><em>Article DOI: <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="http://doi.org/10.22148/16.041" target="_blank">10.22148/</a><a href="http://doi.org/10.22148/16.041" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">16.041</a></em></h6>
+
+
+
+<h6><em>Journal ISSN: 2371-4549</em></h6>
+
+
+
+<h6><em>Cite:   Nikki Stevens, "Data Set Failures and Intersectional Data," Journal of Cultural Analytics. June 12 , 2019.</em></h6>
+
+
+<p> </p>
+
+
+<p>In 2016, a software developer named David<sup><a href="#footnote_0_2505" id="identifier_0_2505" class="footnote-link footnote-identifier-link" title="All company names, contributor names and open source communities are anonymized.">1</a></sup><sup><a href="#footnote_1_2505" id="identifier_1_2505" class="footnote-link footnote-identifier-link" title="I am grateful to the survey team, OSC and all respondents. Thank you also to Jacqueline Wernimont, Taylor Genovese and two anonymous reviewers for their generous feedback that helped me to improve the quality of this article.">2</a></sup> and I met to discuss creating a quantitative demographic survey of the open source software community to which we were both long-time contributors. David and I did not know each other well, but shared a belief that our open source community (OSC, hereafter) was an unsafe place for anyone who did not identify as white, cisgendered, heterosexual and male. That lack of safety was further complicated by any one individual's distance from privileged modes of contribution. In OSC, developers who were on key Contribution Teams and regularly added code to the codebase were valued more highly than those who contributed documentation, user experience research, or quality assurance work. David asked "What if we made a survey that accounted for all of the ways that people <em>make</em> the web? Can we do it intersectionally? Can we do it the OSC way?" Over the following 18 months, David and I worked with a team of OSC community members on the creation, dissemination and analysis of a quantitative demographic survey of OSC. This survey was the first step in a project to create safer spaces within OSC for individuals from marginalized groups. Rather than this survey being an attempt to gather a representative sampling, it was part of a larger political project to increase diversity, inclusion and equity in our community.<sup><a href="#footnote_2_2505" id="identifier_2_2505" class="footnote-link footnote-identifier-link" title="We fell prey to what Theodore Porter calls the “insistent quantifrenia” of everything diversity and inclusion related. Theodore M. Porter, Trust in Numbers (Princeton, N.J: Princeton University Press, 1996), 76. This quantifrenia seems like a way to mediate the unreliable narration of experience performed by those from marginalized groups. My thinking here is influenced by Fricker’s construction of epistemic credibility. Miranda Fricker, Epistemic Injustice: Power and the Ethics of Knowing, 1 edition (Oxford: Oxford University Press, 2009). Examining quantification’s role in diversity and inclusion work is out of the scope of this paper. The CHAOSS (Community Health Analytics Open Source Software) Project is a prominent group thinking about how to measure every aspect of community “health,” including diversity and inclusion. See https://chaoss.community/. For examples of work quantifying the success of diversity projects, see Peggy D Dreachslin PhD; Lee, “Applying Six Sigma and DMAIC to Diversity Initiatives,” Journal of Healthcare Management 52.6 (2007). For one of the few academic works examining the effects of diversity in open source communities, see S Daniel, Agarwal, and Stewart, “The Effects of Diversity in Global, Distributed Collectives: A Study of Open Source Project Success,” Information Systems Research 24, no. 2 (2013): 312–33.">3</a></sup></p>
+
+
+
+<p>To further contextualize our motivations,
+in 2015 Stack Overflow, a popular website for software engineers, released the
+results of its annual developer survey. They surveyed "over fifty thousand
+developers" and claimed that the report was "the most comprehensive developer
+survey ever conducted."<sup><a href="#footnote_3_2505" id="identifier_3_2505" class="footnote-link footnote-identifier-link" title=" Stack Overflow Developer Survey 2016 Results,” Stack&#10;Overflow, January 15, 2016, https://insights.stackoverflow.com/survey/2016">4</a></sup> Despite contributing their information to the
+dataset, individuals who took the survey had no access to the resultant data
+and no input into the questions asked.<sup><a href="#footnote_4_2505" id="identifier_4_2505" class="footnote-link footnote-identifier-link" title="In July 2016, a few months after the&#10;results of the survey were released, Stack Overflow released its “Insight&#10;Center” with data sets for all previous years’ surveys. When our survey work&#10;began in May 2016, there was no way to access the results of the Stack Overflow&#10;developer surveys.">5</a></sup> As engineers steeped in open source ways of working, David
+and I found Stack Overflow's extractivist approach to gathering data to be both
+foreign and morally suspect. We viewed our open source community not only as a
+software production system, but a knowledge production network and believed
+that knowledge produced <em>by</em> the
+community should belong <em>to</em> the
+community. This belief guided every choice that we made during the survey
+project.</p>
+
+
+
+<p>While our format was quantitative, our
+approach was unruly and counter to many of the expectations of a detached and
+objective quantitative survey of a community. We<sup><a href="#footnote_5_2505" id="identifier_5_2505" class="footnote-link footnote-identifier-link" title="Though I am describing my own&#10;experience, outside of the clear boundaries of an academic study, I did not act&#10;alone, but in consultation and collaboration with others in the community.&#10;While I do not speak for them, I also do not wish to represent this work as&#10;only my own. I default to the use of the word ‘we’ when discussing&#10;conversations/group actions.">6</a></sup> deprioritized data cleanliness, invited
+individuals to self identify, and were explicitly biased in both our
+motivations and stewardship of the process - for us, this was a site of
+intersectional praxis. Intersectionality was about power and the ways that
+access to power was mediated by individual social location(s). While
+traditional surveys may be collected in order to obtain an "objective" sampling
+of community members, this project rejected any ideal of objectivity in favor
+of a situated and subjective project.</p>
+
+
+
+<p>This paper begins by reviewing important
+aspects of open source communities and defining our use of intersectionality.
+Next, I outline our approach to employing open source production methods to a
+quantitative demographic survey. I then explore several failures in the
+survey's lifecycle and offer corrective suggestions where appropriate. Finally,
+I discuss the concepts underlying our approach and ask "Does a research project
+designed to be intersectional produce data that itself is intersectional?"</p>
+
+
+<p> </p>
+
+
+<h2 style="text-align:center">Literature Review</h2>
+
+
+
+<h3 style="text-align:center">Open source</h3>
+
+
+
+<p>Open source software communities are those in which individuals work together to produce a technical product. The open source movement<sup><a href="#footnote_6_2505" id="identifier_6_2505" class="footnote-link footnote-identifier-link" title="A review of the history and nuances of open source communities is out of scope for this article. See, among others: Dawn Nafus, “’Patches Don’t Have Gender’: What Is Not Open in Open Source Software,” New Media &amp; Society 14, no. 4 (2012): 669–83; Dany Di Tullio and D. Sandy Staples, “The Governance and Control of Open Source Software Projects.” Journal of Management Information Systems 30, no. 3 (January 2013): 49–80; Hao-Yun Huang, Qize Le, and Jitesh H. Panchal, “Analysis of the Structure and Evolution of an Open-Source Community,” Journal of Computing and Information Science in Engineering 11, no. 3 (2011): 031008; Audris Mockus, Roy T Fielding, and James D Herbsleb, “Two Case Studies of Open Source Software Development: Apache and Mozilla,” ACM Transactions on Software Engineering and Methodology (TOSEM) 11, no. 3 (2002): 309–46; David L. Olson and Kirsten Rosacker, “Crowdsourcing and Open Source Software Participation,” Service Business 7, no. 4 (2013): 499–511; Eric S. Raymond, The Cathedral &amp; the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary, 1 edition (Beijing ; Cambridge, Mass: O’Reilly Media, 2001); E. Gabriella Coleman, Coding Freedom : The Ethics and Aesthetics of Hacking (Princeton University Press, 2012).">7</a></sup> is characterized by a few behaviors: working publicly and collaboratively, the flawed notion of meritocracy,<sup><a href="#footnote_7_2505" id="identifier_7_2505" class="footnote-link footnote-identifier-link" title="Nafus, “’Patches Don’t Have Gender’.”">8</a></sup> and (in its early days) a rejection of capitalist and corporate-controlled modes of production. These behaviors were fundamental parts of OSC.</p>
+
+
+
+<p>Open source software (OSS) communities espouse normative modes of knowledge production and participation, subject to many of the same disequilibriums as the societies that contain those communities. I will briefly review two norms relevant here. First, there is an expectation that knowledge made by individuals is accessible to those individuals. While the "open" in "open source" has been described as not open at all,<sup><a href="#footnote_8_2505" id="identifier_8_2505" class="footnote-link footnote-identifier-link" title="Nafus, “’Patches Don’t Have Gender’.”">9</a></sup> the concept of openness was hugely influential for us. Our adoption of the ethos of open source meant that we began the project with fixed ideas about the way that knowledge should be produced. As evidenced from our initial reaction to the closed-source Stack Overflow survey, we believed data should be collected and distributed by the people who produced it. Rather than engage in debates about how to get "the public" productively involved in technological knowledge production,<sup><a href="#footnote_9_2505" id="identifier_9_2505" class="footnote-link footnote-identifier-link" title="Frank Fischer, “Technological Deliberation in a Democratic Society: The Case for Participatory Inquiry,” Science and Public Policy 26, no. 5 (1999): 294–302; James Wilsdon and Rebecca Willis, See-Through Science: Why Public Engagement Needs to Move Upstream (London: Demos, 2004); Andrew D. Zimmerman, “Toward a More Democratic Ethic of Technological Governance,” Science, Technology, &amp; Human Values 20, no. 1 (1995): 86–107.">10</a></sup> we simply invited everyone to participate. Of course, this did not mean that everyone was able to participate and be longitudinally involved. Barriers to all levels of engagement, specifically for minorities, women and LGBTQIA2S+ individuals, can be significant.<sup><a href="#footnote_10_2505" id="identifier_10_2505" class="footnote-link footnote-identifier-link" title="For information on LGBTQIA2S+ experiences in STEM: Keith J. Bowman and Lynnette D. Madsen, “Queer Identities in Materials Science and Engineering,” MRS Bulletin 43, no. 4 (April 2018): 303–7; Erin A. Cech and Michelle V. Pham, “Queer in STEM Organizations: Workplace Disadvantages for LGBT Employees in STEM Related Federal Agencies,” Social Sciences 6, no. 1 (February 4, 2017): 12; Erin A. Cech and Tom J. Waidzunas, “Navigating the Heteronormativity of Engineering: The Experiences of Lesbian, Gay, and Bisexual Students,” Engineering Studies 3, no. 1 (April 1, 2011): 1–24. Specific research on women in open source participation: M. Mahmod, S. A. M. Yusof, and Z. M. Dahalin, “Women Contributions to Open Source Software Innovation: A Social Constructivist Perspective,” in 2010 International Symposium on Information Technology, vol. 3, 2010, 1433–8; Nafus, “’Patches Don’t Have Gender’.”. These barriers can also be attributed to communication styles E. Moon, “Gendered Patterns of Politeness in Free/Libre Open Source Software Development,” in 2013 46th Hawaii International Conference on System Sciences, 2013, 3168–77. For academic work about the demographics and politics of open source participants, see Yuanfeng Cai and Dan Zhu, “Reputation in an Open Source Software Community: Antecedents and Impacts,” Decision Support Systems 91 (2016): 103–12; Tadeusz Chełkowski, Peter Gloor, and Dariusz Jemielniak, “Inequalities in Open Source Software Development: Analysis of Contributor’s Commits in Apache Software Foundation Projects,” ed. Christophe Antoniewski, PLOS ONE 11, no. 4 (April 20, 2016): e0152976; Daniel, Agarwal, and Stewart, “The Effects of Diversity in Global, Distributed Collectives”; Rajdeep Grewal, Gary L. Lilien, and Girish Mallapragada, “Location, Location, Location: How Network Embeddedness Affects Project Success in Open Source Systems,” Management Science 52, no. 7 (2006): 1043–56; Mahmod, Yusof, and Dahalin, “Women Contributions to Open Source Software Innovation”; Nafus, “’Patches Don’t Have Gender’.”.">11</a></sup></p>
+
+
+
+<p>Second, OSS communities are structured to expect that contribution and individual value are quantifiable. This expectation results in the erasure of work that is not easily measurable and devalues the individuals producing that work. When software is being written, code writers add code to the codebase. Those additions can be specifically measured in lines of code, number of characters changed, or file size differences. Thus, as a project is developed, contributors can be ranked by the volume (and implied value) of their contribution.<sup><a href="#footnote_11_2505" id="identifier_11_2505" class="footnote-link footnote-identifier-link" title="As an example, Docker CLI is a popular open source software project with five years of public code contribution history. At the time of this writing, 607 contributors are listed and ranked by their volume of contribution. See https://github.com/docker/cli/graphs/ contributors for a list of these individuals.">12</a></sup> This is problematic for several reasons. First, the traditional structure of attributing lines of code to a single individual reinforces the idea that lines of code are the sole product of their author, and not the results of extended collaboration with others. Second, ranking contributors by their lines of code erases the other important ways that people contribute to a software product and elides the relationality inherent in creating a project with others. This elision does violence to all of the contributors whose labor is not so easily quantifiable. In order to be successful, software projects need documentation, support forums, outreach individuals, community managers. When a project is large enough to have a physical presence, the project needs people to attend local meetups, to staff booths at conferences, to hold events and coordinate speakers. All of this work directly contributes to the success of the project, but again is not so easily quantifiable.</p>
+
+
+<p> </p>
+
+
+<h3 style="text-align:center">Intersectionality</h3>
+
+
+
+<p>At the start of this project, David and I specifically invoked the word intersectionality. Intersectionality can be a synonym for "complexity," and it is often perceived as an essentialist driver of identity politics; however, these are misunderstandings. Rooted in a history of black feminist scholarship, intersectionality is an analytical framework that ultimately is about exposing power structures and systemic inequalities. While Alexander-Floyd<sup><a href="#footnote_12_2505" id="identifier_12_2505" class="footnote-link footnote-identifier-link" title="“Disappearing Acts: Reclaiming Intersectionality in the Social Sciences in a Post—Black Feminist Era,” Feminist Formations 24, no. 1 (2012): 1–25.">13</a></sup> argues that for work to be intersectional, it must explicitly center and study black and other women of color, Cooper<sup><a href="#footnote_13_2505" id="identifier_13_2505" class="footnote-link footnote-identifier-link" title="“Intersectionality,” The Oxford Handbook of Feminist Theory, February 1, 2016.">14</a></sup> disagrees. She asserts that we can move intersectionality past the "paradigmatic black woman" as an object of study, and into an era in which black feminist scholarship is powerful enough to act as a foundation upon which to build knowledge about marginalized groups of any identity. It is following Cooper's elucidation of intersectionality that I use the term here and that we used the term as we were developing the survey.</p>
+
+
+
+<p>As previously mentioned, the survey team understood intersectionality to be about power structures and social position. We saw the way that individuals who moved further from the "ideal" were given less credibility in OSC and for us, social position included not just one's race, class, gender, sexual orientation and other aspects of "identity", but one's role in the community. To illustrate the layers of marginalization that community members can experience, an example: a few years ago Alex, a genderqueer person of color known in part for their vocal community work, accused Tom, a prominent white male coder, of misogyny and sexually harassing language. The community largely ignored Alex's complaint (despite others coming forward to support and offer similar experiences with Tom) and continued to encourage Tom's participation. Later, Maggie, a white, cis-gendered woman known for her software engineering, accused Tom of sexual harassment. Maggie's complaint was taken seriously. Individuals in the community gave Maggie's complaint more weight not only because of her race and gender, but because she was seen as a valuable code contributor. In evaluating the validity of the claims against Tom, Maggie's history of quantifiable contribution was actively considered. Without an intersectional framework, we were unable to account for all of the ways the community had done a disservice to Alex and their experience.</p>
+
+
+
+<p>Intersectional research often deals with complexity, but it also centers those from marginalized groups and addresses social inequality, relationality and social context.<sup><a href="#footnote_14_2505" id="identifier_14_2505" class="footnote-link footnote-identifier-link" title="Patricia Hill Collins and Sirma Bilge, Intersectionality, 1 edition (Cambridge, UK ; Malden, MA: Polity, 2016).">15</a></sup> Given the reproduction of external oppressions in open source communities, and the violent force of meritocratic ideology,<sup><a href="#footnote_15_2505" id="identifier_15_2505" class="footnote-link footnote-identifier-link" title="Nafus, “’Patches Don’t Have Gender’.”">16</a></sup> open source communities are sites ripe for intersectional examination. I am dealing only with a small case study, but I further Safiya Noble's assertion that we need intersectionality to examine the racialized and gendered ways that knowledge is produced, not just on the internet, but also within open source communities.<sup><a href="#footnote_16_2505" id="identifier_16_2505" class="footnote-link footnote-identifier-link" title="Safiya Umoja Noble, “A Future for Intersectional Black Feminist Technology Studies,” Scholar &amp; Feminist Online 13, no. 3 (2016): 1–8, http://sfonline.barnard.edu/traversing-technologies/safiya-umoja-noble-a-future-for-intersectional-black-feminist-technology-studies/.">17</a></sup></p>
+
+
+<p> </p>
+
+
+<h2 style="text-align:center">Methodology</h2>
+
+
+
+<p>David and I began discussing the survey project in May 2016, worked with the community on the design, and opened the survey for data collection in October 2016. During the six months of design work, there were 108 commits to the Github repository made by 8 individuals (here again we see the easy quantification of text commits). Others on the survey team did not commit direct changes but participated in discussions. Those discussions happened both in the repository's issue queue and in specific meetings about questions and goals. An additional 25 people were part of those discussions. David and I agreed that we would involve as many community members as possible and actively seek to involve individuals from different cultural, socioeconomic, and geographic backgrounds. We did not log the race, class or gender of members of the survey team.</p>
+
+
+
+<p>I am deeply embedded in this story and
+this process - removing myself from it to exist as the academic narrator is an
+impossibility. I was a participant observer present for every stage of the
+survey creation and data lifecycle, attended every meeting and approved the
+majority of the community contributions. Observations about the survey shared
+below come from my recollections of conversations in meetings and reviewing
+digital artifacts like Github issue threads.</p>
+
+
+<p> </p>
+
+
+<h2 style="text-align:center">The Survey Process and the Data lifecycle</h2>
+
+
+
+<p>The data lifecycle describes a set of
+phases that data (and those who are responsible for data) can undergo. The
+lifecycle is cyclical, iterative and, as this project was arranged and managed
+by engineers, made intuitive and epistemological sense to us. As a result, we
+approached the dataset resulting from this survey using a similar set of
+stages. One common lifecycle has eight phases.<sup><a href="#footnote_17_2505" id="identifier_17_2505" class="footnote-link footnote-identifier-link" title="DataOne, “Data Life Cycle |&#10;DataONE,” December 14, 2015, https://www.dataone.org/data-life-cycle/.">18</a></sup>
+The eight steps - Plan, Collect, Assure, Describe, Preserve, Discover,
+Integrate, Analyze - were all present in the creation of this data set. In the
+following sections, I discuss five major failures during the Planning and
+Collection stages and the state of the data at the end of the Assuring phase.</p>
+
+
+<p> </p>
+
+
+<h3 style="text-align:center">Planning</h3>
+
+
+
+<p>In the planning stage, data stewards
+create a "description of the data that will be compiled, and how the data will
+be managed and made accessible throughout its lifetime."<sup><a href="#footnote_18_2505" id="identifier_18_2505" class="footnote-link footnote-identifier-link" title="DataOne.">19</a></sup> In this
+stage, we designed the survey questions.</p>
+
+
+
+<p><em>Failure
+#1: By choosing a code-centric platform, despite the goal of validating and
+encouraging non-code participation, we erected barriers to participation in the
+planning stage.</em></p>
+
+
+
+<p>In order to facilitate collaboration on
+the survey, we rendered the questions in plain text, using () to represent
+radio buttons and [] to represent checkboxes, and we worked in plain text on
+Github.<sup><a href="#footnote_19_2505" id="identifier_19_2505" class="footnote-link footnote-identifier-link" title="Github.com is a site for people (largely people who write code) to&#10;share and collaborate on their projects.">20</a></sup> The final text version of the survey
+(before it was recreated in the online survey platform we used) is visible in
+Appendix A. We followed a standard Github pull request workflow<sup><a href="#footnote_20_2505" id="identifier_20_2505" class="footnote-link footnote-identifier-link" title="For an&#10;explanation of a pull request workflow see Atlassian, “Pull Requests |&#10;Atlassian Git Tutorial,” Atlassian, March 7, 2014, https://www.atlassian.com/git/tutorials/making-a-pull-request;&#10;Github, “Understanding the GitHub Flow · GitHub Guides,” Github, November 30,&#10;2017, https://guides.github.com/introduction/flow/.">21</a></sup>
+and this, despite its publicness, presented an unexpected barrier to entry for
+individual participation. Our backgrounds as developers and our long experience
+with collaborative tools like Github blinded us to the fact that for many
+people working in technology, Github is not a necessary tool. I met many folks
+who wanted to participate but could not (or did not want to) navigate the
+Github onboarding process. Despite our explicit conversations about centering
+marginalized individuals in the survey design, we centered developers and
+developer-centric tools and did not critically engage with our initial platform
+selection. For many of our collaborators using a shared document system - like
+Google Docs - would have been easier.</p>
+
+
+<p> </p>
+
+
+<h4 style="text-align:center">The stabilization of identity</h4>
+
+
+
+<p>Examining the content of <em>every</em> question is out of scope for this
+paper, but I will review two questions as examples of ways that I believe our
+intersectional goals were in friction with the requirements of quantification.</p>
+
+
+
+<p><em>Failure
+#2: By asking users to stabilize aspects of their identity, our questions acted
+as barriers to intersectional representations of an individual.</em></p>
+
+
+
+<p>Because technologists are so often
+portrayed as cisgendered, heterosexual men, it was important that we include
+expansive questions about gender and sexual orientation. We explicitly hoped
+that by framing the questions in a more inclusive way, we would capture a wider
+variety of gender identities and sexual orientations. The survey team spent a
+lot of time discussing and debating the "right" choices for these sections.</p>
+
+
+
+<p>The sexual orientation question:</p>
+
+
+
+<p>  Do you identify with any of the following?<br />
+  [] Asexual<br />
+  [] Bisexual<br />
+  [] Gay<br />
+  [] Lesbian<br />
+  [] Queer<br />
+  [] Straight<br />
+  [] Self
+Identify: _________________<br />
+  [] Prefer not
+to answer</p>
+
+
+
+<p>The gender identity questions:</p>
+
+
+
+<p>  Do you consider yourself to be
+transgender/gender non-conforming?<br />
+  () Yes<br />
+  () No<br />
+<br />
+  What is your
+primary gender identity today?<br />
+  () Female<br />
+  () Genderqueer<br />
+  () Intersex<br />
+  () Male<br />
+  () Trans F-M<br />
+  () Trans M-F<br />
+  () Prefer not
+to answer<br />
+  [___________]
+Self-identify</p>
+
+
+
+<p>Some dimensions of identity, like
+sexual orientation and gender, resist stabilization both in their definition
+and an individual's choice of labels over time.<sup><a href="#footnote_21_2505" id="identifier_21_2505" class="footnote-link footnote-identifier-link" title="Petra Doan, “To Count or Not&#10;to Count: Queering Measurement and the Transgender Community,” Women’s Studies Quarterly 44, no. 3/4&#10;(October 2016): 89–110, http://search.proquest.com/docview/1831356971/.">22</a></sup>
+For gender identity, we attempted to make allowances for this by including the
+word "today" in the question. However, the addition of the word "primary"
+required respondents to engage with an artificial hierarchy of gender
+identities. Internal conflict about not having too many questions meant that we
+removed a separate question asking if the respondent is intersex, and collapsed
+the trans and intersex identification into the gender identity question. As a
+result, we excluded trans-nonbinary and other trans* identities. For sexual
+orientation, we included checkboxes, but still demanded that the respondent
+explore their definition of the word queer in order to answer the question.
+Based on feedback from community members, we should have made all questions in
+this section follow the format of "Check all that apply" + "Self identify."</p>
+
+
+<p> </p>
+
+
+<h4 style="text-align:center">The normative force of questions</h4>
+
+
+
+<p><em>Failure
+#3: In our focus to perform "open source data collection," we neglected to
+think critically about the impact of including workplace, education and
+socioeconomic questions.</em></p>
+
+
+
+<p>Despite the open source rejection of corporate (Stack Overflow, in our case) control of community-sourced data, we were still influenced by corporate interests. We included questions about a respondent's workplace, size of workplace, and main business function, invoking capitalist expectations that an individual's work should serve a profit-making enterprise. In contradiction to a seemingly egalitarian ethos about how "everyone" can participate in our open source community, the questions about a respondent's workplace have normative implications for the validity of work produced in and outside of businesses. In the education section, we asked about an individual's level of educational achievement, and we omitted technology bootcamps - a large source of training for non-traditional and later-in-life technologists.<sup><a href="#footnote_22_2505" id="identifier_22_2505" class="footnote-link footnote-identifier-link" title="G. A. Wilson, “Could a Coding Bootcamp Experience Prepare You for Industry?” IT Professional 20, no. 2 (March 2018): 83–87; Sherry Seibel, “Social Motivators and Inhibitors for Women Entering Software Engineering Through Coding Bootcamps Vs. Computer Science Bachelor’s Degrees: (Abstract Only),” in Proceedings of the 49th ACM Technical Symposium on Computer Science Education, SIGCSE ’18 (New York, NY, USA: ACM, 2018), 274–74.">23</a></sup> Questions about socioeconomic status in childhood compared with adulthood took for granted that people working in technology experience class mobility. As one respondent wrote in the comments box at the end of the survey, "assuming that everyone works for a company or business leaves out those of us working in higher (or other) education, government, or non-profit organizations. It's a common (and annoying) mis-labeling." As an alternative, we could have allowed respondents to share where and how they make technology in a check-all-that-apply style question.</p>
+
+
+<p> </p>
+
+
+<h3 style="text-align:center">Collecting</h3>
+
+
+
+<p>During the collection phase of the
+data lifecycle, "observations are made either by hand or with sensors or other
+instruments and the data are placed into digital form."<sup><a href="#footnote_23_2505" id="identifier_23_2505" class="footnote-link footnote-identifier-link" title="DataOne, “Data Life&#10;Cycle | DataONE.”">24</a></sup> During this phase, we created a web-based version of the
+survey and collected responses.</p>
+
+
+
+<p><em>Failure
+#4: We allowed the limitations of media to determine the designs of our
+questions.</em></p>
+
+
+
+<p>We opened the survey for data collection
+in October 2106 and converted our plain text survey to the format of our chosen
+survey vendor. In the original question design, we agreed to allow users to
+check as many boxes as needed, in addition to entering text in a self-identify
+field. The survey vendor did not support this, and we were bound by the limits
+of the vendor's plugins. The team wanted to choose a vendor that would not
+store copies of survey responses after we closed the survey and that would
+provide a complete data export. In our focus to ensure that we would be able to
+easily share the data, we made user interface compromises.</p>
+
+
+
+<p>We could have addressed this limitation in at least two ways. First, we could have chosen a survey vendor before drafting questions, and subsequently designed questions within that vendor's technological limitations. Second, given that many of us were programmers, we could have modified an existing open source survey tool to accommodate the team's vision for question interfaces. This is another example of the team centering  expectations that technology most often acts as a tool and not a barrier.</p>
+
+
+
+<p><em>Failure
+#5: We ignored the contradictions in involving corporations in a survey
+designed to reject corporate control of data.</em></p>
+
+
+
+<p>Like the corporate interests that
+manifested in planning the questions, corporate interests intervened in
+collection as well. After running the survey for a few months, we still had
+fewer than 200 respondents. David secured $20,000 from his employer to spend on
+advertising to recruit survey participants. One of the places we advertised was
+on Stack Overflow, who matched that $20,000 with another $20,000 of in-kind
+advertising. Like David's employer, Stack Overflow was interested in gathering
+more data about people. The donations were given with the understanding that
+those companies would have access to the data as soon as it was released. I was
+not present for the negotiations regarding the initial money or the matching
+money, but the team collectively agreed that involving corporations to get more
+respondents was a good choice. Ultimately, we were complicit in the gathering
+of data for corporate interests, despite rationalizing that our involvement
+with corporate funding was in service of our larger project to benefit the
+community.</p>
+
+
+<p> </p>
+
+
+<h3 style="text-align:center">Assuring</h3>
+
+
+
+<p>In the assuring phase, "the quality of
+the data are assured through checks and inspections."<sup><a href="#footnote_24_2505" id="identifier_24_2505" class="footnote-link footnote-identifier-link" title="DataOne.">25</a></sup> Implied in
+data assurance are quality checks and transformations to ensure that data is
+recorded in a particular way and that it meets certain standards. Data that
+does not meet standards is often described as "dirty," a counterpoint to
+"clean" data that is ready to progress to the next phase of the lifecycle.
+Numerous works<sup><a href="#footnote_25_2505" id="identifier_25_2505" class="footnote-link footnote-identifier-link" title="Jason W Osborne, Best&#10;Practices in Data Cleaning: A Complete Guide to Everything You Need to Do&#10;Before and After Collecting Your Data (Sage Publications, 2012); Erhard&#10;Rahm and Hong Hai Do, “Data Cleaning: Problems and Current Approaches,” IEEE Data Eng. Bull. 23, no. 4 (2000):&#10;3–13; Vijayshankar Raman and Joseph M Hellerstein, “Potter’s Wheel: An&#10;Interactive Data Cleaning System,” in Proceedings&#10;of the 27th VLBD Conference (Rome, Italy, 2001), 10.">26</a></sup> assert the
+importance of having a system for cleaning data, and make a connection between
+"clean data" and "quality data.."<sup><a href="#footnote_26_2505" id="identifier_26_2505" class="footnote-link footnote-identifier-link" title="N. Peng et al., “Finding Interesting&#10;Cleaning Rules from Dirty Data,” in 2017&#10;10th International Symposium on Computational Intelligence and Design (ISCID),&#10;vol. 2, 2017, 378–82; Chen-Bo Zhong and Katie Liljenquist, “Washing Away Your&#10;Sins: Threatened Morality and Physical Cleansing,” Science 313, no. 5792 (September 8, 2006): 1451–2.">27</a></sup> Those of us
+involved - nearly all software engineers because of our earlier choice to work
+on Github - had extensive training on collecting "clean" data and some
+anticipatory concerns about whether or not the data will be "useful" if it is
+not clean.</p>
+
+
+
+<p>However, if we consider that data is abstract and conceptual,<sup><a href="#footnote_27_2505" id="identifier_27_2505" class="footnote-link footnote-identifier-link" title="Lisa Gitelman, Raw Data Is an Oxymoron (MIT Press, 2013).">28</a></sup> then as a concept it cannot be "clean" or "dirty". If we consider data as a material object, or collection of objects, it similarly cannot be inherently clean or dirty, but simply in violation of an external standard. I am arguing that a focus on data's cleanliness is a way of controlling which knowledge is "valid" and is directly counter to intersectional aims. This informed our choice not to "clean" the data we obtained. Intersectional data is messy data.<sup><a href="#footnote_28_2505" id="identifier_28_2505" class="footnote-link footnote-identifier-link" title="Jacqueline Wernimont, “Notes Toward a Post on Intersectional Data – Jacqueline Wernimont,” December 7, 2015, https://jwernimont.com/notes-toward-a-post-on-intersectional-data/.">29</a></sup> We embraced the messiness and all aspects of the data that might resist traditional quantitative analysis. We elected to make no changes to the survey responses or do any preparation before opening the data set. In this way, I believe that our dataset stands as a counterpoint to the shaped, "cleaned," "interpreted" data produced by surveys like those done by Gitlab and Stack Overflow.<sup><a href="#footnote_29_2505" id="identifier_29_2505" class="footnote-link footnote-identifier-link" title="GitLab, “GitLab 2018 Global Developer Report,” GitLab, March 7, 2018, https://about.gitlab.com/developer-survey/2018/; “Stack Overflow Developer Survey 2017,” Stack Overflow, March 22, 2017, https://stackoverflow.com/insights/survey/2017/?utm_source=so-owned&amp;utm_medium=social&amp;utm_campaign=dev-survey-2017&amp;utm_content=social-share; “Stack Overflow Developer Survey 2016 Results.”">30</a></sup></p>
+
+
+<p> </p>
+
+
+<h2 style="text-align:center">Discussion</h2>
+
+
+
+<p><em>Failure
+#6: We engaged in an ethically complicated process without considering the
+implications.</em></p>
+
+
+
+<p>From its inception, we positioned the
+survey as counter to the Stack Overflow surveys. Unlike Stack Overflow's closed
+and restricted approach, we would be doing all of our work in the open. Our
+intentions were to document the (all-axes) demographics of the community as a
+starting point for intervention; however none of us had considered the
+implications of undertaking such a survey. The responsibility of designing and
+asking demographic questions, the power dynamics inherent in positioning the
+survey as by and for open source, the epistemological challenges of
+representing individuals in numbers - all lost on us at the time. I believe
+that this was our biggest and most foundational failure.</p>
+
+
+
+<p>In OSC, it was emphasized that there was
+no reason to ever wait for an invitation to do things and that leadership and
+opportunity were rarely given, but taken by those with the time and inclination
+to do the work. While we may have realized that we were in a uniquely
+privileged position to be able to start the survey project, we did not have a
+formal conversation about the nuances of collecting data about people and the
+responsibilities we might have for the data at every phase of the lifecycle. We
+did not draw a discrete line between the documenters and the documented and as
+a result, did not understand the complexities of counting humans or that "the
+classification of individuals is at the heart of [...] social control."<sup><a href="#footnote_30_2505" id="identifier_30_2505" class="footnote-link footnote-identifier-link" title="Peter J&#10;Aspinall, “Answer Formats in British Census and Survey Ethnicity Questions:&#10;Does Open Response Better Capture ‘Superdiversity’?” Sociology 46, no. 2 (April 2012): 354–64.">31</a></sup> We realized after the
+fact that our envelopment in an open source space and our invocation of
+intersectional praxis did not protect us from enacting traditional methods of
+control.</p>
+
+
+
+<p>The final question in the survey asked users to add any other aspects of their identity they felt were important. One hundred and seventy-nine respondents entered text, including: Quaker, polyamorous, Russian-speaking Asian, autistic, former fundamentalist, feminist, abuse survivor, liberal, immigrant, depressed. These answers reinforced for us the importance of self-identify boxes and the ways that the identity markers we provided were insufficient. I believe that we absolutely did not offer folks a configuration of questions and answers that would have empowered them to represent themselves.</p>
+
+
+<p> </p>
+
+
+<h2 style="text-align:center">Conclusions and Implications for Further Research</h2>
+
+
+
+<p>Before data can be planned, before it
+exists as a data point, it exists as an imaginary.<sup><a href="#footnote_31_2505" id="identifier_31_2505" class="footnote-link footnote-identifier-link" title="Gitelman, Raw Data Is an Oxymoron.">32</a></sup> Our data
+imaginary contained amorphous representations of individuals and their many
+identities. Scholars have expanded the criteria by which we can determine if a
+research method (qualitative or quantitative) is intersectional<sup><a href="#footnote_32_2505" id="identifier_32_2505" class="footnote-link footnote-identifier-link" title="Nicole M&#10;Else-Quest and Janet Shibley Hyde, “Intersectionality in Quantitative&#10;Psychological Research,” Psychology of&#10;Women Quarterly 40, no. 3 (September 2016): 319–36.">33</a></sup> but make no specific
+mention of whether or not the artifacts resulting from research can be
+intersectional themselves. Can data, as a concept and/or as a material object,
+be intersectional? Regarding the methodological challenges of intersectional
+research, Lisa Bowleg writes "I question whether the positivistic assumptions
+implicit in quantification are compatible with intersectionality research.."<sup><a href="#footnote_33_2505" id="identifier_33_2505" class="footnote-link footnote-identifier-link" title="Lisa&#10;Bowleg, “When Black + Lesbian + Woman != Black Lesbian Woman: The&#10;Methodological Challenges of Qualitative and Quantitative Intersectionality&#10;Research,” Sex Roles 59, nos. 5-6&#10;(September 1, 2008): 37.">34</a></sup> In the survey, we were limited by the media: the
+limitations of the form's user interfaces constrained the ways that users were
+able to represent themselves. Could (or should) we represent the matrix of
+intersectionality<sup><a href="#footnote_34_2505" id="identifier_34_2505" class="footnote-link footnote-identifier-link" title="Vivian M. May, Pursuing&#10;Intersectionality, Unsettling Dominant Imaginaries, 1 edition (New York,&#10;NY: Routledge, 2015).">35</a></sup> in data entry? Guided by existing user interfaces and
+data structures, we asked users to compartmentalize their identities for easy
+entry into forms and storage in static data structures. Can we create and
+design data structures to mirror the fluidity and fullness of identity? Can
+data as an object, or as a collection of data-record objects, mirror the matrix
+perspective of an identity?</p>
+
+
+
+<p>These questions arise as I review my
+assessment of some of the mistakes we made during this survey process. Had we
+been able to correct all of our mistakes, how, if at all, would that have
+changed the intrinsic nature of the data collected? It is my hope that by
+sharing our shortcomings, others can critically engage with their own human
+quantification practices and the nature of the resulting data.</p>
+
+
+<p> </p>
+
+
+<h2 style="text-align:center">Appendix A</h2>
+
+
+
+<p>This is the text of the survey in
+Github before we launched it.</p>
+
+
+<p> </p>
+
+
+<h2 style="text-align:center">Survey</h2>
+
+
+
+<p>Thanks for taking a few minutes to help make the web a better place! The world wide web is perhaps the greatest egalitarian communications platform, ever, and we believe we have a part to play in towards that end. As a community of professional developers, designers, editors, project managers, open-source contributors, we help create the web and help individuals and organizations communicate their message. Who exactly makes up this community of individuals who are contributing to a more free and open communication medium?</p>
+
+
+
+<p>Let us know how you identify yourself, so
+we can get a better vision of who we are as a whole, and thus how we can
+leverage our diverse identity.</p>
+
+
+
+<h3>How do you help build the internet?</h3>
+
+
+
+<h4>Position</h4>
+
+
+
+<p>What professional
+role(s) do you play?<br />
+[] Content Developer/Strategist<br />
+[] Designer<br />
+[] Developer<br />
+[] Product Manager/Owner<br />
+[] QA/Testing<br />
+[] Technical/Solutions Architect<br />
+[] Technical Lead<br />
+[] UX/UI<br />
+[] Other</p>
+
+
+
+<h4>Management/Leadership</h4>
+
+
+
+<p>Which most accurately describes your
+role?</p>
+
+
+
+<p>() I am a formal
+manager<br />
+() I am not a manager, though I do hold a leadership
+role<br />
+() My role does not involve leadership or management</p>
+
+
+
+<h4>Years of Experience</h4>
+
+
+
+<p>() 0 - 1<br />
+() 2 - 5<br />
+() 6 - 10<br />
+() 11 - 15<br />
+() 16 - 20<br />
+() 20+</p>
+
+
+
+<h4>Company Size</h4>
+
+
+
+<p>() Under 10
+employees<br />
+() 10 - 20 employees<br />
+() 20 - 50 employees<br />
+() 50 - 100 employees<br />
+() 100 - 200 employees<br />
+() 200+ employees</p>
+
+
+
+<h4>Location</h4>
+
+
+
+<p>Please choose
+your country of residence. |v| Dropdown of Countries |<br />
+<br />
+Which word best describes the area where you live and
+work?<br />
+() Rural<br />
+() Suburban<br />
+() Urban</p>
+
+
+
+<h4>Type of Company</h4>
+
+
+
+<p>What type of
+company do you work for (check all that apply?)<br />
+[] Freelancer<br />
+[] Web Agency / Development Shop<br />
+[] Digital Agency<br />
+[] Advertising Agency<br />
+[] Non-agency organization<br />
+[] Other</p>
+
+
+
+<h4>Education Level</h4>
+
+
+
+<p>What is your
+education level?<br />
+() Some high school<br />
+() Some college/technical training<br />
+() Completed college<br />
+() Completed master's degree<br />
+() Completed Ph.D<br />
+<br />
+If you have a degree, did you study a
+technology-related field?<br />
+() Yes<br />
+() No</p>
+
+
+
+<h3>How do you identify?</h3>
+
+
+
+<p>Turns out, diversity is hard to classify. It's personal, contextual, and depends as much on who you are as who you are around. Here are some identifiers we're going to consider.</p>
+
+
+
+<p>- Ability -
+Mental and/or physical<br />
+- Age<br />
+- Ethnicity<br />
+- Gender<br />
+- Race<br />
+- Religion<br />
+- Sexual Orientation<br />
+- Socio-Economic Status/Class<br />
+- ? / &amp; / Etc.</p>
+
+
+
+<h3>Disability</h3>
+
+
+
+<p>Do you identify as having a disability as defined under the [Americans with Disabilities Act]?<sup><a href="#footnote_35_2505" id="identifier_35_2505" class="footnote-link footnote-identifier-link" title="https://adata.org/faq/what-definition-disability-under-ada">36</a></sup><br /> [] Yes, Cognitive<br /> [] Yes, Emotional<br /> [] Yes, Hearing<br /> [] Yes, Mental<br /> [] Yes, Physical<br /> [] Yes, Visual<br /> [] Yes, Other<br /> [] No<br /> [] Prefer not to answer<br /> <br /> Does your disability affect how you work?<br /> () Yes<br /> () No<br /> () Prefer not to answer</p>
+
+
+
+<h3>Age</h3>
+
+
+
+<p>What is your age
+range?<br />
+() 0-15<br />
+() 16-24<br />
+() 25-34<br />
+() 35-44<br />
+() 45-54<br />
+() 55-64<br />
+() 65-74<br />
+() 75-84<br />
+() 85+<br />
+() Prefer not to answer</p>
+
+
+
+<h3>Racial Identification</h3>
+
+
+
+<p>Do you identify
+as a person of color?<br />
+() Yes<br />
+() No<br />
+<br />
+With which racial background(s) do you identify?
+(check all that apply)<br />
+[] Asian<br />
+[] Black<br />
+[] Latino<br />
+[] Native American<br />
+[] Pacific Islander<br />
+[] White<br />
+[] Other<br />
+[] Prefer not to answer</p>
+
+
+
+<h3>Sexual Orientation</h3>
+
+
+
+<p>Do you identify
+with any of the following?<br />
+[] Asexual<br />
+[] Bisexual<br />
+[] Gay<br />
+[] Lesbian<br />
+[] Queer<br />
+[] Straight<br />
+[] Self Identify: _________________<br />
+[] Prefer not to answer</p>
+
+
+
+<h3>Gender Identification</h3>
+
+
+
+<p>Do you consider
+yourself to be transgender/gender non-conforming?<br />
+() Yes<br />
+() No<br />
+<br />
+What is your primary gender identity today?<br />
+() Female<br />
+() Genderqueer<br />
+() Intersex<br />
+() Male<br />
+() Trans F-M<br />
+() Trans M-F<br />
+() Prefer not to answer<br />
+[___________] Self-identify</p>
+
+
+
+<h3>Religious Identification</h3>
+
+
+
+<p>Do you practice,
+worship, or observe a particular religion (or agnostic/atheist theology)?<br />
+() Yes<br />
+() No<br />
+<br />
+Do you identify as a minority because of your religion
+(or lack thereof)?<br />
+() Yes<br />
+() No<br />
+() N/A</p>
+
+
+
+<h3>Socio-economic class</h3>
+
+
+
+<p>Thinking about
+your childhood, which socio-economic class did you identify with?<br />
+() Working class<br />
+() Lower middle class<br />
+() Upper middle class<br />
+() Upper class<br />
+<br />
+Thinking about your current situation, which
+socio-economic class do you identify with?<br />
+() Working class<br />
+() Lower middle class<br />
+() Upper middle class<br />
+() Upper class</p>
+
+
+
+<h3>Language</h3>
+
+
+
+<p>Choose the
+language(s) you speak and work with and identify your proficiency<br />
+[___________|v]     
+[___________|v]<br />
+(list of languages) 
+(fluency levels)<br />
+<br />
+add as many as appropriate.</p>
+
+
+
+<h3>Other facets</h3>
+
+
+
+<p>At work, I feel
+comfortable expressing the aspects of my identity that are important to me.<br />
+() Strongly Agree<br />
+() Agree<br />
+() Neutral<br />
+() Disagree<br />
+() Strongly Disagree<br />
+<br />
+At work, it's important to me that I feel comfortable
+expressing my identity.<br />
+() Strongly Agree<br />
+() Agree<br />
+() Neutral<br />
+() Disagree<br />
+() Strongly Disagree<br />
+<br />
+Encouraging people to express any/all aspects of their
+identities benefits my company.<br />
+() Strongly Agree<br />
+() Agree<br />
+() Neutral<br />
+() Disagree<br />
+() Strongly Disagree</p>
+
+
+
+<h3>? / &amp; / Etc.</h3>
+
+
+
+<p>What else do you identify with? Call
+out anything we've missed that makes you, well, you! [ ]</p>
+
+
+
+<p>add as many as
+appropriate.</p>
+
+
+
+<h2 style="text-align:left">Post-survey CTAs</h2>
+
+
+
+<p>- If you'd be
+willing to participate in a semi-structured interview about your experiences<br />
+[Link to new form not tied to participant's data]<br />
+<br />
+- If you're interested in being notified when the data
+is released<br />
+[Link to new form not tied to participant's data]<br />
+<br />
+- If you're interested in being a part of the diversity
+working group mailing list<br />
+[Link to new form not tied to participant's data]</p>
+
+
+
+<h2>Survey conventions</h2>
+
+
+
+<p>()  radio buttons<br /> []  check boxes<br /> [___________]  fill-in-the-blank<br /> [___________|v] drop-down select one<br /> ??? combo box/select many</p>
+
+
+
+<figure class="wp-block-image"><a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License" /></a></figure>
+
+
+
+<p>Unless otherwise specified, all work in this journal is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+ 
+					
+					
+					
+										</div>
+	</div>
+<div id='footnote_div'><ol class="footnotes"><li id="footnote_0_2505" class="footnote">All company names, contributor names and open source communities are anonymized. [<a href="#identifier_0_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_1_2505" class="footnote">I am grateful to the survey team, OSC and all respondents. Thank you also to Jacqueline Wernimont, Taylor Genovese and two anonymous reviewers for their generous feedback that helped me to improve the quality of this article. [<a href="#identifier_1_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_2_2505" class="footnote">We fell prey to what Theodore Porter calls the "insistent quantifrenia" of everything diversity and inclusion related. Theodore M. Porter, <em>Trust in Numbers</em> (Princeton, N.J: Princeton University Press, 1996), 76. This quantifrenia seems like a way to mediate the unreliable narration of experience performed by those from marginalized groups. My thinking here is influenced by Fricker's construction of epistemic credibility. Miranda Fricker, <em>Epistemic Injustice: Power and the Ethics of Knowing</em>, 1 edition (Oxford: Oxford University Press, 2009). Examining quantification's role in diversity and inclusion work is out of the scope of this paper. The CHAOSS (Community Health Analytics Open Source Software) Project is a prominent group thinking about how to measure every aspect of community "health," including diversity and inclusion. See https://chaoss.community/. For examples of work quantifying the success of diversity projects, see Peggy D Dreachslin PhD; Lee, "Applying Six Sigma and DMAIC to Diversity Initiatives," <em>Journal of Healthcare Management</em> 52.6 (2007). For one of the few academic works examining the effects of diversity in open source communities, see S Daniel, Agarwal, and Stewart, "The Effects of Diversity in Global, Distributed Collectives: A Study of Open Source Project Success," <em>Information Systems Research</em> 24, no. 2 (2013): 312-33. [<a href="#identifier_2_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_3_2505" class="footnote"> Stack Overflow Developer Survey 2016 Results," Stack
+Overflow, January 15, 2016, <a href="https://insights.stackoverflow.com/survey/2016">https://insights.stackoverflow.com/survey/2016</a> [<a href="#identifier_3_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_4_2505" class="footnote">In July 2016, a few months after the
+results of the survey were released, Stack Overflow released its "Insight
+Center" with data sets for all previous years' surveys. When our survey work
+began in May 2016, there was no way to access the results of the Stack Overflow
+developer surveys. [<a href="#identifier_4_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_5_2505" class="footnote">Though I am describing my own
+experience, outside of the clear boundaries of an academic study, I did not act
+alone, but in consultation and collaboration with others in the community.
+While I do not speak for them, I also do not wish to represent this work as
+only my own. I default to the use of the word 'we' when discussing
+conversations/group actions. [<a href="#identifier_5_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_6_2505" class="footnote">A review of the history and nuances of open source communities is out of scope for this article. See, among others: Dawn Nafus, "'Patches Don't Have Gender': What Is Not Open in Open Source Software," <em>New Media &amp; Society</em> 14, no. 4 (2012): 669-83; Dany Di Tullio and D. Sandy Staples, "The Governance and Control of Open Source Software Projects." <em>Journal of Management Information Systems</em> 30, no. 3 (January 2013): 49-80; Hao-Yun Huang, Qize Le, and Jitesh H. Panchal, "Analysis of the Structure and Evolution of an Open-Source Community," <em>Journal of Computing and Information Science in Engineering</em> 11, no. 3 (2011): 031008; Audris Mockus, Roy T Fielding, and James D Herbsleb, "Two Case Studies of Open Source Software Development: Apache and Mozilla," <em>ACM Transactions on Software Engineering and Methodology (TOSEM)</em> 11, no. 3 (2002): 309-46; David L. Olson and Kirsten Rosacker, "Crowdsourcing and Open Source Software Participation," <em>Service Business</em> 7, no. 4 (2013): 499-511; Eric S. Raymond, <em>The Cathedral &amp; the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary</em>, 1 edition (Beijing ; Cambridge, Mass: O'Reilly Media, 2001); E. Gabriella Coleman, <em>Coding Freedom : The Ethics and Aesthetics of Hacking</em> (Princeton University Press, 2012). [<a href="#identifier_6_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_7_2505" class="footnote">Nafus, "'Patches Don't Have Gender'." [<a href="#identifier_7_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_8_2505" class="footnote">Nafus, "'Patches Don't Have Gender'." [<a href="#identifier_8_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_9_2505" class="footnote">Frank Fischer, "Technological Deliberation in a Democratic Society: The Case for Participatory Inquiry," <em>Science and Public Policy</em> 26, no. 5 (1999): 294-302; James Wilsdon and Rebecca Willis, <em>See-Through Science: Why Public Engagement Needs to Move Upstream</em> (London: Demos, 2004); Andrew D. Zimmerman, "Toward a More Democratic Ethic of Technological Governance," <em>Science, Technology, &amp; Human Values</em> 20, no. 1 (1995): 86-107. [<a href="#identifier_9_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_10_2505" class="footnote">For information on LGBTQIA2S+ experiences in STEM: Keith J. Bowman and Lynnette D. Madsen, "Queer Identities in Materials Science and Engineering," <em>MRS Bulletin</em> 43, no. 4 (April 2018): 303-7; Erin A. Cech and Michelle V. Pham, "Queer in STEM Organizations: Workplace Disadvantages for LGBT Employees in STEM Related Federal Agencies," <em>Social Sciences</em> 6, no. 1 (February 4, 2017): 12; Erin A. Cech and Tom J. Waidzunas, "Navigating the Heteronormativity of Engineering: The Experiences of Lesbian, Gay, and Bisexual Students," <em>Engineering Studies</em> 3, no. 1 (April 1, 2011): 1-24. Specific research on women in open source participation: M. Mahmod, S. A. M. Yusof, and Z. M. Dahalin, "Women Contributions to Open Source Software Innovation: A Social Constructivist Perspective," in <em>2010 International Symposium on Information Technology</em>, vol. 3, 2010, 1433-8; Nafus, "'Patches Don't Have Gender'.". These barriers can also be attributed to communication styles E. Moon, "Gendered Patterns of Politeness in Free/Libre Open Source Software Development," in <em>2013 46th Hawaii International Conference on System Sciences</em>, 2013, 3168-77. For academic work about the demographics and politics of open source participants, see Yuanfeng Cai and Dan Zhu, "Reputation in an Open Source Software Community: Antecedents and Impacts," <em>Decision Support Systems</em> 91 (2016): 103-12; Tadeusz Chełkowski, Peter Gloor, and Dariusz Jemielniak, "Inequalities in Open Source Software Development: Analysis of Contributor's Commits in Apache Software Foundation Projects," ed. Christophe Antoniewski, <em>PLOS ONE</em> 11, no. 4 (April 20, 2016): e0152976; Daniel, Agarwal, and Stewart, "The Effects of Diversity in Global, Distributed Collectives"; Rajdeep Grewal, Gary L. Lilien, and Girish Mallapragada, "Location, Location, Location: How Network Embeddedness Affects Project Success in Open Source Systems," <em>Management Science</em> 52, no. 7 (2006): 1043-56; Mahmod, Yusof, and Dahalin, "Women Contributions to Open Source Software Innovation"; Nafus, "'Patches Don't Have Gender'.". [<a href="#identifier_10_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_11_2505" class="footnote">As an example, Docker CLI is a popular open source software project with five years of public code contribution history. At the time of this writing, 607 contributors are listed and ranked by their volume of contribution. See <a href="https://github.com/docker/cli/graphs/">https://github.com/docker/cli/graphs/</a> contributors for a list of these individuals. [<a href="#identifier_11_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_12_2505" class="footnote">"Disappearing Acts: Reclaiming Intersectionality in the Social Sciences in a Post<span class="emdash">—</span>Black Feminist Era," <em>Feminist Formations</em> 24, no. 1 (2012): 1-25. [<a href="#identifier_12_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_13_2505" class="footnote">"Intersectionality," <em>The Oxford Handbook of Feminist Theory</em>, February 1, 2016. [<a href="#identifier_13_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_14_2505" class="footnote">Patricia Hill Collins and Sirma Bilge, <em>Intersectionality</em>, 1 edition (Cambridge, UK ; Malden, MA: Polity, 2016). [<a href="#identifier_14_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_15_2505" class="footnote">Nafus, "'Patches Don't Have Gender'." [<a href="#identifier_15_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_16_2505" class="footnote">Safiya Umoja Noble, "A Future for Intersectional Black Feminist Technology Studies," <em>Scholar &amp; Feminist Online</em> 13, no. 3 (2016): 1-8, <a href="http://sfonline.barnard.edu/traversing-technologies/safiya-umoja-noble-a-future-for-intersectional-black-feminist-technology-studies/">http://sfonline.barnard.edu/traversing-technologies/safiya-umoja-noble-a-future-for-intersectional-black-feminist-technology-studies/</a>. [<a href="#identifier_16_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_17_2505" class="footnote">DataOne, "Data Life Cycle |
+DataONE," December 14, 2015, <a href="https://www.dataone.org/data-life-cycle/">https://www.dataone.org/data-life-cycle/</a>. [<a href="#identifier_17_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_18_2505" class="footnote">DataOne. [<a href="#identifier_18_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_19_2505" class="footnote">Github.com is a site for people (largely people who write code) to
+share and collaborate on their projects. [<a href="#identifier_19_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_20_2505" class="footnote">For an
+explanation of a pull request workflow see Atlassian, "Pull Requests |
+Atlassian Git Tutorial," Atlassian, March 7, 2014, <a href="https://www.atlassian.com/git/tutorials/making-a-pull-request">https://www.atlassian.com/git/tutorials/making-a-pull-request</a>;
+Github, "Understanding the GitHub Flow · GitHub Guides," Github, November 30,
+2017, <a href="https://guides.github.com/introduction/flow/">https://guides.github.com/introduction/flow/</a>. [<a href="#identifier_20_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_21_2505" class="footnote">Petra Doan, "To Count or Not
+to Count: Queering Measurement and the Transgender Community," <em>Women's Studies Quarterly</em> 44, no. 3/4
+(October 2016): 89-110, <a href="http://search.proquest.com/docview/1831356971/">http://search.proquest.com/docview/1831356971/</a>. [<a href="#identifier_21_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_22_2505" class="footnote">G. A. Wilson, "Could a Coding Bootcamp Experience Prepare You for Industry?" <em>IT Professional</em> 20, no. 2 (March 2018): 83-87; Sherry Seibel, "Social Motivators and Inhibitors for Women Entering Software Engineering Through Coding Bootcamps Vs. Computer Science Bachelor's Degrees: (Abstract Only)," in <em>Proceedings of the 49th ACM Technical Symposium on Computer Science Education</em>, SIGCSE '18 (New York, NY, USA: ACM, 2018), 274-74. [<a href="#identifier_22_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_23_2505" class="footnote">DataOne, "Data Life
+Cycle | DataONE." [<a href="#identifier_23_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_24_2505" class="footnote">DataOne. [<a href="#identifier_24_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_25_2505" class="footnote">Jason W Osborne, <em>Best
+Practices in Data Cleaning: A Complete Guide to Everything You Need to Do
+Before and After Collecting Your Data</em> (Sage Publications, 2012); Erhard
+Rahm and Hong Hai Do, "Data Cleaning: Problems and Current Approaches," <em>IEEE Data Eng. Bull.</em> 23, no. 4 (2000):
+3-13; Vijayshankar Raman and Joseph M Hellerstein, "Potter's Wheel: An
+Interactive Data Cleaning System," in <em>Proceedings
+of the 27th VLBD Conference</em> (Rome, Italy, 2001), 10. [<a href="#identifier_25_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_26_2505" class="footnote">N. Peng et al., "Finding Interesting
+Cleaning Rules from Dirty Data," in <em>2017
+10th International Symposium on Computational Intelligence and Design (ISCID)</em>,
+vol. 2, 2017, 378-82; Chen-Bo Zhong and Katie Liljenquist, "Washing Away Your
+Sins: Threatened Morality and Physical Cleansing," <em>Science</em> 313, no. 5792 (September 8, 2006): 1451-2. [<a href="#identifier_26_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_27_2505" class="footnote">Lisa Gitelman, <em>Raw Data Is an Oxymoron</em> (MIT Press, 2013). [<a href="#identifier_27_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_28_2505" class="footnote">Jacqueline Wernimont, "Notes Toward a Post on Intersectional Data - Jacqueline Wernimont," December 7, 2015, <a href="https://jwernimont.com/notes-toward-a-post-on-intersectional-data/">https://jwernimont.com/notes-toward-a-post-on-intersectional-data/</a>. [<a href="#identifier_28_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_29_2505" class="footnote">GitLab, "GitLab 2018 Global Developer Report," GitLab, March 7, 2018, <a href="https://about.gitlab.com/developer-survey/2018/">https://about.gitlab.com/developer-survey/2018/</a>; "Stack Overflow Developer Survey 2017," Stack Overflow, March 22, 2017, <a href="https://stackoverflow.com/insights/survey/2017/?utm_source=so-owned&amp;utm_medium=social&amp;utm_campaign=dev-survey-2017&amp;utm_content=social-share">https://stackoverflow.com/insights/survey/2017/?utm_source=so-owned&amp;utm_medium=social&amp;utm_campaign=dev-survey-2017&amp;utm_content=social-share</a>; "Stack Overflow Developer Survey 2016 Results." [<a href="#identifier_29_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_30_2505" class="footnote">Peter J
+Aspinall, "Answer Formats in British Census and Survey Ethnicity Questions:
+Does Open Response Better Capture 'Superdiversity'?" <em>Sociology</em> 46, no. 2 (April 2012): 354-64. [<a href="#identifier_30_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_31_2505" class="footnote">Gitelman, <em>Raw Data Is an Oxymoron</em>. [<a href="#identifier_31_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_32_2505" class="footnote">Nicole M
+Else-Quest and Janet Shibley Hyde, "Intersectionality in Quantitative
+Psychological Research," <em>Psychology of
+Women Quarterly</em> 40, no. 3 (September 2016): 319-36. [<a href="#identifier_32_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_33_2505" class="footnote">Lisa
+Bowleg, "When Black + Lesbian + Woman != Black Lesbian Woman: The
+Methodological Challenges of Qualitative and Quantitative Intersectionality
+Research," <em>Sex Roles</em> 59, nos. 5-6
+(September 1, 2008): 37. [<a href="#identifier_33_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_34_2505" class="footnote">Vivian M. May, <em>Pursuing
+Intersectionality, Unsettling Dominant Imaginaries</em>, 1 edition (New York,
+NY: Routledge, 2015). [<a href="#identifier_34_2505" class="footnote-link footnote-back-link">↩</a>]</li><li id="footnote_35_2505" class="footnote"><a href="https://adata.org/faq/what-definition-disability-under-ada">https://adata.org/faq/what-definition-disability-under-ada</a> [<a href="#identifier_35_2505" class="footnote-link footnote-back-link">↩</a>]</li></ol></div>

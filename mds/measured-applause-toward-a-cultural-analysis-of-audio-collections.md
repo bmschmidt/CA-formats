@@ -6,11 +6,19 @@ shorttitle: Measured Applause
 title: 'Measured Applause: Toward a Cultural Analysis of Audio Collections'
 ---
 
+::: {.entry .print-only}
+::: {#post-94 .post-94 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
 ###### *Peer-Reviewed By: Jonathan Sterne*
 
 ###### *Clusters: [Sound](http://66.147.244.186/~postfou1/ca/2016/05/sound/)*
 
-###### *Journal ISSN: 2371-4549* *DOI: [10.22148/16.002](https://doi.org/10.22148/16.002)*
+###### *Article DOI: [10.22148/16.002](https://doi.org/10.22148/16.002)*
+
+###### *PDF: [10.31235/osf.io/8p5cf](https://doi.org/10.31235/osf.io/8p5cf)*
+
+###### *Journal ISSN: 2371-4549*
+
+###### *Cite: Tanya Clement and Stephen McLaughlin, "Measured Applause: Toward a Cultural Analysis of Audio Collections," Journal of Cultural Analytics. May 23, 2016. DOI: [10.31235/osf.io/8p5cf](https://doi.org/10.31235/osf.io/8p5cf)*
 
  
 
@@ -172,8 +180,8 @@ reported applause. This left 3,130 readings in our cleaned evaluation
 set, with a median applause duration of 15.5 seconds and measurements
 falling in a right-skewed distribution.
 
-::: {#attachment_96 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/CA_Clement-et-al_2016_Fig-1-e1461973128323.png)
+::: {#attachment_96 .image style="width: 650px"}
+![](CA_Clement-et-al_2016_Fig-1-e1461973128323.png)
 
 Figure 1. Histogram of Measured Applause Durations for 3,130 Poetry
 Readings, Binned at 1-Second Level
@@ -194,8 +202,8 @@ and the nonparametric Mann-Whitney *U* test (discussed below).
 
 Table 3. Mean and Median for Recording Lengths of Male and Female poets
 
-::: {#attachment_98 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/CA_Clement-et-al_2016_Fig-2-e1461973442401.jpg)
+::: {#attachment_98 .image style="width: 650px"}
+![](CA_Clement-et-al_2016_Fig-2-e1461973442401.jpg)
 
 Figure 2. Overlaid Histograms of Measured Applause Duration by Gender
 for 3,114 Poetry Readings, Binned at 1-Second Level
@@ -207,8 +215,8 @@ demonstrates a stable pattern of audience response over the decades,
 with the Pearson's correlation coefficient between year and applause
 duration measured at -0.04 (*p*=0.01), showing a very small correlation.
 
-::: {#attachment_99 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/CA_Clement-et-al_2016_Fig-3-e1461973799520.jpg)
+::: {#attachment_99 .image style="width: 650px"}
+![](CA_Clement-et-al_2016_Fig-3-e1461973799520.jpg)
 
 Figure 3. Plot of Measured Applause Durations by Year for 2,870 readings
 between 1980 and 2014
@@ -637,6 +645,8 @@ algorithm, accuracy is measured using a simulation of the leave-one-out
 cross-validation prediction process described above.
 
  
+:::
+:::
 
 [^1]: R.S. Gilbert "Joyful Noise: Reflections on Applause," *Southwest
     Review*, 86(1) (2001): 13-33; C. Goodwin, "Audience diversity,

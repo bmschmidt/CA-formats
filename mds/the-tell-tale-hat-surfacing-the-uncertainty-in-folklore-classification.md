@@ -6,15 +6,21 @@ shorttitle: 'The Tell-Tale Hat'
 title: 'The Tell-Tale Hat: Surfacing the Uncertainty in Folklore Classification'
 ---
 
+::: {.entry .print-only}
+::: {#post-760 .post-760 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
 ###### *Peer-Reviewed By: Chad Wellmon*
 
 ###### *Clusters: [Genre](http://culturalanalytics.org/2016/05/genre/)*
 
-###### *Journal ISSN: 2371-4549*
-
 ###### *Article DOI: [10.22148/16.012](https://doi.org/10.22148/16.012)*
 
 ###### *Dataverse DOI: [10.7910/DVN/MUYD7T](http://dx.doi.org/10.7910/DVN/MUYD7T)*
+
+###### *PDF: [10.31235/osf.io/a7dp8](https://dx.doi.org/10.31235/osf.io/a7dp8)*
+
+###### *Journal ISSN: 2371-4549*
+
+###### *Cite: Peter M. Broadwell, David Mimno, and Timothy R. Tangherlini, "The Tell-Tale Hat: Surfacing the Uncertainty in Folklore Classification," Journal of Cultural Analytics. Feb. 8, 2017. DOI: [10.31235/osf.io/a7dp8](https://dx.doi.org/10.31235/osf.io/a7dp8)*
 
  
 
@@ -213,8 +219,8 @@ distinct genre of legends, the first-level topic of "hidden folk" has
 several second-level classifications, including "hidden folk one has
 either seen or heard".
 
-::: {#attachment_765 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/01/Broadwell_fig1.png)
+::: {#attachment_765 .image style="width: 650px"}
+![](Broadwell_fig1.png)
 
 Figure 1. Printed volumes in the Tang Kristensen collection and their
 physical labels.
@@ -328,8 +334,8 @@ Folklore Nexus[^29] corpus exploration interface, affording users of the
 Nexus the opportunity to discover related stories that might not share
 the same topic indices.
 
-::: {#attachment_766 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/01/Broadwell_fig2.png)
+::: {#attachment_766 .image style="width: 650px"}
+![](Broadwell_fig2.png)
 
 Figure 2. The Danish Folklore Nexus interface
 (www.purl.org/danishfolktales) highlighting the corpus exploration
@@ -459,8 +465,8 @@ the waning decades of the nineteenth century.[^37] The result was
 nothing less than a radical spatial reorganization of the Danish
 landscape.
 
-::: {#attachment_767 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/01/Broadwell_fig3.png)
+::: {#attachment_767 .image style="width: 650px"}
+![](Broadwell_fig3.png)
 
 Figure 3. The fields around Havbro, where Jens Korregård lived and Kræn
 Møller had his original farm.
@@ -620,8 +626,8 @@ diagonal is the largest in each row, indicating that the human and the
 algorithm often agree. We see that classes vary in size: stories about
 hidden folk are more prevalent than stories about wyverns.
 
-::: {#attachment_768 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/01/Broadwell_fig4.png)
+::: {#attachment_768 .image style="width: 650px"}
+![](Broadwell_fig4.png)
 
 Figure 4. A "confusion matrix" generated from the 31,088 Danish legends
 collected by Evald Tang Kristensen, with the size of the circle in each
@@ -705,8 +711,8 @@ for the algorithmic classifier, however, are the final six volumes of
 overall collection and have a more coarse-grained set of classification
 labels.
 
-::: {#attachment_769 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/01/Broadwell_fig5.png)
+::: {#attachment_769 .image style="width: 650px"}
+![](Broadwell_fig5.png)
 
 Figure 5. Highlighted "blocks" in the confusion matrix, indicating
 recognizable large-scale groupings of stories across adjacent
@@ -736,8 +742,8 @@ example of this interface is shown in Figure 6, for stories classified
 by Tang Kristensen as "mound dwellers" that were classified by the
 algorithm as "churches".
 
-::: {#attachment_770 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/01/Broadwell_fig6.png)
+::: {#attachment_770 .image style="width: 650px"}
+![](Broadwell_fig6.png)
 
 Figure 6. A detailed view showing stories that were assigned one
 classification (Bjærgfolk -- hidden folk / mound dwellers) by Tang
@@ -772,8 +778,8 @@ pattern of block structures, but this pattern becomes less prominent
 with each volume. A similar pattern emerges in the classifications in
 *Jyske Almueliv* (see Figure 8).
 
-::: {#attachment_771 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/01/Broadwell_fig7.png)
+::: {#attachment_771 .image style="width: 650px"}
+![](Broadwell_fig7.png)
 
 Figure 7. A "confusion matrix" generated from the 2,409 Danish legends
 that Tang Kristensen assigned to the category Bjærgfolk (Mound
@@ -783,8 +789,8 @@ by Tang Kristensen (rows) and by a NB classifier trained on Tang
 Kristensen's classifications (columns).
 :::
 
-::: {#attachment_772 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/01/Broadwell_fig8.png)
+::: {#attachment_772 .image style="width: 650px"}
+![](Broadwell_fig8.png)
 
 Figure 8. A confusion matrix generated from the 9,679 Danish legends in
 Tang Kristensen's six-volume collection Det jyske Almueliv (JA). The
@@ -989,6 +995,8 @@ through the shifting terrain of expressive culture, they will encounter
 strange characters, perhaps even some wearing red hats. Now, however,
 they will be better equipped to answer the question, "I wonder what he
 is doing here?"
+:::
+:::
 
 [^1]: For example, see John Zemke, "Editor's Column. Archives,
     Databases, and Special Collections," *Oral Tradition* 28, no. 2

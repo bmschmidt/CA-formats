@@ -6,6 +6,8 @@ shorttitle: Fictionality
 title: Fictionality
 ---
 
+::: {.entry .print-only}
+::: {#post-723 .post-723 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
 ###### *Peer-Reviewed By: Adam Hammond*
 
 ###### *Clusters: [Genre](http://culturalanalytics.org/2016/05/genre/), [NovelTM Special Issue on Genre](http://culturalanalytics.org/2017/04/noveltm-special-issue-on-genre/)*
@@ -13,6 +15,12 @@ title: Fictionality
 ###### *Article DOI: [10.22148/16.011](https://doi.org/10.22148/16.011)*
 
 ###### *Dataverse DOI:  [10.7910/DVN/5WKTZV](http://dx.doi.org/10.7910/DVN/5WKTZV)*
+
+###### *PDF: [10.31235/osf.io/93mdj](https://dx.doi.org/10.31235/osf.io/93mdj)*
+
+###### *Journal ISSN: 2371-4549*
+
+###### *Cite: Andrew Piper, "Fictionality," Journal of Cultural Analytics. Dec. 20, 2016. DOI: [10.31235/osf.io/93mdj](https://dx.doi.org/10.31235/osf.io/93mdj)*
 
  
 
@@ -1056,15 +1064,15 @@ emphasis on the realist novel's concretization has missed one of the
 primary ways through which novels have historically mattered as a form
 of writing, i.e. in their abstractness.
 
-::: {#attachment_725 .image style="max-width: 660px"}
-![](http://culturalanalytics.org/wp-content/uploads/2016/12/Piper_fig1.png)
+::: {#attachment_725 .image style="width: 660px"}
+![](Piper_fig1.png)
 
 Figure 1. This graph measures the ratio of nouns identified as
 "abstract" versus "physical entity" by WordNet classification.
 :::
 
-::: {#attachment_726 .image style="max-width: 660px"}
-![](http://culturalanalytics.org/wp-content/uploads/2016/12/Piper_fig2.png)
+::: {#attachment_726 .image style="width: 660px"}
+![](Piper_fig2.png)
 
 Figure 2. This graph measures the percentage of words in one corpus that
 are hypernyms of words in the other corpus. A hypernym is a more
@@ -1113,8 +1121,8 @@ in place surrounding fictional discourse in the nineteenth century
 remain largely intact over the course of time, with some features, like
 an emphasis on sense perception rising considerably in importance.[^41]
 
-::: {#attachment_727 .image style="max-width: 660px"}
-![](http://culturalanalytics.org/wp-content/uploads/2016/12/Piper_fig3.png)
+::: {#attachment_727 .image style="width: 660px"}
+![](Piper_fig3.png)
 
 Figure 3. Rates of "doubt" and sense "perception" in English novels
 published between 1800 and 2000. In the former case we see a very slight
@@ -1154,6 +1162,8 @@ the page, words like "feeling," "knowing," "seeing," "remembering,"
 "almost," "possibly," "vaguely," and a variety of forms of negation, of
 the not. This is the space of fiction's apartness. "And where is this
 elsewhere?" Roland Barthes once asked. "In the paradise of words."
+:::
+:::
 
 [^1]: I would like to gratefully acknowledge the support of the Social
     Sciences and Humanities Research Council of Canada (SSHRC) in

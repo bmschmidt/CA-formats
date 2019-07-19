@@ -6,15 +6,21 @@ shorttitle: Understanding Gender and Character Agency in the 19th Century Novel
 title: Understanding Gender and Character Agency in the 19th Century Novel
 ---
 
+::: {.entry .print-only}
+::: {#post-641 .post-641 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
 ###### *Peer-Reviewed By: Anon.*
 
 ###### *Clusters: [Genre](http://culturalanalytics.org/2016/05/genre/)*
 
-###### *Journal ISSN: 2371-4549*
-
 ###### *Article DOI: [10.22148/16.010](https://doi.org/10.22148/16.010)*
 
 ###### *Dataverse DOI: [10.7910/DVN/3UXBOJ](http://dx.doi.org/10.7910/DVN/3UXBOJ)*
+
+###### *PDF: [10.31235/osf.io/sw85m](https://dx.doi.org/10.31235/osf.io/sw85m)*
+
+###### *Journal ISSN: 2371-4549*
+
+###### *Cite: Matthew Jockers and Gabi Kirilloff, "Understanding Gender and Character Agency in the 19th Century Novel," Journal of Cultural Analytics. Dec. 1, 2016. DOI: [10.31235/osf.io/sw85m](https://dx.doi.org/10.31235/osf.io/sw85m)*
 
  
 
@@ -324,8 +330,8 @@ female pronouns.
 
  
 
-::: {#attachment_639 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2016/11/jockers_fig1.png)
+::: {#attachment_639 .image style="width: 650px"}
+![](jockers_fig1.png)
 
 Figure 1. Mean Male and Female Pronoun Occurrence.
 :::
@@ -500,8 +506,8 @@ our two anti-Jacobin, four Evangelical, and eight national tale novels. 
 Across thirty-three Gothic novels, we observed 80% accuracy and 100%
 accuracy for our six industrial and two Newgate novels (see figure 2).
 
-::: {#attachment_640 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2016/11/jockers_fig2.png)
+::: {#attachment_640 .image style="width: 650px"}
+![](jockers_fig2.png)
 
 Figure 2.
 :::
@@ -978,6 +984,8 @@ receive, understand, said, looks.
  
 
  
+:::
+:::
 
 [^1]: Vladimir Propp, *Morphology of the Folktale: Second
     Edition* (Austin: University of Texas Press, 1968), 87.

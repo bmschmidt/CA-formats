@@ -1,22 +1,13 @@
 \PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
 \PassOptionsToPackage{hyphens}{url}
+
 $if(colorlinks)$
 \PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
 $endif$
 %
-%\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$if(beamer)$ignorenonframetext,$if(handout)$handout,$endif$$if(aspectratio)$aspectratio=$aspectratio$,$endif$$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 
 \documentclass[twoside]{article}
 
-$if(beamer)$
-\setbeamertemplate{caption}[numbered]
-\setbeamertemplate{caption label separator}{: }
-\setbeamercolor{caption name}{fg=normal text.fg}
-\beamertemplatenavigationsymbols$if(navigation)$$navigation$$else$empty$endif$
-$endif$
-$if(beamerarticle)$
-\usepackage{beamerarticle} % needs to be loaded first
-$endif$
 $if(fontfamily)$
 \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
 $else$
@@ -34,7 +25,7 @@ $endif$
 \usepackage[margin=.75in,a5paper]{geometry}
 
 
-\usepackage{wallpaper}
+\usepackage[absolute]{textpos}
 
 \usepackage{fancyhdr}
 \fancyhead[LO,RE]{Cultural Analytics}
@@ -149,9 +140,7 @@ $endif$
 $if(verbatim-in-note)$
 \usepackage{fancyvrb}
 $endif$
-$if(colorlinks)$
 \usepackage{xcolor}
-$endif$
 \usepackage{hyperref}
 \hypersetup{
 $if(title-meta)$
@@ -378,11 +367,7 @@ $endif$
 
 \begin{document}
 $if(title)$
-$if(beamer)$
-\frame{\titlepage}
-$else$
 \maketitle
-$endif$
 $if(abstract)$
 \begin{abstract}
 $abstract$
@@ -395,9 +380,23 @@ $include-before$
 
 $endfor$
 
-\addtolength{\wpYoffset}{4.5in}
-\addtolength{\wpXoffset}{-1.2in}
-\ThisCenterWallPaper{0.5}{printing/Masthead.png}
+
+% Make the Cultural Analytics Logo in a slightly different form.
+
+\definecolor{cablue}{HTML}{5497C1}
+
+\begin{textblock}{3}[1, 1](5.4, 1.7)
+{\fontsize{60}{64} \selectfont CA}
+\end{textblock}
+
+\begin{textblock}{8}[0, 1](5.6, 1.1)
+\textcolor{cablue}{{\fontsize{24}{28} \selectfont Journal of}}
+\end{textblock}
+
+\begin{textblock}{8}[0, 1](5.6, 1.7){
+\textcolor{cablue}{\fontsize{24}{28} \selectfont \textbf{Cultural Analytics}}}
+\end{textblock}
+
 
 $if(toc)$
 $if(beamer)$

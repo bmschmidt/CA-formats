@@ -6,6 +6,8 @@ shorttitle: 'The Transformation of Gender in English-Language Fiction'
 title: 'The Transformation of Gender in English-Language Fiction'
 ---
 
+::: {.entry .print-only}
+::: {#post-1217 .post-1217 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
 ###### *Peer-Reviewed By: Heather Love*
 
 ###### *Clusters: [Gender](http://culturalanalytics.org/2018/02/gender/)*
@@ -14,9 +16,11 @@ title: 'The Transformation of Gender in English-Language Fiction'
 
 ###### *Dataverse DOI: [10.7910/DVN/ZM2MAN](http://dx.doi.org/10.7910/DVN/ZM2MAN)*
 
+###### *PDF: [10.31235/osf.io/fr9bk](https://dx.doi.org/10.31235/osf.io/fr9bk)*
+
 ###### *Journal ISSN: 2371-4549*
 
-###### *Cite: Ted Underwood, David Bamman, and Sabrina Lee, "The Transformation of Gender in English-Language Fiction," Cultural Analytics Feb. 13, 2018. DOI: [10.22148/16.019](http://doi.org/10.22148/16.019).*
+###### *Cite: Ted Underwood, David Bamman, and Sabrina Lee, "The Transformation of Gender in English-Language Fiction," Journal of Cultural Analytics. Feb. 13, 2018. DOI: [10.31235/osf.io/fr9bk](https://dx.doi.org/10.31235/osf.io/fr9bk)*
 
  
 
@@ -141,8 +145,8 @@ to the middle of the twentieth [---]{.emdash} in the very period when we
 might expect to see the effects of first-wave feminism. The trend
 reverses around 1970, for reasons we will investigate later.
 
-::: {#attachment_1202 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2018/01/Fig1.jpeg)
+::: {#attachment_1202 .image style="width: 650px"}
+![](Fig1.jpeg)
 
 Figure 1. The percentage of words used in characterization that describe
 women.
@@ -178,8 +182,8 @@ there was, in fact, a fairly stunning decline in the proportion of
 fiction writers who were women, from the middle of the nineteenth
 century to the middle of the twentieth.
 
-::: {#attachment_1203 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2018/01/Fig2.jpg)
+::: {#attachment_1203 .image style="width: 650px"}
+![](Fig2.jpg)
 
 Figure 2. The fraction of English-language volumes of fiction in
 HathiTrust written by women. Dots are the fraction actually recorded for
@@ -236,8 +240,8 @@ Since we were using our own judgment to assign authors to a gender
 category, this sample also addressed potential concerns about the
 accuracy of algorithmic inference based on names.
 
-::: {#attachment_1204 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2018/01/Fig3.jpeg)
+::: {#attachment_1204 .image style="width: 650px"}
+![](Fig3.jpeg)
 
 Figure 3. Gender ratios in the HathiTrust sample (as a yearly point
 estimate) and 95% confidence intervals for four years sampled in
@@ -267,8 +271,8 @@ would be important in itself. But readers who have any doubts about the
 significance of libraries can set their doubts aside: this was a broad
 trend, and it had some impact on every aspect of literary life.)
 
-::: {#attachment_1205 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2018/01/Fig4.png)
+::: {#attachment_1205 .image style="width: 650px"}
+![](Fig4.png)
 
 Figure 4. The authors of yearly bestsellers from Publishers Weekly.
 :::
@@ -298,8 +302,8 @@ briefer sort of pause in the middle of the twentieth century that we
 might have expected). It is not hard to see how expanding opportunities
 on this scale might have lured women away from the novel.
 
-::: {#attachment_1206 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2018/01/Fig5.jpeg)
+::: {#attachment_1206 .image style="width: 650px"}
+![](Fig5.jpeg)
 
 Figure 5. Books by women, as a fraction of all books in HathiTrust. The
 category "other" is mostly nonfiction, although it also includes small
@@ -335,8 +339,8 @@ closer to equal. This gap between the genders is depressingly stable
 across two hundred years and may be, for some readers, the biggest story
 coming out of this inquiry.
 
-::: {#attachment_1207 .image style="max-width: 604px"}
-![](http://culturalanalytics.org/wp-content/uploads/2018/01/Fig6.jpeg)
+::: {#attachment_1207 .image style="width: 604px"}
+![](Fig6.jpeg)
 
 Figure 6. Words devoted to description of women, broken out by author
 gender. HathiTrust and the Chicago Novel Corpus are folded together
@@ -418,8 +422,8 @@ implicit differences between masculine and feminine characters get
 steadily harder to discern from the middle of the nineteenth century to
 the beginning of the twenty-first.
 
-::: {#attachment_1208 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2018/01/Fig7.jpeg)
+::: {#attachment_1208 .image style="width: 650px"}
+![](Fig7.jpeg)
 
 Figure 7. How easily can grammatical gender be predicted from ostensibly
 ungendered evidence? 84,000 characters drawn from novels in HathiTrust,
@@ -487,8 +491,8 @@ boundaries from 1840 through the late twentieth century is quite robust;
 the trend is not likely to vanish with a different set of sampling or
 modeling choices.
 
-::: {#attachment_1209 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2018/01/Fig8.jpg)
+::: {#attachment_1209 .image style="width: 650px"}
+![](Fig8.jpg)
 
 Figure 8. Accuracy of BookNLP's gender inference for characters. The
 only significant departure is in the eighteenth century[---]{.emdash}the
@@ -519,8 +523,8 @@ detective story may tend to be depicted very strongly as "The Woman." We
 might call this the Irene Adler Exception, if Katha Politt hadn't
 already memorably dubbed it "the Smurfette Principle."[^19]
 
-::: {#attachment_1210 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2018/01/Fig9AuthSpecific.jpeg)
+::: {#attachment_1210 .image style="width: 650px"}
+![](Fig9AuthSpecific.jpeg)
 
 Figure 9. The accuracy of models that attempt to distinguish character
 gender in groups of characters drawn only from books by men, or by
@@ -552,8 +556,8 @@ one. But the point of this exercise is not really to model authorial
 identity. We're simply providing a point of comparison that may clarify
 the significance of changes in our character model.
 
-::: {#attachment_1211 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2018/01/Fig10Authors.jpeg)
+::: {#attachment_1211 .image style="width: 650px"}
+![](Fig10Authors.jpeg)
 
 Figure 10. Models that use text from a single character to predict
 either the gender of the character, or of the author. Both sets of
@@ -590,8 +594,8 @@ tends to emphasize common words, but for our purposes that's fine: we
 want to find changes that were big enough to make gender hard to infer.
 Here, for instance, are three common verbs.
 
-::: {#attachment_1212 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2018/01/Fig11feltgotread.jpeg)
+::: {#attachment_1212 .image style="width: 650px"}
+![](Fig11feltgotread.jpeg)
 
 Figure 11. The difference between a word's frequency in descriptions of
 women, and of men.
@@ -617,8 +621,8 @@ especially with a lot of things like this:
 
 ** **
 
-::: {#attachment_1213 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2018/01/Fig12heartmindspiritspassion.jpeg)
+::: {#attachment_1213 .image style="width: 650px"}
+![](Fig12heartmindspiritspassion.jpeg)
 
 Figure 12. Words selected because they produce more differentiation
 early in the timeline than toward the end.
@@ -662,8 +666,8 @@ The evidence we are seeing also supports Armstrong's contention that the
 gendering of privacy and interiority was linked to a broader division
 between public and domestic spaces.
 
-::: {#attachment_1214 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2018/01/Fig13roomchamberhouse.jpeg)
+::: {#attachment_1214 .image style="width: 650px"}
+![](Fig13roomchamberhouse.jpeg)
 
 Figure 13. Spaces that are possessed by women, or by men, respectively.
 :::
@@ -691,8 +695,8 @@ these involve the creation of new forms of gender differentiation. For
 instance, verbs of mirth become strongly gendered in the middle of the
 twentieth century.
 
-::: {#attachment_1215 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2018/01/Fig14grinnedsmiledlaughed.jpeg)
+::: {#attachment_1215 .image style="width: 650px"}
+![](Fig14grinnedsmiledlaughed.jpeg)
 
 Figure 14. The mid-twentieth-century gendering of mirth.
 :::
@@ -722,8 +726,8 @@ descriptions also became more specifically gendered. A whole article
 could be written on this topic: jaws, hands, lips, and feet are all
 fascinating. But here are a few leading examples.
 
-::: {#attachment_1216 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2018/01/Fig15eyeshairchest.jpeg)
+::: {#attachment_1216 .image style="width: 650px"}
+![](Fig15eyeshairchest.jpeg)
 
 Figure 15. The rise of physical signs of gender.
 :::
@@ -870,6 +874,8 @@ exhausting their potential; these methods have a lot of room to run, and
 they could eventually have broad theoretical implications.
 
  
+:::
+:::
 
 [^1]: The evidence used in this paper has depended heavily on the labor
     of other hands. The HathiTrust corpus we use was processed by Boris

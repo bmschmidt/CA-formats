@@ -6,6 +6,8 @@ shorttitle: 'Topic Modeling, Epistemology, and the English and German Novel'
 title: 'Topic Modeling, Epistemology, and the English and German Novel'
 ---
 
+::: {.entry .print-only}
+::: {#post-937 .post-937 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
  
 
 ###### *Peer-Reviewed By: Anon.*
@@ -15,6 +17,14 @@ title: 'Topic Modeling, Epistemology, and the English and German Novel'
 ###### *Article DOI: [10.22148/16.014](https://doi.org/10.22148/16.014)*
 
 ###### *Dataverse DOI: [10.7910/DVN/3J38FX](http://dx.doi.org/10.7910/DVN/3J38FX)*
+
+###### *PDF: [10.31235/osf.io/78zpu](https://dx.doi.org/10.31235/osf.io/78zpu)*
+
+###### *Journal ISSN: 2371-4549*
+
+###### *Cite: Matt Erlin, "Topic Modeling, Epistemology, and the English and German Novel," Journal of Cultural Analytics. May 1, 2017. DOI: [10.31235/osf.io/78zpu](https://dx.doi.org/10.31235/osf.io/78zpu)*
+
+###### 
 
 ** **
 
@@ -470,15 +480,15 @@ between 1791 and 1901, with year of publication and percentage
 participation in the epistemology topics as the respective x and y
 axes.[^22]
 
-::: {#attachment_918 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/04/erlin_figure_1.jpeg)
+::: {#attachment_918 .image style="width: 650px"}
+![](erlin_figure_1.jpeg)
 
 Figure 1. Scatter plot of English novels 1791-1901 with regression line
 (R2=.081, F(1,172)=15.13, p\<.001)
 :::
 
-::: {#attachment_919 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/04/erlin_figure_2.jpeg)
+::: {#attachment_919 .image style="width: 650px"}
+![](erlin_figure_2.jpeg)
 
 Figure 2. Scatter plot of German novels 1791-1901 with regression line
 (R2=.034, F(1,165)=5.786, p=.017)
@@ -889,8 +899,8 @@ represents the 20-year rolling mean of the per-novel frequency of these
 adverbs, calculated in relation to the total number adjectives and
 adverbs appearing in the novel.
 
-::: {#attachment_920 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/04/erlin_figure_3.jpeg)
+::: {#attachment_920 .image style="width: 650px"}
+![](erlin_figure_3.jpeg)
 
 Figure 3. Modal adverbs and adjectives as % of total adverbs and
 adjectives.
@@ -1185,6 +1195,8 @@ of concern.
  
 
  
+:::
+:::
 
 [^1]: Russell A. Berman, "Politics: Divide and Rule," *MLQ: Modern
     Language Quarterly* 62.4 (2001): 328.

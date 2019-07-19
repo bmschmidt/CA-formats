@@ -8,6 +8,8 @@ title: |
     a Menu Corpus
 ---
 
+::: {.entry .print-only}
+::: {#post-526 .post-526 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
 ###### *Peer-Reviewed By: Nathalie Cooke & Anon.*
 
 ###### *Clusters: [Food](http://culturalanalytics.org/2016/10/food/)*
@@ -15,6 +17,12 @@ title: |
 ###### *Article DOI: [10.22148/16.007](https://doi.org/10.22148/16.007) *
 
 ###### *Dataverse DOI: [10.7910/DVN/QMLCPD](http://dx.doi.org/10.7910/DVN/QMLCPD)*
+
+###### *PDF: [10.31235/osf.io/j9tga](https://dx.doi.org/10.31235/osf.io/j9tga)*
+
+###### *Journal ISSN: 2371-4549*
+
+###### *Cite: Dan Jurafsky, Victor Chahuneau, Bryan R. Routledge, and Noah A. Smith, "Linguistic Markers of Status in Food Culture: Bourdieu's Distinction in a Menu Corpus," Journal of Cultural Analytics. Oct. 18, 2016. DOI: [10.31235/osf.io/j9tga](https://dx.doi.org/10.31235/osf.io/j9tga)*
 
  
 
@@ -460,8 +468,8 @@ restaurant category, number of dishes, and number of words.  The framing
 of traditional authenticity indeed was more likely to be used in the
 menus of lower middle priced restaurants (*p* = 0.000303).
 
-::: {#attachment_659 .image style="max-width: 660px"}
-![](http://culturalanalytics.org/wp-content/uploads/2016/11/figure1_authenticity.jpg)
+::: {#attachment_659 .image style="width: 660px"}
+![](figure1_authenticity.jpg)
 
 Figure 1. Means and 95% confidence intervals for raw values of natural
 versus traditional authenticity by restaurant price status. The values
@@ -477,8 +485,8 @@ inspiration, exquisitely*; cheaper restaurants used shorter forms like
 *sides* instead of *accompaniments* or *complements*. Figure 2 shows raw
 means and standard errors:
 
-::: {#attachment_660 .image style="max-width: 660px"}
-![](http://culturalanalytics.org/wp-content/uploads/2016/11/figure2_wordlength.jpg)
+::: {#attachment_660 .image style="width: 660px"}
+![](figure2_wordlength.jpg)
 
 Figure 2. Means and 95% confidence intervals for raw values of word
 length in letters by restaurant price status.
@@ -511,8 +519,8 @@ of diner's choice with descriptions like "baby lamb chops, grilled *to
 your liking\",* \"PEI mussels: *choose your style\"*) (*p *\< 2 x
 10^-16^).
 
-::: {#attachment_662 .image style="max-width: 660px"}
-![](http://culturalanalytics.org/wp-content/uploads/2016/11/figure3_choice.jpg)
+::: {#attachment_662 .image style="width: 660px"}
+![](figure3_choice.jpg)
 
 Figure 3. Means and 95% confidence intervals for raw values of choice
 and plenty by restaurant price status. 3b shows values of plenty for all
@@ -550,8 +558,8 @@ cheaper restaurants used more adjectives than expensive ones (*p *\< 6.1
 x 10^-5^).  Figure 4 shows the raw means and variances for the four
 specific sub-classes of adjectives we consider.
 
-::: {#attachment_665 .image style="max-width: 660px"}
-![](http://culturalanalytics.org/wp-content/uploads/2016/11/figure4_adjs.jpg)
+::: {#attachment_665 .image style="width: 660px"}
+![](figure4_adjs.jpg)
 
 Figure 4. Means and 95% confidence intervals for raw values of four
 classes of adjectives by restaurant price status. Sensory adjectives and
@@ -631,8 +639,8 @@ were large differences in the presence of French vocabulary, which we
 return to below). Figure 6 shows the raw means and variances for these
 variables.
 
-::: {#attachment_538 .image style="max-width: 660px"}
-![](http://culturalanalytics.org/wp-content/uploads/2016/10/figure5_nypl.jpg)
+::: {#attachment_538 .image style="width: 660px"}
+![](figure5_nypl.jpg)
 
 Figure 5. Means and 95% confidence intervals for raw values of four
 variables in historical menus from 1892-1921 from the New York Public
@@ -943,6 +951,8 @@ out the effects of description length in words (loglength).
   -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Table A3.  Lexicons
+:::
+:::
 
 [^1]: This work was supported in part by a research grant from Google,
     and by the Center for Advanced Study in the Behavioral Sciences at

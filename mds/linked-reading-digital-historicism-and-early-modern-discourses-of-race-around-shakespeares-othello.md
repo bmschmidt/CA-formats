@@ -8,6 +8,8 @@ title: |
     around Shakespeare's Othello
 ---
 
+::: {.entry .print-only}
+::: {#post-1179 .post-1179 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
 ###### *Peer-Reviewed By: Rachel Buurma, Paul Yachnin*
 
 ###### *Clusters: [Race](http://culturalanalytics.org/2018/01/race/)*
@@ -16,7 +18,11 @@ title: |
 
 ###### *Dataverse DOI: [10.7910/DVN/XHFTUX](http://dx.doi.org/10.7910/DVN/XHFTUX)*
 
+###### *PDF: [10.31235/osf.io/tg23u](https://dx.doi.org/10.31235/osf.io/tg23u)*
+
 ###### *Journal ISSN: 2371-4549*
+
+###### *Cite: James Jaehoon Lee, Blaine Greteman, Jason Lee, and David Eichmann, "Linked Reading: Digital Historicism and Early Modern Discourses of Race around Shakespeare's Othello," Journal of Cultural Analytics. Jan. 25, 2018. DOI: [10.31235/osf.io/tg23u](https://dx.doi.org/10.31235/osf.io/tg23u)*
 
  
 
@@ -230,14 +236,14 @@ compare the term lists across different topics, we employed the
 term-topic matrix visualization (Figure 2) to align multiple topics at
 once.
 
-::: {#attachment_1157 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig1.png)
+::: {#attachment_1157 .image style="width: 650px"}
+![](Lee_fig1.png)
 
 Figure 1. LDA and Document Retrieval Interface.
 :::
 
-::: {#attachment_1158 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig2.png)
+::: {#attachment_1158 .image style="width: 650px"}
+![](Lee_fig2.png)
 
 Figure 2. Term-Topic Matrix and Document Retrieval Interface.
 :::
@@ -277,8 +283,8 @@ word "love" occurs together in paragraphs with "death," "passion,"
 "wife," "torture," "faith," and "daughter," a vocabulary that conflates
 romance, sexuality, and pain.
 
-::: {#attachment_1159 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig3.png)
+::: {#attachment_1159 .image style="width: 650px"}
+![](Lee_fig3.png)
 
 Figure 3. Sexuality and Romance topics, pre-1604 (left) / 1622 (right).
 :::
@@ -318,8 +324,8 @@ broadly in topics like figure four's "family / slave / monster" topic
 (labeled as "Topic 15"), which is drawn from works published before
 1622.
 
-::: {#attachment_1160 .image style="max-width: 291px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig4.png)
+::: {#attachment_1160 .image style="width: 291px"}
+![](Lee_fig4.png)
 
 Figure 4. Family / Slave / Monster Topic, Pre-1622.
 :::
@@ -349,8 +355,8 @@ translation of *Orlando Furioso* (1591)*,* Christopher Marlowe's
 *Tamburlaine* (1590)*,* and Thomas Kyd's *The Tragedy of Soloman and
 Perseda* (1592)*.*
 
-::: {#attachment_1161 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig5.png)
+::: {#attachment_1161 .image style="width: 650px"}
+![](Lee_fig5.png)
 
 Figure 5. "Religion" topics, Pre-1604 (topic 6, left) / 1622 (topic 7,
 right).
@@ -371,8 +377,8 @@ navigation and four topics on trade and resources, in addition to the
 five topics on sex/the body/romance, eleven topics on religion, five on
 political organization, and five on military affairs (figure six).
 
-::: {#attachment_1162 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig6.png)
+::: {#attachment_1162 .image style="width: 650px"}
+![](Lee_fig6.png)
 
 Figure 6. Summary of Topics, Pre-1622 EEBO Corpus.
 :::
@@ -401,8 +407,8 @@ topics, rather than in topics on sexuality, the passions, or the body.
 In fact, 85.7% of topics that include at least one version of the play
 are geographical, global, or naval in nature.
 
-::: {#attachment_1163 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig7.png)
+::: {#attachment_1163 .image style="width: 650px"}
+![](Lee_fig7.png)
 
 Figure 7. LDA Topics that include Othello, Pre-1623.
 :::
@@ -422,8 +428,8 @@ and landscape that find a shared vocabulary linking Shakespeare's
 Pilgrimes* (1613), alongside texts on "cosmographie," surveying, and
 chorography.
 
-::: {#attachment_1164 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig8.png)
+::: {#attachment_1164 .image style="width: 650px"}
+![](Lee_fig8.png)
 
 Figure 8. LDA Topics that include Othello.
 :::
@@ -434,8 +440,8 @@ literary texts, like *Lust's Dominion* (1600) and even Shakespeare's
 earlier play *Titus Andronicus* (1594), which contribute to topics on
 the passions, female sexuality, and religion (figure nine).
 
-::: {#attachment_1165 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig9.png)
+::: {#attachment_1165 .image style="width: 650px"}
+![](Lee_fig9.png)
 
 Figure 9. "Moor" Topic Composed of Literary Texts.
 :::
@@ -456,8 +462,8 @@ as "ships," "seas," "trade," "fleete," "marchants," "traffique,"
 analysis of the LDA topics containing *Othello* alongside texts on
 global travel and shipping.
 
-::: {#attachment_1166 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig10.png)
+::: {#attachment_1166 .image style="width: 650px"}
+![](Lee_fig10.png)
 
 Figure 10. Word2Vec Model of "Moores" (EEBO Corpus, 1500-1623).
 :::
@@ -489,8 +495,8 @@ pre-1604 and pre-1623 EEBO texts, include "Spain," "Portugal,"
 "Granada," "French," and "England," along with the more distant
 "Affrica" and "Turk."
 
-::: {#attachment_1167 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig11.png)
+::: {#attachment_1167 .image style="width: 650px"}
+![](Lee_fig11.png)
 
 Figure 11. Topics on Europe, the Mediterranean and the "Turk," Pre-1604
 (left) / 1623 (right).
@@ -501,8 +507,8 @@ an "equinoctial" imagination of Moors that is markedly more technical
 than the cultural conflicts described by the first tranche of European
 topics. Here we find clusters of words related to space and climate.
 
-::: {#attachment_1168 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig12.png)
+::: {#attachment_1168 .image style="width: 650px"}
+![](Lee_fig12.png)
 
 Figure 12. Complexion/Equinoctial/Global Geography Topics, Pre-1604
 (left) / 1622 (center) / 1623 (right).
@@ -537,8 +543,8 @@ corpus from 1500 to 1623 demonstrates an analogous geographical
 vocabulary of spatial markers and a diversity of global place names, as
 seen in figure thirteen.
 
-::: {#attachment_1169 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig13.png)
+::: {#attachment_1169 .image style="width: 650px"}
+![](Lee_fig13.png)
 
 Figure 13. Word2Vec Model of "Equinoctial" (EEBO Corpus from 1500-1623).
 :::
@@ -608,8 +614,8 @@ phenotype modulated by "physicke," "constitution," "melancholy,"
 an immutable genotype. Indeed, the "blacke\_moore" pairs with
 "behavior," rather than words associated with the body or skin color.
 
-::: {#attachment_1170 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig14.png)
+::: {#attachment_1170 .image style="width: 650px"}
+![](Lee_fig14.png)
 
 Figure 14. Word2Vec Model of "Complexion" (EEBO Corpus from 1500 to
 1623).
@@ -624,8 +630,8 @@ fifteen) shows that Othello himself comes to contribute to the very
 definition of the idea, in a closer relationship with "tempers,"
 "appetites," and "affections," than the vocabulary of "blackness."
 
-::: {#attachment_1171 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig15.png)
+::: {#attachment_1171 .image style="width: 650px"}
+![](Lee_fig15.png)
 
 Figure 15. Word2Vec Model of "Complexion" (EEBO Corpus from 1623-1700).
 :::
@@ -639,8 +645,8 @@ sixteen, below, where the proximity of "black," "Indian," "white,"
 "complexion" might incline us to read this as a cluster of words about
 the body:
 
-::: {#attachment_1172 .image style="max-width: 492px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig16.png)
+::: {#attachment_1172 .image style="width: 492px"}
+![](Lee_fig16.png)
 
 Figure 16. Complexion Topic, Pre-1622.
 :::
@@ -672,8 +678,8 @@ represented by the entire EEBO corpus. When we step back and look at LDA
 runs that represent the entire period of the EEBO corpus, the Folio
 version of *Othello* is prominent in topics such as these:
 
-::: {#attachment_1173 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig17.png)
+::: {#attachment_1173 .image style="width: 650px"}
+![](Lee_fig17.png)
 
 Figure 17. Othello in "Moor" Topics Across Entire EEBO Corpus,
 1473-1700.
@@ -691,8 +697,8 @@ once again, between these topics and the ones where we *do* find the
 Quarto, here is an example of an earlier topic that includes the first
 printing:
 
-::: {#attachment_1174 .image style="max-width: 302px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig18.png)
+::: {#attachment_1174 .image style="width: 302px"}
+![](Lee_fig18.png)
 
 Figure 18. "Moor" Topic including Quarto Edition.
 :::
@@ -738,8 +744,8 @@ below, the left-hand side is dominated by publications of news and
 current events, while the right includes more literary and religious
 texts. *Othello* sits astride these worlds.
 
-::: {#attachment_1175 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig19.png)
+::: {#attachment_1175 .image style="width: 650px"}
+![](Lee_fig19.png)
 
 Figure 19. Print Network of Okes, Walkley, and Shakespeare.
 :::
@@ -824,8 +830,8 @@ publication in 1623, we find that Okes is not really "representative" at
 all. He is in fact the most connected person in the entire print network
 during this time:
 
-::: {#attachment_1176 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig20.png)
+::: {#attachment_1176 .image style="width: 650px"}
+![](Lee_fig20.png)
 
 Figure 20. Degree Rank (average connections) of Publishers and Printers,
 1564-1623.
@@ -858,8 +864,8 @@ early modern print network, and to get a true sense of just *how*
 exceptional Okes really was, it may help to consider a chart of "average
 degree" across the entire print network during this time.
 
-::: {#attachment_1177 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig21.png)
+::: {#attachment_1177 .image style="width: 650px"}
+![](Lee_fig21.png)
 
 Figure 21. Degree Distribution of Individuals in the English Print
 Network, 1564-1623.
@@ -1046,8 +1052,8 @@ with the models including the proper names "Othello," "Desdemona,"
 places like "Florida," "Jordan," "Arabia," "Persia," "Ireland," and of
 course, "Venice."
 
-::: {#attachment_1178 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/12/Lee_fig23.png)
+::: {#attachment_1178 .image style="width: 650px"}
+![](Lee_fig23.png)
 
 Figure 22. Topics Including or Mentioning Othello after 1623.
 :::
@@ -1088,6 +1094,8 @@ point, we may have the power to articulate alternative non-essentialist
 vocabularies, using Shakespeare's global text to rethink the idea of
 ethnic difference in today's globalized - and increasingly racialized -
 society.
+:::
+:::
 
 [^1]: The authors are grateful to the Andrew W. Mellon Foundation's
     Digital Bridges for Humanistic Inquiry Grant and the University of

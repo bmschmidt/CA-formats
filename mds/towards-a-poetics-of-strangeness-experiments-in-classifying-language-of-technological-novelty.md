@@ -10,6 +10,8 @@ title: |
     Technological Novelty
 ---
 
+::: {.entry .print-only}
+::: {#post-1008 .post-1008 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
 ###### 
 
 ###### *Peer-Reviewed By: Ted Underwood*
@@ -19,6 +21,14 @@ title: |
 ###### *Article DOI: [10.22148/16.015](http://culturalanalytics.org/2017/09/towards-a-poetics-of-strangeness-experiments-in-classifying-language-of-technological-novelty/)*
 
 ###### *Dataverse DOI: [10.7910/DVN/MSXKNB](http://dx.doi.org/10.7910/DVN/MSXKNB)*
+
+###### *PDF: [10.31235/osf.io/aj9td](https://doi.org/10.31235/osf.io/aj9td)*
+
+###### *Journal ISSN: 2371-4549*
+
+###### *Cite: Michael Simeone, Advaith Gundavajhala Venkata Koundinya, Anandh Ravi Kumar, and Ed Finn, "Towards a Poetics of Strangeness: Experiments in Classifying Language of Technological Novelty," Journal of Cultural Analytics. Sep. 8, 2017. DOI: [10.31235/osf.io/aj9td](https://doi.org/10.31235/osf.io/aj9td)*
+
+###### 
 
  
 
@@ -529,10 +539,10 @@ of correct positive classifications for "strange" over the number of
 classifications returned as "strange" divided by the actual number of
 sentences labeled as strange by human coders.
 
-![](http://culturalanalytics.org/wp-content/uploads/2017/08/Equation1.jpg){.alignnone
+![](Equation1.jpg "http://culturalanalytics.org/wp-content/uploads/2017/08/Equation1.jpg"){.alignnone
 .size-full .wp-image-1009 width="335" height="45"
 sizes="(max-width: 335px) 100vw, 335px"
-srcset="http://culturalanalytics.org/wp-content/uploads/2017/08/Equation1.jpg 335w, http://culturalanalytics.org/wp-content/uploads/2017/08/Equation1-300x40.jpg 300w"}
+srcset="https://culturalanalytics.org/wp-content/uploads/2017/08/Equation1.jpg 335w, https://culturalanalytics.org/wp-content/uploads/2017/08/Equation1-300x40.jpg 300w"}
 
 TP = True positive\
 FP = False Positive\
@@ -869,6 +879,8 @@ both humble and surprising. Turning toward the very fabric of
 strangeness can help us understand the continuities and feedbacks among
 the science fictions we accept to be possible, and the science fictions
 we accept, every day, to be true.
+:::
+:::
 
 [^1]: Work by the Authors was partially supported by The National
     Aeronautics and Space Administration through the funding of

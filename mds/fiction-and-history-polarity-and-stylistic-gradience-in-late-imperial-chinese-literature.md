@@ -8,11 +8,21 @@ title: |
     Chinese Literature
 ---
 
+::: {.entry .print-only}
+::: {#post-32 .post-32 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
 ###### *Peer-Reviewed By: Hoyt Long*
 
 ###### *Clusters: [Genre](http://66.147.244.186/~postfou1/ca/2016/05/genre/)*
 
-###### *Journal ISSN: 2371-4549* *DOIs: [10.22148/16.003](https://doi.org/10.22148/16.003) (CA) and [10.7910/DVN/4ZVSKA](http://dx.doi.org/10.7910/DVN/4ZVSKA) (Dataverse)*
+###### *Article DOI: [10.22148/16.003](https://doi.org/10.22148/16.003)*
+
+###### *Dataverse DOI: [10.7910/DVN/4ZVSKA](http://dx.doi.org/10.7910/DVN/4ZVSKA)*
+
+###### *PDF: [10.31235/osf.io/t9b7v](https://doi.org/10.31235/osf.io/t9b7v)*
+
+###### *Journal ISSN: 2371-4549*
+
+###### *Cite: Paul Vierthaler, "Fiction and History: Polarity and Stylistic Gradience in Late Imperial Chinese Literature," Journal of Cultural Analytics. May 23, 2016. DOI: [10.31235/osf.io/t9b7v](https://doi.org/10.31235/osf.io/t9b7v)*
 
  
 
@@ -256,8 +266,8 @@ others taken from the same work forming clades, or groups of closely
 related texts that fall on the same branch of the dendrogram. Texts of
 similar genre form the next highest order of clustering.
 
-::: {#attachment_86 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/Vierthaler.Figure1-2-e1461874738523.png)
+::: {#attachment_86 .image style="width: 650px"}
+![](Vierthaler.Figure1-2-e1461874738523.png)
 
 Figure 1. An Unrooted Phylodendrogram Showing 14 Texts using 10,000 *Zi*
 Segments and 100 Most Frequent *Zi*. The *yeshi* all fall on a single
@@ -341,8 +351,8 @@ written collaboratively by many government scholars. The novels stand
 slightly independently of the historical works (although the *National
 Fragrance* appears closely related to part of the *Captured Wilds*).
 
-::: {#attachment_59 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/Vierthaler.Figure2-e1461873940722.png)
+::: {#attachment_59 .image style="width: 650px"}
+![](Vierthaler.Figure2-e1461873940722.png)
 
 Figure 2. Phylodendrogram of 10,000 *Zi* sections Including *Official
 Ming History* using 100 Most Common *Zi*. There is a very close
@@ -375,8 +385,8 @@ overpower short ones. There are a number of ways to normalize the data,
 including by assigning each token a score based on the number of
 occurrences per ten thousand tokens. [^34]
 
-::: {#attachment_60 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/Vierthaler.Figure3-e1461874006865.png)
+::: {#attachment_60 .image style="width: 650px"}
+![](Vierthaler.Figure3-e1461874006865.png)
 
 Figure 3. Hierarchical Clustering of Texts Using 200 most frequent *n*
 -grams, using their frequency per thousand characters, Vernacular novels
@@ -477,8 +487,8 @@ Novel authors play with this dichotomy in interesting ways by
 incorporating *yeshi* into their titles. [^42] Several cases of this are
 visible as *yeshi* clustering among vernacular novels in Figure 4.
 
-::: {#attachment_61 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/Vierthaler.Figure4-e1461874049261.png)
+::: {#attachment_61 .image style="width: 650px"}
+![](Vierthaler.Figure4-e1461874049261.png)
 
 Figure 4. Hierarchical cluster analysis of official histories, *yeshi*,
 novels, and historical romances using euclidean distances of term
@@ -521,8 +531,8 @@ component, which accounts for 33 percent of the variance within the
 dataset. The second principal component accounts for approximately 6
 percent of the variance. [^43]
 
-::: {#attachment_62 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/Vierthaler.Figure5A-e1461874147708.png)
+::: {#attachment_62 .image style="width: 650px"}
+![](Vierthaler.Figure5A-e1461874147708.png)
 
 Figure 5A. Principal component analysis of official histories and novels
 in ten thousand 1-gram sections using the thousand most common tokens in
@@ -558,8 +568,8 @@ language, and informal personal pronouns (你*you*, *me*,  *him*) spread
 from the bottom center to the middle right of the principal component
 space. These works are entirely novels.
 
-::: {#attachment_63 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/Vierthaler.Figure5B-e1461874214564.png)
+::: {#attachment_63 .image style="width: 650px"}
+![](Vierthaler.Figure5B-e1461874214564.png)
 
 Figure 5B. Principal component loadings from Figure 5A. This loadings
 plot shows the influence the variables have on the principal components.
@@ -687,8 +697,8 @@ intermingling is less clear when looking at a PCA of the full texts.
 Although they distinctly cluster, as shown in Figure 6, the nature of
 the space between them is vague.
 
-::: {#attachment_65 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/Vierthaler.Figure6-e1461874244257.png)
+::: {#attachment_65 .image style="width: 650px"}
+![](Vierthaler.Figure6-e1461874244257.png)
 
 Figure 6. Principal component analysis of the full texts of official
 histories and novels using the one thousand most common tokens. The
@@ -728,8 +738,8 @@ histories. These texts appear to fall along a multi-dimensional
 stylistic gradient that emerges in this principal component space with
 poles in vernacular, classical, historical, and fictional language.
 
-::: {#attachment_66 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/Vierthaler.Figure7-e1461874273229.png)
+::: {#attachment_66 .image style="width: 650px"}
+![](Vierthaler.Figure7-e1461874273229.png)
 
 Figure 7. Principal component analysis of ten thousand 1-gram sections
 from official histories, novels, and historical romances. When
@@ -748,8 +758,8 @@ significant portion extends into space occupied by the historical
 romances, with some mingling among the pure novels. They form an
 apparent bridge between the novelistic and historical genres.
 
-::: {#attachment_67 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/Vierthaler.Figure8-e1461874301997.png)
+::: {#attachment_67 .image style="width: 650px"}
+![](Vierthaler.Figure8-e1461874301997.png)
 
 Figure 8. Principal component analysis of official histories, novels,
 historical romances, and *yeshi*. When *yeshi* enter in to the picture,
@@ -785,8 +795,8 @@ historical romances, but also extend into vernacular novel space. The
 overall shape of the PC space illustrates the bridging effect that
 the *yeshi *have in the stylistic space formed by these texts.
 
-::: {#attachment_68 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/Vierthaler.Figure9-e1461874330922.png)
+::: {#attachment_68 .image style="width: 650px"}
+![](Vierthaler.Figure9-e1461874330922.png)
 
 Figure 9. Principal component analysis of official histories, novels,
 historical romances, and texts taken from wenxian.fanren8.com's Stored
@@ -938,8 +948,8 @@ as *n* increases sparse data rapidly becomes an issue. [^64]
 
  
 
-::: {#attachment_70 .image style="max-width: 810px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/Vierthaler.SupplementaryFigure-e1461874360432.png)
+::: {#attachment_70 .image style="width: 810px"}
+![](Vierthaler.SupplementaryFigure-e1461874360432.png)
 
 Supplementary Figure 1 Scree Plot: This plot shows the explained
 variance of the top ten components in the dataset used for Figure 8 and
@@ -952,6 +962,8 @@ excellent explanation of the relationship among these texts.
 :::
 
  
+:::
+:::
 
 [^1]: 
 

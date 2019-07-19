@@ -6,7 +6,15 @@ shorttitle: Genre Theory and Historicism
 title: Genre Theory and Historicism
 ---
 
-###### *Journal ISSN: 2371-4549* *DOI: [10.22148/16.008](https://doi.org/10.22148/16.008)*
+::: {.entry .print-only}
+::: {#post-607 .post-607 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
+###### *Article DOI: [10.22148/16.008](https://doi.org/10.22148/16.008)*
+
+###### *PDF: [10.31235/osf.io/dav64](https://dx.doi.org/10.31235/osf.io/dav64)*
+
+###### *Journal ISSN: 2371-4549*
+
+###### *Cite: Ted Underwood and the NovelTM Research Group, "Genre Theory and Historicism," Journal of Cultural Analytics. Oct. 25, 2016. DOI: [10.31235/osf.io/dav64](https://dx.doi.org/10.31235/osf.io/dav64)*
 
  
 
@@ -194,6 +202,8 @@ dialogue with each other, and allowing new insights to emerge from the
 tension between them. That is what we hope to have fostered here: a mode
 of inquiry about genre that revives substantive debate, and avoids
 falling back on a nominalistic shrug.
+:::
+:::
 
 [^1]: Northrop Frye, *Anatomy of Criticism* (Princeton: Princeton
     University Press, 1957); Jacques Derrida and Avital Ronell, "The Law

@@ -34,7 +34,7 @@ printing/%: printing/%.hs
 
 docxs/%.docx: htmls/%.html
 	pandoc -o $@ \
-	--filter printing/html_cleaner \
+	--filter printing/html_cleaner.hs \
 	--standalone \
 
 
@@ -44,16 +44,26 @@ mds/%.md: htmls/%.html
 		--from html+smart+multiline_tables \
 		--to markdown \
 		--standalone \
-		--filter printing/html_cleaner \
+		--filter printing/html_cleaner.hs
+
+# Generate a list of images.
+	pandoc -t plain $< \
+		--filter printing/pull_images.hs > tmp.txt
+# Download any that don't exist.
+	wget -i tmp.txt --no-clobber --directory-prefix $(subst .md,,$@)
+
+	rm tmp.txt # Get rid of the list.
+
 
 pdfs/%.pdf: mds/%.md printing/CA.latex
 	-pandoc -o $@ \
 		--template printing/CA.latex \
+		--resource-path $(subst .md,,$<) \
 		--pdf-engine xelatex \
-		$< \
+		$< --verbose \
 		--variable="mainfont:$(font)" \
 		--variable="CJKmainfont:$(CJKmainfont)" \
-		--variable="fontsize:12pt" \
-#		--verbose 
+		--variable="fontsize:12pt"
+
 
 

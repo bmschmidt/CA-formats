@@ -6,15 +6,23 @@ shorttitle: 'Scotland''s Poetics of Space'
 title: 'Scotland''s Poetics of Space: An Experiment in Geospatial Semantics'
 ---
 
+::: {.entry .print-only}
+::: {#post-1071 .post-1071 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
  
 
 ###### *Peer-Reviewed By: James Lee, Matthew Wilkins *
 
-###### *Clusters: Space *
+###### *Clusters: [Geography](http://culturalanalytics.org/2017/11/geography/) *
 
 ###### *Article DOI: [10.22148/16.017](https://doi.org/10.22148/16.017)*
 
 ###### *Dataverse DOI: [10.7910/DVN/OPMFXZ](http://dx.doi.org/10.7910/DVN/OPMFXZ)*
+
+###### *PDF: [10.31235/osf.io/85nfc](https://dx.doi.org/10.31235/osf.io/85nfc)*
+
+###### *Journal ISSN: 2371-4549*
+
+###### *Cite: Michael Gavin and Eric Gidal, "Scotland's Poetics of Space: An Experiment in Geospatial Semantics," Journal of Cultural Analytics. Nov. 16, 2017. DOI: [10.31235/osf.io/85nfc](https://dx.doi.org/10.31235/osf.io/85nfc)*
 
  
 
@@ -191,8 +199,8 @@ It visualizes a sequence of textual correlations between Sinclair's
 *Statistical Account* and the poems of Ossian whose truth claims are
 bolstered by their cartographical representation.
 
-::: {#attachment_1052 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-1.jpg)
+::: {#attachment_1052 .image style="width: 650px"}
+![](Figure-1.jpg)
 
 Figure 1. "Map of Ancient Selma, the Residence of Fingal, with Part of
 the Fingalian Territories in the Shire of Argyle," from The Poems of
@@ -291,8 +299,8 @@ eighteenth century to 2015, for some entries no suitable match could be
 found: 11,485 of the descriptions are "placeless" and so had to be
 excluded from many of the analyses performed below.[^25]
 
-::: {#attachment_1053 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-2.jpg)
+::: {#attachment_1053 .image style="width: 650px"}
+![](Figure-2.jpg)
 
 Figure 2. Nicholas Carlisle, A topographical dictionary of Scotland, and
 of the islands in the British seas (London: Printed for G. and W.
@@ -319,8 +327,8 @@ corpus, excluding stopwords. The result is a vector-space model with
 12,000 rows across 17,046 dimensions, and each of those dimensions is
 associated with coordinates provided by the Ordnance Survey.[^28]
 
-::: {#attachment_1054 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-3.jpg)
+::: {#attachment_1054 .image style="width: 650px"}
+![](Figure-3.jpg)
 
 Figure 3. Places in semantic space. Left: Places distributed over two
 dimensions (bank, islands). Right: Locations among the British Ordnance
@@ -342,19 +350,19 @@ descriptive vocabulary. We define the semantic distance that separates
 any two places as the cosine distance that separates their respective
 column vectors:
 
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula1.png){.aligncenter
+![](Gavin_formula1.png "http://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula1.png"){.aligncenter
 .wp-image-1074 width="300" height="66"
 sizes="(max-width: 300px) 100vw, 300px"
-srcset="http://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula1.png 792w, http://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula1-300x66.png 300w, http://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula1-768x168.png 768w"}
+srcset="https://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula1.png 792w, https://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula1-300x66.png 300w, https://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula1-768x168.png 768w"}
 
 The geographic distance that separates two places is estimated by taking
 the Euclidean distance between the easting and northing coordinates
 provided by the Ordnance Survey:
 
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula2.png){.aligncenter
+![](Gavin_formula2.png "http://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula2.png"){.aligncenter
 .wp-image-1077 width="550" height="63"
 sizes="(max-width: 550px) 100vw, 550px"
-srcset="http://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula2.png 1011w, http://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula2-300x34.png 300w, http://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula2-768x87.png 768w"}
+srcset="https://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula2.png 1011w, https://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula2-300x34.png 300w, https://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula2-768x87.png 768w"}
 
 These two primary measures outline the basic structure of our
 geosemantic model.[^30] The first shows how similar places are. The
@@ -423,8 +431,8 @@ points randomly substituted: as the semantic data were randomly
 scattered over the model, its correlation to British space approached
 zero. [^37]
 
-::: {#attachment_1055 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-4.jpg)
+::: {#attachment_1055 .image style="width: 650px"}
+![](Figure-4.jpg)
 
 Figure 4. Geosemantic correlation by word count. Of the roughly 7
 million words in the corpus, most (77%) are found in place descriptions
@@ -434,8 +442,8 @@ geographic distances that separate them from other places correlate
 strongly (between .2 and .4 Pearson coefficient).
 :::
 
-::: {#attachment_1056 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-5.1.jpg)
+::: {#attachment_1056 .image style="width: 650px"}
+![](Figure-5.1.jpg)
 
 Figure 5.1. Geosemantic correlation by northing. Places in the British
 National Grid are located with "easting" and "northing" coordinates.
@@ -471,10 +479,10 @@ calculation, but over the rows instead of the columns. We define the
 geosemantic similarity between any two words as the cosine similarity
 between their vectors in a word-place matrix:
 
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula3.png){.aligncenter
+![](Gavin_formula3.png "http://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula3.png"){.aligncenter
 .wp-image-1080 width="300" height="75"
 sizes="(max-width: 300px) 100vw, 300px"
-srcset="http://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula3.png 700w, http://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula3-300x75.png 300w"}
+srcset="https://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula3.png 700w, https://culturalanalytics.org/wp-content/uploads/2017/10/Gavin_formula3-300x75.png 300w"}
 
 Notice that when discussing places we usually refer to semantic distance
 and when discussing words we generally refer to semantic similarity.
@@ -533,30 +541,30 @@ most tightly in Scotland's Central Belt, where coal production had
 significantly transformed the landscape by 1850, while descriptions of
 *fisheries* appear most distinctively along the coasts and harbors.
 
-::: {#attachment_1058 .image style="max-width: 427px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-6.1.jpg)
+::: {#attachment_1058 .image style="width: 427px"}
+![](Figure-6.1.jpg)
 
 Figure 6.1. The semantic footprints of toponyms: argyllshire. Points in
 red indicate regional overrepresentation of a given term. Toponyms tend
 to cluster near their geographical locations.
 :::
 
-::: {#attachment_1059 .image style="max-width: 424px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-6.2.jpg)
+::: {#attachment_1059 .image style="width: 424px"}
+![](Figure-6.2.jpg)
 
 Figure 6.2. The semantic footprints of toponyms: edinburgh.
 :::
 
-::: {#attachment_1060 .image style="max-width: 423px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-7.1.jpg)
+::: {#attachment_1060 .image style="width: 423px"}
+![](Figure-7.1.jpg)
 
 Figure 7.1 The semantic footprint of coal. Points in red indicate
 regional overrepresentation of a given term. Terms related to industry
 tend to cluster near their functional areas.
 :::
 
-::: {#attachment_1061 .image style="max-width: 427px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-7.2.jpg)
+::: {#attachment_1061 .image style="width: 427px"}
+![](Figure-7.2.jpg)
 
 Figure 7.2. The semantic footprint of fisheries.
 :::
@@ -612,8 +620,8 @@ poetry and aesthetics (*poems*, *horror*, *bards*, *scenery*, *songs*,
 *terrific*), and Celtic identity and language (*gaelic*, *language,*
 *celtic*, *race*).
 
-::: {#attachment_1062 .image style="max-width: 512px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-8.jpg)
+::: {#attachment_1062 .image style="width: 512px"}
+![](Figure-8.jpg)
 
 Figure 8. The semantic footprint of Ossianic myth. Map shows a hotspot
 analysis of the distribution of 345 uses of fingal or ossian.
@@ -899,16 +907,16 @@ Whereas our primary analysis draws from the word-place matrix described
 above, our discussion in this section draws from what could be called a
 "word-decade matrix."
 
-::: {#attachment_1063 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-9.1.jpg)
+::: {#attachment_1063 .image style="width: 650px"}
+![](Figure-9.1.jpg)
 
 Figure 9.1. Word frequency by decade over the entire corpus. Note that
 all references to dates prior to 1,000 AD are gathered into a single
 point.
 :::
 
-::: {#attachment_1064 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-9.2.jpg)
+::: {#attachment_1064 .image style="width: 650px"}
+![](Figure-9.2.jpg)
 
 Figure 9.2. Frequency by decade for the words related to water-powered
 mills (black) and steam-powered engines (red). Values displayed
@@ -943,22 +951,22 @@ and economic developments on the one hand and national chronicle on the
 other  [---]{.emdash}  may be graphed so as to visualize two orders of
 time informing these genres of national improvement.
 
-::: {#attachment_1065 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-10.1.jpg)
+::: {#attachment_1065 .image style="width: 650px"}
+![](Figure-10.1.jpg)
 
 Figure 10.1. Frequency by decade for the word bruce. Historical figures
 like the Earl of Bruce and Queen Mary appear clearly in the data, as do
 events like the Jacobite Rebellion.
 :::
 
-::: {#attachment_1066 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-10.2.jpg)
+::: {#attachment_1066 .image style="width: 650px"}
+![](Figure-10.2.jpg)
 
 Figure 10.2. Frequency by decade for the word mary.
 :::
 
-::: {#attachment_1067 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-10.3.jpg)
+::: {#attachment_1067 .image style="width: 650px"}
+![](Figure-10.3.jpg)
 
 Figure 10.3. Frequency by decade for the word jacobite.
 :::
@@ -1006,22 +1014,22 @@ seen to join the localized histories of regional topography with the
 national imperatives of political economy through an amorphous but
 productive pattern of mythic time.[^51]
 
-::: {#attachment_1068 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-11.1.jpg)
+::: {#attachment_1068 .image style="width: 650px"}
+![](Figure-11.1.jpg)
 
 Figure 11.1. Frequency by decade for the words fingal and ossian
 (combined). Words that invoked the ancient past often leapt over the
 tumultuous events of Scotland's political history.
 :::
 
-::: {#attachment_1069 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-11.2.jpg)
+::: {#attachment_1069 .image style="width: 650px"}
+![](Figure-11.2.jpg)
 
 Figure 11.2. Frequency by decade for the word irish.
 :::
 
-::: {#attachment_1070 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/10/Figure-11.3.jpg)
+::: {#attachment_1070 .image style="width: 650px"}
+![](Figure-11.3.jpg)
 
 Figure 11.3. Frequency by decade for the word pictish.
 :::
@@ -1082,6 +1090,8 @@ contributions to the cultural history of the environment. Our challenge
 moving forward will be to create data and models adequate to this task.
 
  
+:::
+:::
 
 [^1]: Textual approaches to geographic questions have been pioneered in
     the humanities by scholars like Ian Gregory, Andrew Hardie, and

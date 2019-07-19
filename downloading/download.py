@@ -32,15 +32,16 @@ def default_path(url):
 def get_download_list():
     urls = []
     for i in range(10):
-        url = "http://culturalanalytics.org/category/articles/page/{}/".format(i+1)
+        url = "https://culturalanalytics.org/category/articles/page/{}/".format(i+1)
         try:
-            site=pq(url=url)
+            site=pq(url=url, headers={'user-agent': 'pyquery'})
         except urllib.error.HTTPError as err:
             # If there are only two (as there are right now) pages of archives, it raises 404
             # and we're done.
             if err.code==404 and i > 0:
                 break
             else:
+                print(url)
                 raise
         posts = site("#main")(".category-articles")("a")
         for post in posts:
@@ -55,7 +56,7 @@ def download_url(url,oput=None,overwrite=False, dump = False):
         print("Already got {}".format(oput))
         return
     print("Downloading {}".format(oput))
-    site = pq(url=url)
+    site = pq(url=url, headers={'user-agent': 'pyquery'})
     title = site("title")[0]
     title = title.text.replace(" «  CA: Journal of Cultural Analytics","")
     try:
@@ -73,9 +74,18 @@ def download_url(url,oput=None,overwrite=False, dump = False):
     shorttitle = title
     if len(shorttitle) > 50:
         shorttitle = re.sub(": .*","",title)
+
+    inner_html = site("#content")
+    # This has crept into the body.
+    inner_html.remove(".byline")
+    inner_html.remove(".title")
+    try:
+        footnotes = str(site(".footnotes").outer_html())
+    except TypeError:
+        footnotes = ""
+    inner_html.remove(".footnotes")
     
-    inner_html = site("div.post")
-#    footnote_html = site(".footnotes")
+
     output = open(oput,"w")
     output.write("""
     <head>
@@ -87,13 +97,9 @@ def download_url(url,oput=None,overwrite=False, dump = False):
     </head>
     """.format(author,title,date,shortauthor,shorttitle))
 
-    output.write(inner_html.html())
-#    try:
-#        footnotes = footnote_html.outer_html()
-#        output.write("<div id='footnote_div'>{}</div>".format(footnotes))
-#    except TypeError:
-        # Maybe there aren't footnotes.
-#        pass
+    output.write(inner_html.html())    
+    output.write("<div id='footnote_div'>{}</div>".format(footnotes))
+
     output.close()
 
 def main():
@@ -102,3 +108,4 @@ def main():
 if __name__=="__main__":
     #main()
     download_all()
+        

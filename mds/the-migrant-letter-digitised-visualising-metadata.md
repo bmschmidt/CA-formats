@@ -6,6 +6,8 @@ shorttitle: 'The Migrant Letter Digitised: Visualising Metadata'
 title: 'The Migrant Letter Digitised: Visualising Metadata'
 ---
 
+::: {.entry .print-only}
+::: {#post-848 .post-848 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
 ###### *Peer-Reviewed By: Ian Milligan*
 
 ###### *Clusters: [Correspondence](http://culturalanalytics.org/2017/03/correspondence/)*
@@ -13,6 +15,12 @@ title: 'The Migrant Letter Digitised: Visualising Metadata'
 ###### *Article DOI: [10.22148/16.013](https://doi.org/10.22148/16.013)*
 
 ###### *Dataverse DOI: [10.7910/DVN/ERQWPH](http://dx.doi.org/10.7910/DVN/ERQWPH)*
+
+###### *PDF: [10.31235/osf.io/89xbp](https://dx.doi.org/10.31235/osf.io/89xbp)*
+
+###### *Journal ISSN: 2371-4549*
+
+###### *Cite: Niall O'Leary and Emma Moreton, "The Migrant Letter Digitised: Visualising Metadata," Journal of Cultural Analytics. March 28, 2017. DOI: [10.31235/osf.io/89xbp](https://dx.doi.org/10.31235/osf.io/89xbp)*
 
  
 
@@ -179,10 +187,10 @@ information categories that appeared to be common to all the letters:
 sender, recipient, origin, destination, and date. Although TEI was not
 used to tag all letters (time and resources did not allow this), where
 it was used the sender and recipient names were captured with the
-\<correspAction\> element and the @type attribute. Origin and
-destination were captured using the \<settlement\> element and the @key
+\<correspAction\> element and the \@type attribute. Origin and
+destination were captured using the \<settlement\> element and the \@key
 attribute. Finally, date information was captured using the \<date\>
-element and the @when attribute.
+element and the \@when attribute.
 
 Metadata relating to names, places and dates are common across letter
 collections, reflecting some of the formal characteristics of
@@ -278,8 +286,8 @@ the address (e.g. 'New York, New York'), meant the majority of place
 names were not common across collections and had to be manually
 collected.
 
-::: {#attachment_882 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/03/figure1.png)
+::: {#attachment_882 .image style="width: 650px"}
+![](figure1.png)
 
 Figure 1. Web tool for entering geo-spatial coordinates.
 :::
@@ -360,8 +368,8 @@ chart the locations of these entries over time, we notice a great deal
 of contiguity in terms of place and time. For instance,'Montgomery, Wm'
 and 'Montgomery, W.' were both in Cincinnati around 1847/48.
 
-::: {#attachment_883 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/03/figure2.png)
+::: {#attachment_883 .image style="width: 650px"}
+![](figure2.png)
 
 Figure 2. Bubble graph depicting movements of William Montgomery.
 :::
@@ -376,8 +384,8 @@ Mobile, Alabama in 1849, he seems to have lived in New Orleans until
 Portadown. He remained in Portadown until 1857 when he went to
 Manchester, England.
 
-::: {#attachment_884 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/03/figure3.png)
+::: {#attachment_884 .image style="width: 650px"}
+![](figure3.png)
 
 Figure 3. Tabular display of Montgomery locations.
 :::
@@ -426,8 +434,8 @@ four datasets. Unsurprisingly, given the datasets being used here, the
 majority of correspondents communicate between Ireland and various
 locations in America.
 
-::: {#attachment_885 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/03/figure4.png)
+::: {#attachment_885 .image style="width: 650px"}
+![](figure4.png)
 
 Figure 4. Distribution of correspondence for the IED, Lough,
 Smith/O'Gowan and DIL collections.
@@ -442,8 +450,8 @@ granularity. Some places are as specific as 'Westfield, Hampden County,
 Massachusetts, America', while others are as general as 'Ireland'
 (Figure 5).
 
-::: {#attachment_886 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/03/figure5.png)
+::: {#attachment_886 .image style="width: 650px"}
+![](figure5.png)
 
 Figure 5. Map of correspondence of Lough collection.
 :::
@@ -464,16 +472,16 @@ and then Torrington.
 
  
 
-::: {#attachment_887 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/03/figure6.png)
+::: {#attachment_887 .image style="width: 650px"}
+![](figure6.png)
 
 Figure 6. Map with facetted interactivity.
 :::
 
  
 
-::: {#attachment_888 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/03/figure7.png)
+::: {#attachment_888 .image style="width: 650px"}
+![](figure7.png)
 
 Figure 7. Time map.
 :::
@@ -484,8 +492,8 @@ colour represents the person. Unfortunately the large number of letters
 without a date in the Lough collection - 35 out of 99 - means we have a
 large number of letters without a year.
 
-::: {#attachment_889 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/03/figure8.png)
+::: {#attachment_889 .image style="width: 650px"}
+![](figure8.png)
 
 Figure 8. Bubble graph for the Lough collection.
 :::
@@ -506,8 +514,8 @@ essence, Elizabeth and Annie do not move from Winsted once there, Alice
 seems to reside only in Westfield. Only Julia moves location, beginning
 in Winsted, but ultimately moving to and staying in Torrington.
 
-::: {#attachment_890 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/03/figure9.png)
+::: {#attachment_890 .image style="width: 650px"}
+![](figure9.png)
 
 Figure 9. Correspondents also in the Winsted area.
 :::
@@ -528,8 +536,8 @@ last letter to James Smith, James Whipp was writing to the Irish
 Socialist and revolutionary, James Connolly. If nothing else, this shows
 that Fall River was not a political backwater.
 
-::: {#attachment_891 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/03/figure10.png)
+::: {#attachment_891 .image style="width: 650px"}
+![](figure10.png)
 
 Figure 10. Concentration of letters.
 :::
@@ -559,16 +567,16 @@ cannot guarantee that they will bear fruit. However, having the metadata
 databased and available to query makes establishing dead ends a fairly
 quick process.
 
-::: {#attachment_892 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/03/figure11.png)
+::: {#attachment_892 .image style="width: 650px"}
+![](figure11.png)
 
 Figure 11. Number of letters by correspondent.
 :::
 
  
 
-::: {#attachment_893 .image style="max-width: 650px"}
-![](http://culturalanalytics.org/wp-content/uploads/2017/03/figure12.png)
+::: {#attachment_893 .image style="width: 650px"}
+![](figure12.png)
 
 Figure 12. Social network graph.
 :::
@@ -630,6 +638,8 @@ letters, as was seen in the case of the Lough sisters in Winsted, and
 increase the opportunities for serendipitous discovery.  From this
 perspective, *Visual Correspondence* demonstrates some of the
 possibilities inherent in all letter collections.
+:::
+:::
 
 [^1]: For an example see: Martin Grandjean, \"[A social network analysis
     of Twitter: Mapping the digital humanities

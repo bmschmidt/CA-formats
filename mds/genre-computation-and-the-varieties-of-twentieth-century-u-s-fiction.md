@@ -6,11 +6,21 @@ shorttitle: 'Genre, Computation, and the Varieties of Twentieth-Century U.S. Fic
 title: 'Genre, Computation, and the Varieties of Twentieth-Century U.S. Fiction'
 ---
 
+::: {.entry .print-only}
+::: {#post-495 .post-495 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
 ###### *Peer-Reviewed By: Scott Selisker*
 
 ###### *Clusters: [Genre](http://culturalanalytics.org/2016/05/genre/)*
 
-###### *Journal ISSN: 2371-4549* *DOIs: [10.22148/16.009](https://doi.org/10.22148/16.009) (CA) and [10.7910/DVN/EXPXYT](http://dx.doi.org/10.7910/DVN/EXPXYT)(Dataverse)*
+###### *Article DOI: [10.22148/16.009](https://doi.org/10.22148/16.009)*
+
+###### *Dataverse DOI: [10.7910/DVN/EXPXYT](http://dx.doi.org/10.7910/DVN/EXPXYT)*
+
+###### *PDF: [10.31235/osf.io/e7wy6](https://dx.doi.org/10.31235/osf.io/e7wy6)*
+
+###### *Journal ISSN: 2371-4549*
+
+###### *Cite: Matthew Wilkens, "Genre, Computation, and the Varieties of Twentieth-Century U.S. Fiction," Journal of Cultural Analytics. Nov. 1, 2016. DOI: [10.31235/osf.io/e7wy6](https://dx.doi.org/10.31235/osf.io/e7wy6)*
 
  
 
@@ -160,8 +170,8 @@ peak holdings around 1900 and the 1980s. Note that the corpus does not
 contain novels published after 1990 and is therefore not well suited to
 addressing questions of genre in very contemporary U.S. fiction.
 
-::: {#attachment_562 .image style="max-width: 660px"}
-![](http://culturalanalytics.org/wp-content/uploads/2016/10/fig1-e1476317846322.png)
+::: {#attachment_562 .image style="width: 660px"}
+![](fig1-e1476317846322.png)
 
 Figure 1. Distribution of volumes in the research corpus by date of
 publication and author gender.
@@ -395,8 +405,8 @@ topic component; and between diction score and reading level. None of
 these correlations is unexpected. Further analysis of the interactions
 between features follows in the discussion of the models, below.
 
-::: {#attachment_564 .image style="max-width: 660px"}
-![](http://culturalanalytics.org/wp-content/uploads/2016/10/fig2.png)
+::: {#attachment_564 .image style="width: 660px"}
+![](fig2.png)
 
 Figure 2. Correlations among input variables.
 :::
@@ -449,8 +459,8 @@ across clusters. That is to say, most authors should have most of their
 works assigned to a small number of clusters, and most clusters should
 contain works by generically similar authors.
 
-::: {#attachment_567 .image style="max-width: 660px"}
-![](http://culturalanalytics.org/wp-content/uploads/2016/10/fig3.png)
+::: {#attachment_567 .image style="width: 660px"}
+![](fig3.png)
 
 Figure 3. Expected generic groups in a test set of 302 novels by 25
 authors.
@@ -544,8 +554,8 @@ The results of DBSCAN clustering on text-only features are shown in
 figure 4. The method assigns 657 total volumes  (just under 8% of the
 corpus) to 8 distinct clusters.[^17]
 
-::: {#attachment_568 .image style="max-width: 660px"}
-![](http://culturalanalytics.org/wp-content/uploads/2016/10/fig4.png)
+::: {#attachment_568 .image style="width: 660px"}
+![](fig4.png)
 
 Figure 4. Eight "core" clusters identified by density-based analysis
 using the text-only feature set, arranged from earliest average
@@ -674,8 +684,8 @@ data set, including publication dates and author genders (where known).
 The algorithm assigns 685 total volumes (8% of the corpus) to 11
 non-overlapping clusters.
 
-::: {#attachment_571 .image style="max-width: 660px"}
-![](http://culturalanalytics.org/wp-content/uploads/2016/10/fig5.png)
+::: {#attachment_571 .image style="width: 660px"}
+![](fig5.png)
 
 Figure 5. Eleven clusters identified by density-based analysis using the
 full feature set, arranged from earliest average publication date
@@ -930,6 +940,8 @@ conventions of a single genre.
  
 
  
+:::
+:::
 
 [^1]: For Frye's formalist version of genre, see especially essay four
     of his *Anatomy of Criticism* (Princeton: Princeton UP, 1957). For

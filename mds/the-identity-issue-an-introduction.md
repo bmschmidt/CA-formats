@@ -6,11 +6,17 @@ shorttitle: The Identity Issue
 title: The Identity Issue
 ---
 
+::: {.entry .print-only}
+::: {#post-1264 .post-1264 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
 ###### *Clusters: [Gender](http://culturalanalytics.org/2018/02/gender/)*
 
 ###### *Article DOI: [10.22148/16.020](http://doi.org/10.22148/16.020)*
 
+###### *PDF: [10.31235/osf.io/9qvby](https://dx.doi.org/10.31235/osf.io/9qvby)*
+
 ###### *Journal ISSN: 2371-4549*
+
+###### *Cite: Susan Brown and Laura Mandell, "The Identity Issue," Journal of Cultural Analytics. Feb. 13, 2018. DOI: [10.31235/osf.io/9qvby](https://dx.doi.org/10.31235/osf.io/9qvby)*
 
  
 
@@ -377,11 +383,11 @@ Analytics*, several might be said to open up alternative histories of
 historically marginalized groups. Evans and Wilkins demonstrate that
 outsider novelists, foreign to British soil, engaged in colonial and
 anti-colonial critique of modernist internationalism through the greater
-use, and greater abstraction, of geographical terminology. Matt Erlin,
-Lynne Tatlock, Douglas Knox, and Stephen Pentecost demonstrate among
-readers from the U.S. midwest a resistance to reading only those novels
-that target specific genders. And Kraicer and Piper demonstrate in
-recent Anglophone novels the under-representation of women characters
+use, and greater abstraction, of geographical terminology. Lynne
+Tatlock, Matt Erlin, Douglas Knox, and Stephen Pentecost demonstrate
+among readers from the U.S. midwest a resistance to reading only those
+novels that target specific genders. And Kraicer and Piper demonstrate
+in recent Anglophone novels the under-representation of women characters
 and the privileging of heteronormativity.
 
  
@@ -434,8 +440,8 @@ can provide another method for "giving voice." The NovelTM group has
 embraced the challenge to devise better methods for addressing social
 identities and power dynamics. So, for example, in "Crossing Over:
 Gendered Reading Formations at the Muncie Public Library, 1891-1902,"
-Erlin et al. combine text mining with borrower records and a history of
-institutions (book market and libraries) in order to provide a
+Tatlock et al. combine text mining with borrower records and a history
+of institutions (book market and libraries) in order to provide a
 dialectical account of the social and institutional forces that push
 readers toward gender normative texts as well as how readers push back
 through book selection.
@@ -541,7 +547,7 @@ of the psychological self, and of how embedded this relation is in ideas
 about language.
 
 "Crossing Over: Gendered Reading Formations at the Muncie Public
-Library, 1891-1902," by Matt Erlin, Lynne Tatlock, Douglas Knox, and
+Library, 1891-1902," by Lynne Tatlock, Matt Erlin, Douglas Knox, and
 Stephen Pentecost interweaves thick description (literary analysis) with
 a consideration of broad social patterns, providing a finely-grained
 consideration of gender-normative reading in nineteenth-century Muncie,
@@ -561,7 +567,7 @@ gender of reader or another. This insight only emerges as a result of
 placing aggregate borrowing patterns in dialogue with text-mining
 techniques designed to find novelistic features typed by gender,
 analyzing simultaneously literary qualities and statistical patterns.
-Additionally, Erlin, Tatlock, Knox, and Pentecost, offer a situated
+Additionally, Tatlock, Erlin, Knox, and Pentecost, offer a situated
 understanding of gender; their article performs gender trouble through
 its investigation of crossover reading and the crossover textuality of
 Horatio Alger.
@@ -672,6 +678,8 @@ contributions clustered here will enable the ongoing debate over how
 cultural analytics can engage ethically and convincingly with thorny
 questions of identity to proceed productively on the basis of both
 theory and practice.
+:::
+:::
 
 [^1]: The Text Mining the Novel project is led by Andrew Piper at McGill
     University and funded by a Partnership Grant from the Social

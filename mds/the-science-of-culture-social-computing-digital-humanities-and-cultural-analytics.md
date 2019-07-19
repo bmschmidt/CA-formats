@@ -10,11 +10,19 @@ title: |
     Cultural Analytics
 ---
 
+::: {.entry .print-only}
+::: {#post-104 .post-104 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
 ###### *Peer-Reviewed By: Andrew Piper*
 
 ###### *Clusters: [Cultural Analytics](http://66.147.244.186/~postfou1/ca/2016/05/cultural-analytics/), [Image](http://66.147.244.186/~postfou1/ca/2016/05/image/)*
 
-###### *Journal ISSN: 2371-4549* *DOI: [10.22148/16.004](https://doi.org/10.22148/16.004)*
+###### *Article DOI: [10.22148/16.004](https://doi.org/10.22148/16.004)*
+
+###### *PDF: [10.31235/osf.io/b2y79](https://doi.org/10.31235/osf.io/b2y79)*
+
+###### *Journal ISSN: 2371-4549*
+
+###### *Cite: Lev Manovich, "The Science of Culture? Social Computing, Digital Humanities and Cultural Analytics," Journal of Cultural Analytics. May 23, 2016. DOI: [10.31235/osf.io/b2y79](https://doi.org/10.31235/osf.io/b2y79)*
 
  
 
@@ -585,6 +593,8 @@ we think, see, and ultimately act on our knowledge.
 *Lev Manovich, City University of New York*
 
  
+:::
+:::
 
 [^1]: In assembling this article, I am grateful to my colleagues from
     computer science and digital humanities fields for many discussions

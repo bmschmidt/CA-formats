@@ -6,9 +6,20 @@ shorttitle: There Will Be Numbers
 title: There Will Be Numbers
 ---
 
-###### *Journal ISSN: 2371-4549* *DOI: [10.22148/16.006](https://doi.org/10.22148/16.006)*
+::: {.entry .print-only}
+::: {#post-414 .post-414 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
+###### 
 
- \
+###### *Article DOI: [10.22148/16.006](https://doi.org/10.22148/16.006)*
+
+###### *PDF: [10.31235/osf.io/kf6hz](https://dx.doi.org/10.31235/osf.io/kf6hz)*
+
+###### *Journal ISSN: 2371-4549*
+
+###### *Cite: Andrew Piper, "There Will Be Numbers," Journal of Cultural Analytics. May 23, 2016. DOI: [10.31235/osf.io/kf6hz](https://dx.doi.org/10.31235/osf.io/kf6hz)*
+
+ 
+
 Beginnings are always hard to trace. They tend to belong more to the
 realm of myth, as Tristram Shandy well knew. At what point did it become
 necessary, in the sense of unavoidable, to use computation to study
@@ -445,3 +456,7 @@ cultures and media that have gotten us to where we are today. What
 unites it is a belief that computation can show us things about culture
 that previous media and their metonymical impasses could not. The proof,
 as they say, is in the pudding.
+
+*Andrew Piper, McGill University*
+:::
+:::

@@ -1,18 +1,26 @@
 ---
+author: Ted Underwood
 date: '05.23.16'
+shortauthor: Ted Underwood
 shorttitle: The Life Cycles of Genres
 title: The Life Cycles of Genres
 ---
 
+::: {.entry .print-only}
+::: {#post-45 .post-45 .post .type-post .status-publish .format-standard .has-post-thumbnail .hentry .category-articles}
 ###### *Peer-Reviewed By: James English*
 
 ###### *Clusters: [Genre](http://66.147.244.186/~postfou1/ca/2016/05/genre/)*
 
-###### *Journal ISSN: 2371-4549*
-
 ###### *Article DOI: [10.22148/16.005](https://doi.org/10.22148/16.005)*
 
 ###### *Dataverse DOI: [10.7910/DVN/XKQOQM](http://dx.doi.org/10.7910/DVN/XKQOQM)*
+
+###### *PDF: [10.31235/osf.io/8629m](https://doi.org/10.31235/osf.io/8629m)*
+
+###### *Journal ISSN: 2371-4549*
+
+###### *Cite: Ted Underwood, "The Life Cycles of Genres," Journal of Cultural Analytics. May 23, 2016. DOI: [10.31235/osf.io/8629m](https://doi.org/10.31235/osf.io/8629m)*
 
  
 
@@ -329,8 +337,8 @@ useless rule of that kind can easily give predictions a bias that is
 worse than a guess. So there is very little danger that this algorithm
 will seem to discern a difference between two groups where none exists.
 
-::: {#attachment_346 .image style="max-width: 586px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/05/Figure1Histogram-e1463436724230.jpeg)
+::: {#attachment_346 .image style="width: 586px"}
+![](Figure1Histogram-e1463436724230.jpeg)
 
 Figure 1. Histogram plotting the accuracy of 40 models for three
 different putative "genres." For each model, 140 positive instances were
@@ -482,8 +490,8 @@ the "detective fiction" set. In figure 2 I've done that with all 249
 volumes that were either tagged by individual librarians or included in
 the Indiana exhibition.
 
-::: {#attachment_47 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/Figure2Detective.jpeg)
+::: {#attachment_47 .image style="width: 650px"}
+![](Figure2Detective.jpeg)
 
 Figure 2. Predicted probabilities of coming from the "detective fiction"
 set; 91.0% accuracy overall.
@@ -591,8 +599,8 @@ precursors of detective fiction; [^32] *The Moonstone* was already
 included in the Indiana exhibition, but we might try adding other
 sensation novels to see whether they too would fit in this category.
 
-::: {#attachment_48 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/Figure3Crime.jpeg)
+::: {#attachment_48 .image style="width: 650px"}
+![](Figure3Crime.jpeg)
 
 Figure 3. A model trained only on the detective and random examples
 makes predictions about three other categories.
@@ -668,8 +676,8 @@ increase with the size of the set being modeled. To convey a sense of
 that increase, I've plotted curves that indicate the mean accuracy for
 other genres at various sample sizes.
 
-::: {#attachment_49 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/Figure4Gothic.jpeg)
+::: {#attachment_49 .image style="width: 650px"}
+![](Figure4Gothic.jpeg)
 
 Figure 4. Various samples of Gothic fiction, plotted relative to curves
 that indicate the typical range of accuracies for other genres at
@@ -714,8 +722,8 @@ in figure 5, there's not much evidence that chronologically focused
 genres are generally more coherent, linguistically, than our 160-year
 sample of detective fiction.
 
-::: {#attachment_50 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/Figure5Generational.jpeg)
+::: {#attachment_50 .image style="width: 650px"}
+![](Figure5Generational.jpeg)
 
 Figure 5. Several genres of roughly generational size, plotted relative
 to a curve that indicates the range of accuracy for a random sample of
@@ -806,8 +814,8 @@ genre than to the Gothic. (Accuracy remains about three times closer to
 detective fiction even if we downsample all the genres to have the same
 number of volumes.)
 
-::: {#attachment_51 .image style="max-width: 650px"}
-![](http://66.147.244.186/~postfou1/ca/wp-content/uploads/2016/04/Figure6SF.jpeg)
+::: {#attachment_51 .image style="width: 650px"}
+![](Figure6SF.jpeg)
 
 Figure 6. Science fiction 1771-1989, classified with 88.3% accuracy.
 :::
@@ -994,6 +1002,8 @@ of the texts are volume-sized, but a few are short stories.
 Is the github repo containing code, data, and metadata for the project,
 located here:\
 <https://github.com/tedunderwood/fiction>
+:::
+:::
 
 [^1]: The author gratefully acknowledges the support of the NovelTM
     project, funded by Canada's Social Sciences and Humanities Research
